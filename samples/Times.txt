@@ -1,0 +1,92 @@
+liczba watkow  = 4
+
+Sekwencyjnie IKJ:
+Czas:   0.8160 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.0730 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4900 sec
+wynik: 250403472.000000
+Sekwencyjnie IKJ:
+Czas:   0.7980 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.0560 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4880 sec
+wynik: 250403472.000000
+Sekwencyjnie IKJ:
+Czas:   0.7950 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.0610 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4880 sec
+wynik: 250403472.000000
+Sekwencyjnie IKJ:
+Czas:   0.7980 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.0550 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4880 sec
+wynik: 250403472.000000
+Sekwencyjnie IKJ:
+Czas:   0.7960 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.0500 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4890 sec
+wynik: 250403472.000000
+Sekwencyjnie IKJ:
+Czas:   0.7970 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.0760 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4860 sec
+wynik: 250403472.000000
+Sekwencyjnie IKJ:
+Czas:   0.7990 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.0560 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4920 sec
+wynik: 250403472.000000
+Sekwencyjnie IKJ:
+Czas:   0.7980 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.0770 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4900 sec
+wynik: 250403472.000000
+Sekwencyjnie IKJ:
+Czas:   0.7990 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.0590 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4920 sec
+wynik: 250403472.000000
+Sekwencyjnie IKJ:
+Czas:   0.7960 sec
+wynik: 250403472.000000
+IJK:
+Czas:  11.1180 sec
+wynik: 250403472.000000
+IJK_IKJ:
+Czas:   0.4890 sec
+wynik: 250403472.000000
