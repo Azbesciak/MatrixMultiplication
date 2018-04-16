@@ -1,9 +1,10 @@
 import java.io.File
+const val MEASURE_HEADER = "void measure(void(*measure_invocation)(void(*ff)()))"
 
 fun main(args: Array<String>) {
 
 
-    val generated = generateInvocations()
+    val generated = generateTrashCpp()
 
     File("somefile.txt").printWriter().use { out ->
         generated.forEach {
@@ -12,8 +13,21 @@ fun main(args: Array<String>) {
     }
 }
 
-fun <T> generateInRange(f: (i : Int) -> T)= IntProgression.fromClosedRange(50, 1500, 50).map {f(it)}
+fun generateTrashCpp() =
+    listOf("#include \"stdafx.h\"\n" +
+            "#include \"Trash.h\"\n" +
+            "#include <stdio.h>\n" +
+            "#include <time.h>\n" +
+            "#include <cstdlib>") +
+            generateMatrixes() +
+            generateFunction() +
+            listOf("""$MEASURE_HEADER {
+            |      ${generateInvocations().joinToString("\n\t")}
+            |}""".trimMargin())
 
+fun <T> generateInRange(f: (i : Int) -> T)= IntProgression.fromClosedRange(50, 1500, 50).map(f)
+fun <T> generateSubranges(max: Int, f: (i: Int) -> T) = IntProgression.fromClosedRange(50, max, 1)
+        .filter { max % it == 0 }.map(f)
 fun generateMatrixes(): List<String> = generateInRange {
     """
         float matrix_a_$it[$it][$it];
@@ -39,11 +53,13 @@ fun generateCleaners() = generateInRange {
     """.trimIndent()
 }
 
-fun generateHeaders()  = listOf("void measure(void(*measure_invocation)(void(*ff)()));") +
-        generateInRange {
-    """void clean_$it();
+fun generateHeaders(): List<String> {
+    return listOf("$MEASURE_HEADER;") +
+            generateInRange {
+                """void clean_$it();
         |void measure_invocation_$it(const char* title, void(*f)(), void(*callback)(void(*ff)()));
     """.trimMargin()
+            }
 }
 
 fun generateInvocations(): List<String> {
@@ -53,7 +69,7 @@ fun generateInvocations(): List<String> {
     }
 
     val res3 = IntProgression.fromClosedRange(50, 1500, 50).flatMap { n ->
-        IntProgression.fromClosedRange(50, n, 50).map { r ->
+        generateSubranges(n) { r ->
             """measure_invocation_$n("IJK_IKJ ${n}_$r", multiply_matrices_ijk_ikj_${n}_$r, measure_invocation);"""
         }
     }
@@ -109,7 +125,7 @@ fun generateFunction(): List<String> {
         """.trimIndent()
     }
     val sixlines = IntProgression.fromClosedRange(50, 1500, 50).flatMap { n ->
-        IntProgression.fromClosedRange(50, n, 50).map { r ->
+        generateSubranges(n) { r ->
             """
             void multiply_matrices_ijk_ikj_${n}_$r()
             {
@@ -138,7 +154,7 @@ fun generateInvHeadersOnly(): List<String> {
         """.trimIndent()
     }
     val sixlines = IntProgression.fromClosedRange(50, 1500, 50).flatMap { n ->
-        IntProgression.fromClosedRange(50, n, 50).map { r ->
+        generateSubranges(n) { r ->
             """
             void multiply_matrices_ijk_ikj_${n}_$r();
             """.trimIndent()

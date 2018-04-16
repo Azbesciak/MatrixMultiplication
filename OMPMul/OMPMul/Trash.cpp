@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <time.h>
 #include <cstdlib>
-
 float matrix_a_50[50][50];
 float matrix_b_50[50][50];
 float matrix_r_50[50][50];
@@ -1184,14 +1183,14 @@ void multiply_matrices_ijk_ikj_150_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_150[ii][jj] += matrix_a_150[ii][kk] * matrix_b_150[kk][jj];
 }
-void multiply_matrices_ijk_ikj_150_100() {
+void multiply_matrices_ijk_ikj_150_75() {
 	#pragma omp parallel for
-	for (int i = 0; i < 150; i += 100)
-		for (int j = 0; j < 150; j += 100)
-			for (int k = 0; k < 150; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 150; i += 75)
+		for (int j = 0; j < 150; j += 75)
+			for (int k = 0; k < 150; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
 							matrix_r_150[ii][jj] += matrix_a_150[ii][kk] * matrix_b_150[kk][jj];
 }
 void multiply_matrices_ijk_ikj_150_150() {
@@ -1224,16 +1223,6 @@ void multiply_matrices_ijk_ikj_200_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_200[ii][jj] += matrix_a_200[ii][kk] * matrix_b_200[kk][jj];
 }
-void multiply_matrices_ijk_ikj_200_150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 200; i += 150)
-		for (int j = 0; j < 200; j += 150)
-			for (int k = 0; k < 200; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
-							matrix_r_200[ii][jj] += matrix_a_200[ii][kk] * matrix_b_200[kk][jj];
-}
 void multiply_matrices_ijk_ikj_200_200() {
 	#pragma omp parallel for
 	for (int i = 0; i < 200; i += 200)
@@ -1254,34 +1243,14 @@ void multiply_matrices_ijk_ikj_250_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_250[ii][jj] += matrix_a_250[ii][kk] * matrix_b_250[kk][jj];
 }
-void multiply_matrices_ijk_ikj_250_100() {
+void multiply_matrices_ijk_ikj_250_125() {
 	#pragma omp parallel for
-	for (int i = 0; i < 250; i += 100)
-		for (int j = 0; j < 250; j += 100)
-			for (int k = 0; k < 250; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
-							matrix_r_250[ii][jj] += matrix_a_250[ii][kk] * matrix_b_250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_250_150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 250; i += 150)
-		for (int j = 0; j < 250; j += 150)
-			for (int k = 0; k < 250; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
-							matrix_r_250[ii][jj] += matrix_a_250[ii][kk] * matrix_b_250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_250_200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 250; i += 200)
-		for (int j = 0; j < 250; j += 200)
-			for (int k = 0; k < 250; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
+	for (int i = 0; i < 250; i += 125)
+		for (int j = 0; j < 250; j += 125)
+			for (int k = 0; k < 250; k += 125)
+				for (int ii = i; ii < i + 125; ii++)
+					for (int kk = k; kk < k + 125; kk++)
+						for (int jj = j; jj < j + 125; jj++)
 							matrix_r_250[ii][jj] += matrix_a_250[ii][kk] * matrix_b_250[kk][jj];
 }
 void multiply_matrices_ijk_ikj_250_250() {
@@ -1304,6 +1273,26 @@ void multiply_matrices_ijk_ikj_300_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_300[ii][jj] += matrix_a_300[ii][kk] * matrix_b_300[kk][jj];
 }
+void multiply_matrices_ijk_ikj_300_60() {
+	#pragma omp parallel for
+	for (int i = 0; i < 300; i += 60)
+		for (int j = 0; j < 300; j += 60)
+			for (int k = 0; k < 300; k += 60)
+				for (int ii = i; ii < i + 60; ii++)
+					for (int kk = k; kk < k + 60; kk++)
+						for (int jj = j; jj < j + 60; jj++)
+							matrix_r_300[ii][jj] += matrix_a_300[ii][kk] * matrix_b_300[kk][jj];
+}
+void multiply_matrices_ijk_ikj_300_75() {
+	#pragma omp parallel for
+	for (int i = 0; i < 300; i += 75)
+		for (int j = 0; j < 300; j += 75)
+			for (int k = 0; k < 300; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
+							matrix_r_300[ii][jj] += matrix_a_300[ii][kk] * matrix_b_300[kk][jj];
+}
 void multiply_matrices_ijk_ikj_300_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 300; i += 100)
@@ -1322,26 +1311,6 @@ void multiply_matrices_ijk_ikj_300_150() {
 				for (int ii = i; ii < i + 150; ii++)
 					for (int kk = k; kk < k + 150; kk++)
 						for (int jj = j; jj < j + 150; jj++)
-							matrix_r_300[ii][jj] += matrix_a_300[ii][kk] * matrix_b_300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_300_200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 300; i += 200)
-		for (int j = 0; j < 300; j += 200)
-			for (int k = 0; k < 300; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_300[ii][jj] += matrix_a_300[ii][kk] * matrix_b_300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_300_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 300; i += 250)
-		for (int j = 0; j < 300; j += 250)
-			for (int k = 0; k < 300; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
 							matrix_r_300[ii][jj] += matrix_a_300[ii][kk] * matrix_b_300[kk][jj];
 }
 void multiply_matrices_ijk_ikj_300_300() {
@@ -1364,54 +1333,24 @@ void multiply_matrices_ijk_ikj_350_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_350[ii][jj] += matrix_a_350[ii][kk] * matrix_b_350[kk][jj];
 }
-void multiply_matrices_ijk_ikj_350_100() {
+void multiply_matrices_ijk_ikj_350_70() {
 	#pragma omp parallel for
-	for (int i = 0; i < 350; i += 100)
-		for (int j = 0; j < 350; j += 100)
-			for (int k = 0; k < 350; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 350; i += 70)
+		for (int j = 0; j < 350; j += 70)
+			for (int k = 0; k < 350; k += 70)
+				for (int ii = i; ii < i + 70; ii++)
+					for (int kk = k; kk < k + 70; kk++)
+						for (int jj = j; jj < j + 70; jj++)
 							matrix_r_350[ii][jj] += matrix_a_350[ii][kk] * matrix_b_350[kk][jj];
 }
-void multiply_matrices_ijk_ikj_350_150() {
+void multiply_matrices_ijk_ikj_350_175() {
 	#pragma omp parallel for
-	for (int i = 0; i < 350; i += 150)
-		for (int j = 0; j < 350; j += 150)
-			for (int k = 0; k < 350; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
-							matrix_r_350[ii][jj] += matrix_a_350[ii][kk] * matrix_b_350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_350_200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 350; i += 200)
-		for (int j = 0; j < 350; j += 200)
-			for (int k = 0; k < 350; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_350[ii][jj] += matrix_a_350[ii][kk] * matrix_b_350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_350_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 350; i += 250)
-		for (int j = 0; j < 350; j += 250)
-			for (int k = 0; k < 350; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_350[ii][jj] += matrix_a_350[ii][kk] * matrix_b_350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_350_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 350; i += 300)
-		for (int j = 0; j < 350; j += 300)
-			for (int k = 0; k < 350; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
+	for (int i = 0; i < 350; i += 175)
+		for (int j = 0; j < 350; j += 175)
+			for (int k = 0; k < 350; k += 175)
+				for (int ii = i; ii < i + 175; ii++)
+					for (int kk = k; kk < k + 175; kk++)
+						for (int jj = j; jj < j + 175; jj++)
 							matrix_r_350[ii][jj] += matrix_a_350[ii][kk] * matrix_b_350[kk][jj];
 }
 void multiply_matrices_ijk_ikj_350_350() {
@@ -1434,6 +1373,16 @@ void multiply_matrices_ijk_ikj_400_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_400[ii][jj] += matrix_a_400[ii][kk] * matrix_b_400[kk][jj];
 }
+void multiply_matrices_ijk_ikj_400_80() {
+	#pragma omp parallel for
+	for (int i = 0; i < 400; i += 80)
+		for (int j = 0; j < 400; j += 80)
+			for (int k = 0; k < 400; k += 80)
+				for (int ii = i; ii < i + 80; ii++)
+					for (int kk = k; kk < k + 80; kk++)
+						for (int jj = j; jj < j + 80; jj++)
+							matrix_r_400[ii][jj] += matrix_a_400[ii][kk] * matrix_b_400[kk][jj];
+}
 void multiply_matrices_ijk_ikj_400_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 400; i += 100)
@@ -1444,16 +1393,6 @@ void multiply_matrices_ijk_ikj_400_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_400[ii][jj] += matrix_a_400[ii][kk] * matrix_b_400[kk][jj];
 }
-void multiply_matrices_ijk_ikj_400_150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 400; i += 150)
-		for (int j = 0; j < 400; j += 150)
-			for (int k = 0; k < 400; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
-							matrix_r_400[ii][jj] += matrix_a_400[ii][kk] * matrix_b_400[kk][jj];
-}
 void multiply_matrices_ijk_ikj_400_200() {
 	#pragma omp parallel for
 	for (int i = 0; i < 400; i += 200)
@@ -1462,36 +1401,6 @@ void multiply_matrices_ijk_ikj_400_200() {
 				for (int ii = i; ii < i + 200; ii++)
 					for (int kk = k; kk < k + 200; kk++)
 						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_400[ii][jj] += matrix_a_400[ii][kk] * matrix_b_400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_400_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 400; i += 250)
-		for (int j = 0; j < 400; j += 250)
-			for (int k = 0; k < 400; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_400[ii][jj] += matrix_a_400[ii][kk] * matrix_b_400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_400_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 400; i += 300)
-		for (int j = 0; j < 400; j += 300)
-			for (int k = 0; k < 400; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_400[ii][jj] += matrix_a_400[ii][kk] * matrix_b_400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_400_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 400; i += 350)
-		for (int j = 0; j < 400; j += 350)
-			for (int k = 0; k < 400; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
 							matrix_r_400[ii][jj] += matrix_a_400[ii][kk] * matrix_b_400[kk][jj];
 }
 void multiply_matrices_ijk_ikj_400_400() {
@@ -1514,14 +1423,24 @@ void multiply_matrices_ijk_ikj_450_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_450[ii][jj] += matrix_a_450[ii][kk] * matrix_b_450[kk][jj];
 }
-void multiply_matrices_ijk_ikj_450_100() {
+void multiply_matrices_ijk_ikj_450_75() {
 	#pragma omp parallel for
-	for (int i = 0; i < 450; i += 100)
-		for (int j = 0; j < 450; j += 100)
-			for (int k = 0; k < 450; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 450; i += 75)
+		for (int j = 0; j < 450; j += 75)
+			for (int k = 0; k < 450; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
+							matrix_r_450[ii][jj] += matrix_a_450[ii][kk] * matrix_b_450[kk][jj];
+}
+void multiply_matrices_ijk_ikj_450_90() {
+	#pragma omp parallel for
+	for (int i = 0; i < 450; i += 90)
+		for (int j = 0; j < 450; j += 90)
+			for (int k = 0; k < 450; k += 90)
+				for (int ii = i; ii < i + 90; ii++)
+					for (int kk = k; kk < k + 90; kk++)
+						for (int jj = j; jj < j + 90; jj++)
 							matrix_r_450[ii][jj] += matrix_a_450[ii][kk] * matrix_b_450[kk][jj];
 }
 void multiply_matrices_ijk_ikj_450_150() {
@@ -1534,54 +1453,14 @@ void multiply_matrices_ijk_ikj_450_150() {
 						for (int jj = j; jj < j + 150; jj++)
 							matrix_r_450[ii][jj] += matrix_a_450[ii][kk] * matrix_b_450[kk][jj];
 }
-void multiply_matrices_ijk_ikj_450_200() {
+void multiply_matrices_ijk_ikj_450_225() {
 	#pragma omp parallel for
-	for (int i = 0; i < 450; i += 200)
-		for (int j = 0; j < 450; j += 200)
-			for (int k = 0; k < 450; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_450[ii][jj] += matrix_a_450[ii][kk] * matrix_b_450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_450_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 450; i += 250)
-		for (int j = 0; j < 450; j += 250)
-			for (int k = 0; k < 450; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_450[ii][jj] += matrix_a_450[ii][kk] * matrix_b_450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_450_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 450; i += 300)
-		for (int j = 0; j < 450; j += 300)
-			for (int k = 0; k < 450; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_450[ii][jj] += matrix_a_450[ii][kk] * matrix_b_450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_450_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 450; i += 350)
-		for (int j = 0; j < 450; j += 350)
-			for (int k = 0; k < 450; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_450[ii][jj] += matrix_a_450[ii][kk] * matrix_b_450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_450_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 450; i += 400)
-		for (int j = 0; j < 450; j += 400)
-			for (int k = 0; k < 450; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
+	for (int i = 0; i < 450; i += 225)
+		for (int j = 0; j < 450; j += 225)
+			for (int k = 0; k < 450; k += 225)
+				for (int ii = i; ii < i + 225; ii++)
+					for (int kk = k; kk < k + 225; kk++)
+						for (int jj = j; jj < j + 225; jj++)
 							matrix_r_450[ii][jj] += matrix_a_450[ii][kk] * matrix_b_450[kk][jj];
 }
 void multiply_matrices_ijk_ikj_450_450() {
@@ -1614,24 +1493,14 @@ void multiply_matrices_ijk_ikj_500_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_500[ii][jj] += matrix_a_500[ii][kk] * matrix_b_500[kk][jj];
 }
-void multiply_matrices_ijk_ikj_500_150() {
+void multiply_matrices_ijk_ikj_500_125() {
 	#pragma omp parallel for
-	for (int i = 0; i < 500; i += 150)
-		for (int j = 0; j < 500; j += 150)
-			for (int k = 0; k < 500; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
-							matrix_r_500[ii][jj] += matrix_a_500[ii][kk] * matrix_b_500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_500_200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 500; i += 200)
-		for (int j = 0; j < 500; j += 200)
-			for (int k = 0; k < 500; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
+	for (int i = 0; i < 500; i += 125)
+		for (int j = 0; j < 500; j += 125)
+			for (int k = 0; k < 500; k += 125)
+				for (int ii = i; ii < i + 125; ii++)
+					for (int kk = k; kk < k + 125; kk++)
+						for (int jj = j; jj < j + 125; jj++)
 							matrix_r_500[ii][jj] += matrix_a_500[ii][kk] * matrix_b_500[kk][jj];
 }
 void multiply_matrices_ijk_ikj_500_250() {
@@ -1642,46 +1511,6 @@ void multiply_matrices_ijk_ikj_500_250() {
 				for (int ii = i; ii < i + 250; ii++)
 					for (int kk = k; kk < k + 250; kk++)
 						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_500[ii][jj] += matrix_a_500[ii][kk] * matrix_b_500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_500_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 500; i += 300)
-		for (int j = 0; j < 500; j += 300)
-			for (int k = 0; k < 500; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_500[ii][jj] += matrix_a_500[ii][kk] * matrix_b_500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_500_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 500; i += 350)
-		for (int j = 0; j < 500; j += 350)
-			for (int k = 0; k < 500; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_500[ii][jj] += matrix_a_500[ii][kk] * matrix_b_500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_500_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 500; i += 400)
-		for (int j = 0; j < 500; j += 400)
-			for (int k = 0; k < 500; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_500[ii][jj] += matrix_a_500[ii][kk] * matrix_b_500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_500_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 500; i += 450)
-		for (int j = 0; j < 500; j += 450)
-			for (int k = 0; k < 500; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
 							matrix_r_500[ii][jj] += matrix_a_500[ii][kk] * matrix_b_500[kk][jj];
 }
 void multiply_matrices_ijk_ikj_500_500() {
@@ -1704,94 +1533,34 @@ void multiply_matrices_ijk_ikj_550_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
 }
-void multiply_matrices_ijk_ikj_550_100() {
+void multiply_matrices_ijk_ikj_550_55() {
 	#pragma omp parallel for
-	for (int i = 0; i < 550; i += 100)
-		for (int j = 0; j < 550; j += 100)
-			for (int k = 0; k < 550; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 550; i += 55)
+		for (int j = 0; j < 550; j += 55)
+			for (int k = 0; k < 550; k += 55)
+				for (int ii = i; ii < i + 55; ii++)
+					for (int kk = k; kk < k + 55; kk++)
+						for (int jj = j; jj < j + 55; jj++)
 							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
 }
-void multiply_matrices_ijk_ikj_550_150() {
+void multiply_matrices_ijk_ikj_550_110() {
 	#pragma omp parallel for
-	for (int i = 0; i < 550; i += 150)
-		for (int j = 0; j < 550; j += 150)
-			for (int k = 0; k < 550; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 550; i += 110)
+		for (int j = 0; j < 550; j += 110)
+			for (int k = 0; k < 550; k += 110)
+				for (int ii = i; ii < i + 110; ii++)
+					for (int kk = k; kk < k + 110; kk++)
+						for (int jj = j; jj < j + 110; jj++)
 							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
 }
-void multiply_matrices_ijk_ikj_550_200() {
+void multiply_matrices_ijk_ikj_550_275() {
 	#pragma omp parallel for
-	for (int i = 0; i < 550; i += 200)
-		for (int j = 0; j < 550; j += 200)
-			for (int k = 0; k < 550; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
-}
-void multiply_matrices_ijk_ikj_550_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 550; i += 250)
-		for (int j = 0; j < 550; j += 250)
-			for (int k = 0; k < 550; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
-}
-void multiply_matrices_ijk_ikj_550_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 550; i += 300)
-		for (int j = 0; j < 550; j += 300)
-			for (int k = 0; k < 550; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
-}
-void multiply_matrices_ijk_ikj_550_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 550; i += 350)
-		for (int j = 0; j < 550; j += 350)
-			for (int k = 0; k < 550; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
-}
-void multiply_matrices_ijk_ikj_550_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 550; i += 400)
-		for (int j = 0; j < 550; j += 400)
-			for (int k = 0; k < 550; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
-}
-void multiply_matrices_ijk_ikj_550_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 550; i += 450)
-		for (int j = 0; j < 550; j += 450)
-			for (int k = 0; k < 550; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
-}
-void multiply_matrices_ijk_ikj_550_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 550; i += 500)
-		for (int j = 0; j < 550; j += 500)
-			for (int k = 0; k < 550; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
+	for (int i = 0; i < 550; i += 275)
+		for (int j = 0; j < 550; j += 275)
+			for (int k = 0; k < 550; k += 275)
+				for (int ii = i; ii < i + 275; ii++)
+					for (int kk = k; kk < k + 275; kk++)
+						for (int jj = j; jj < j + 275; jj++)
 							matrix_r_550[ii][jj] += matrix_a_550[ii][kk] * matrix_b_550[kk][jj];
 }
 void multiply_matrices_ijk_ikj_550_550() {
@@ -1814,6 +1583,26 @@ void multiply_matrices_ijk_ikj_600_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
 }
+void multiply_matrices_ijk_ikj_600_60() {
+	#pragma omp parallel for
+	for (int i = 0; i < 600; i += 60)
+		for (int j = 0; j < 600; j += 60)
+			for (int k = 0; k < 600; k += 60)
+				for (int ii = i; ii < i + 60; ii++)
+					for (int kk = k; kk < k + 60; kk++)
+						for (int jj = j; jj < j + 60; jj++)
+							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
+}
+void multiply_matrices_ijk_ikj_600_75() {
+	#pragma omp parallel for
+	for (int i = 0; i < 600; i += 75)
+		for (int j = 0; j < 600; j += 75)
+			for (int k = 0; k < 600; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
+							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
+}
 void multiply_matrices_ijk_ikj_600_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 600; i += 100)
@@ -1822,6 +1611,16 @@ void multiply_matrices_ijk_ikj_600_100() {
 				for (int ii = i; ii < i + 100; ii++)
 					for (int kk = k; kk < k + 100; kk++)
 						for (int jj = j; jj < j + 100; jj++)
+							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
+}
+void multiply_matrices_ijk_ikj_600_120() {
+	#pragma omp parallel for
+	for (int i = 0; i < 600; i += 120)
+		for (int j = 0; j < 600; j += 120)
+			for (int k = 0; k < 600; k += 120)
+				for (int ii = i; ii < i + 120; ii++)
+					for (int kk = k; kk < k + 120; kk++)
+						for (int jj = j; jj < j + 120; jj++)
 							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
 }
 void multiply_matrices_ijk_ikj_600_150() {
@@ -1844,16 +1643,6 @@ void multiply_matrices_ijk_ikj_600_200() {
 						for (int jj = j; jj < j + 200; jj++)
 							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
 }
-void multiply_matrices_ijk_ikj_600_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 600; i += 250)
-		for (int j = 0; j < 600; j += 250)
-			for (int k = 0; k < 600; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
-}
 void multiply_matrices_ijk_ikj_600_300() {
 	#pragma omp parallel for
 	for (int i = 0; i < 600; i += 300)
@@ -1862,56 +1651,6 @@ void multiply_matrices_ijk_ikj_600_300() {
 				for (int ii = i; ii < i + 300; ii++)
 					for (int kk = k; kk < k + 300; kk++)
 						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
-}
-void multiply_matrices_ijk_ikj_600_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 600; i += 350)
-		for (int j = 0; j < 600; j += 350)
-			for (int k = 0; k < 600; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
-}
-void multiply_matrices_ijk_ikj_600_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 600; i += 400)
-		for (int j = 0; j < 600; j += 400)
-			for (int k = 0; k < 600; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
-}
-void multiply_matrices_ijk_ikj_600_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 600; i += 450)
-		for (int j = 0; j < 600; j += 450)
-			for (int k = 0; k < 600; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
-}
-void multiply_matrices_ijk_ikj_600_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 600; i += 500)
-		for (int j = 0; j < 600; j += 500)
-			for (int k = 0; k < 600; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
-}
-void multiply_matrices_ijk_ikj_600_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 600; i += 550)
-		for (int j = 0; j < 600; j += 550)
-			for (int k = 0; k < 600; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
 							matrix_r_600[ii][jj] += matrix_a_600[ii][kk] * matrix_b_600[kk][jj];
 }
 void multiply_matrices_ijk_ikj_600_600() {
@@ -1934,114 +1673,34 @@ void multiply_matrices_ijk_ikj_650_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
 }
-void multiply_matrices_ijk_ikj_650_100() {
+void multiply_matrices_ijk_ikj_650_65() {
 	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 100)
-		for (int j = 0; j < 650; j += 100)
-			for (int k = 0; k < 650; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 650; i += 65)
+		for (int j = 0; j < 650; j += 65)
+			for (int k = 0; k < 650; k += 65)
+				for (int ii = i; ii < i + 65; ii++)
+					for (int kk = k; kk < k + 65; kk++)
+						for (int jj = j; jj < j + 65; jj++)
 							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
 }
-void multiply_matrices_ijk_ikj_650_150() {
+void multiply_matrices_ijk_ikj_650_130() {
 	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 150)
-		for (int j = 0; j < 650; j += 150)
-			for (int k = 0; k < 650; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 650; i += 130)
+		for (int j = 0; j < 650; j += 130)
+			for (int k = 0; k < 650; k += 130)
+				for (int ii = i; ii < i + 130; ii++)
+					for (int kk = k; kk < k + 130; kk++)
+						for (int jj = j; jj < j + 130; jj++)
 							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
 }
-void multiply_matrices_ijk_ikj_650_200() {
+void multiply_matrices_ijk_ikj_650_325() {
 	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 200)
-		for (int j = 0; j < 650; j += 200)
-			for (int k = 0; k < 650; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
-}
-void multiply_matrices_ijk_ikj_650_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 250)
-		for (int j = 0; j < 650; j += 250)
-			for (int k = 0; k < 650; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
-}
-void multiply_matrices_ijk_ikj_650_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 300)
-		for (int j = 0; j < 650; j += 300)
-			for (int k = 0; k < 650; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
-}
-void multiply_matrices_ijk_ikj_650_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 350)
-		for (int j = 0; j < 650; j += 350)
-			for (int k = 0; k < 650; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
-}
-void multiply_matrices_ijk_ikj_650_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 400)
-		for (int j = 0; j < 650; j += 400)
-			for (int k = 0; k < 650; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
-}
-void multiply_matrices_ijk_ikj_650_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 450)
-		for (int j = 0; j < 650; j += 450)
-			for (int k = 0; k < 650; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
-}
-void multiply_matrices_ijk_ikj_650_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 500)
-		for (int j = 0; j < 650; j += 500)
-			for (int k = 0; k < 650; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
-}
-void multiply_matrices_ijk_ikj_650_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 550)
-		for (int j = 0; j < 650; j += 550)
-			for (int k = 0; k < 650; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
-}
-void multiply_matrices_ijk_ikj_650_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 650; i += 600)
-		for (int j = 0; j < 650; j += 600)
-			for (int k = 0; k < 650; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
+	for (int i = 0; i < 650; i += 325)
+		for (int j = 0; j < 650; j += 325)
+			for (int k = 0; k < 650; k += 325)
+				for (int ii = i; ii < i + 325; ii++)
+					for (int kk = k; kk < k + 325; kk++)
+						for (int jj = j; jj < j + 325; jj++)
 							matrix_r_650[ii][jj] += matrix_a_650[ii][kk] * matrix_b_650[kk][jj];
 }
 void multiply_matrices_ijk_ikj_650_650() {
@@ -2064,6 +1723,16 @@ void multiply_matrices_ijk_ikj_700_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
 }
+void multiply_matrices_ijk_ikj_700_70() {
+	#pragma omp parallel for
+	for (int i = 0; i < 700; i += 70)
+		for (int j = 0; j < 700; j += 70)
+			for (int k = 0; k < 700; k += 70)
+				for (int ii = i; ii < i + 70; ii++)
+					for (int kk = k; kk < k + 70; kk++)
+						for (int jj = j; jj < j + 70; jj++)
+							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
+}
 void multiply_matrices_ijk_ikj_700_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 700; i += 100)
@@ -2074,44 +1743,24 @@ void multiply_matrices_ijk_ikj_700_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
 }
-void multiply_matrices_ijk_ikj_700_150() {
+void multiply_matrices_ijk_ikj_700_140() {
 	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 150)
-		for (int j = 0; j < 700; j += 150)
-			for (int k = 0; k < 700; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 700; i += 140)
+		for (int j = 0; j < 700; j += 140)
+			for (int k = 0; k < 700; k += 140)
+				for (int ii = i; ii < i + 140; ii++)
+					for (int kk = k; kk < k + 140; kk++)
+						for (int jj = j; jj < j + 140; jj++)
 							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
 }
-void multiply_matrices_ijk_ikj_700_200() {
+void multiply_matrices_ijk_ikj_700_175() {
 	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 200)
-		for (int j = 0; j < 700; j += 200)
-			for (int k = 0; k < 700; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
-}
-void multiply_matrices_ijk_ikj_700_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 250)
-		for (int j = 0; j < 700; j += 250)
-			for (int k = 0; k < 700; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
-}
-void multiply_matrices_ijk_ikj_700_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 300)
-		for (int j = 0; j < 700; j += 300)
-			for (int k = 0; k < 700; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
+	for (int i = 0; i < 700; i += 175)
+		for (int j = 0; j < 700; j += 175)
+			for (int k = 0; k < 700; k += 175)
+				for (int ii = i; ii < i + 175; ii++)
+					for (int kk = k; kk < k + 175; kk++)
+						for (int jj = j; jj < j + 175; jj++)
 							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
 }
 void multiply_matrices_ijk_ikj_700_350() {
@@ -2122,66 +1771,6 @@ void multiply_matrices_ijk_ikj_700_350() {
 				for (int ii = i; ii < i + 350; ii++)
 					for (int kk = k; kk < k + 350; kk++)
 						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
-}
-void multiply_matrices_ijk_ikj_700_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 400)
-		for (int j = 0; j < 700; j += 400)
-			for (int k = 0; k < 700; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
-}
-void multiply_matrices_ijk_ikj_700_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 450)
-		for (int j = 0; j < 700; j += 450)
-			for (int k = 0; k < 700; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
-}
-void multiply_matrices_ijk_ikj_700_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 500)
-		for (int j = 0; j < 700; j += 500)
-			for (int k = 0; k < 700; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
-}
-void multiply_matrices_ijk_ikj_700_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 550)
-		for (int j = 0; j < 700; j += 550)
-			for (int k = 0; k < 700; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
-}
-void multiply_matrices_ijk_ikj_700_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 600)
-		for (int j = 0; j < 700; j += 600)
-			for (int k = 0; k < 700; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
-}
-void multiply_matrices_ijk_ikj_700_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 700; i += 650)
-		for (int j = 0; j < 700; j += 650)
-			for (int k = 0; k < 700; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
 							matrix_r_700[ii][jj] += matrix_a_700[ii][kk] * matrix_b_700[kk][jj];
 }
 void multiply_matrices_ijk_ikj_700_700() {
@@ -2204,14 +1793,24 @@ void multiply_matrices_ijk_ikj_750_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
 }
-void multiply_matrices_ijk_ikj_750_100() {
+void multiply_matrices_ijk_ikj_750_75() {
 	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 100)
-		for (int j = 0; j < 750; j += 100)
-			for (int k = 0; k < 750; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 750; i += 75)
+		for (int j = 0; j < 750; j += 75)
+			for (int k = 0; k < 750; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
+							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
+}
+void multiply_matrices_ijk_ikj_750_125() {
+	#pragma omp parallel for
+	for (int i = 0; i < 750; i += 125)
+		for (int j = 0; j < 750; j += 125)
+			for (int k = 0; k < 750; k += 125)
+				for (int ii = i; ii < i + 125; ii++)
+					for (int kk = k; kk < k + 125; kk++)
+						for (int jj = j; jj < j + 125; jj++)
 							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
 }
 void multiply_matrices_ijk_ikj_750_150() {
@@ -2224,16 +1823,6 @@ void multiply_matrices_ijk_ikj_750_150() {
 						for (int jj = j; jj < j + 150; jj++)
 							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
 }
-void multiply_matrices_ijk_ikj_750_200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 200)
-		for (int j = 0; j < 750; j += 200)
-			for (int k = 0; k < 750; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
-}
 void multiply_matrices_ijk_ikj_750_250() {
 	#pragma omp parallel for
 	for (int i = 0; i < 750; i += 250)
@@ -2244,94 +1833,14 @@ void multiply_matrices_ijk_ikj_750_250() {
 						for (int jj = j; jj < j + 250; jj++)
 							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
 }
-void multiply_matrices_ijk_ikj_750_300() {
+void multiply_matrices_ijk_ikj_750_375() {
 	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 300)
-		for (int j = 0; j < 750; j += 300)
-			for (int k = 0; k < 750; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
-}
-void multiply_matrices_ijk_ikj_750_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 350)
-		for (int j = 0; j < 750; j += 350)
-			for (int k = 0; k < 750; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
-}
-void multiply_matrices_ijk_ikj_750_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 400)
-		for (int j = 0; j < 750; j += 400)
-			for (int k = 0; k < 750; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
-}
-void multiply_matrices_ijk_ikj_750_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 450)
-		for (int j = 0; j < 750; j += 450)
-			for (int k = 0; k < 750; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
-}
-void multiply_matrices_ijk_ikj_750_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 500)
-		for (int j = 0; j < 750; j += 500)
-			for (int k = 0; k < 750; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
-}
-void multiply_matrices_ijk_ikj_750_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 550)
-		for (int j = 0; j < 750; j += 550)
-			for (int k = 0; k < 750; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
-}
-void multiply_matrices_ijk_ikj_750_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 600)
-		for (int j = 0; j < 750; j += 600)
-			for (int k = 0; k < 750; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
-}
-void multiply_matrices_ijk_ikj_750_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 650)
-		for (int j = 0; j < 750; j += 650)
-			for (int k = 0; k < 750; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
-}
-void multiply_matrices_ijk_ikj_750_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 750; i += 700)
-		for (int j = 0; j < 750; j += 700)
-			for (int k = 0; k < 750; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
+	for (int i = 0; i < 750; i += 375)
+		for (int j = 0; j < 750; j += 375)
+			for (int k = 0; k < 750; k += 375)
+				for (int ii = i; ii < i + 375; ii++)
+					for (int kk = k; kk < k + 375; kk++)
+						for (int jj = j; jj < j + 375; jj++)
 							matrix_r_750[ii][jj] += matrix_a_750[ii][kk] * matrix_b_750[kk][jj];
 }
 void multiply_matrices_ijk_ikj_750_750() {
@@ -2354,6 +1863,16 @@ void multiply_matrices_ijk_ikj_800_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
 }
+void multiply_matrices_ijk_ikj_800_80() {
+	#pragma omp parallel for
+	for (int i = 0; i < 800; i += 80)
+		for (int j = 0; j < 800; j += 80)
+			for (int k = 0; k < 800; k += 80)
+				for (int ii = i; ii < i + 80; ii++)
+					for (int kk = k; kk < k + 80; kk++)
+						for (int jj = j; jj < j + 80; jj++)
+							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
+}
 void multiply_matrices_ijk_ikj_800_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 800; i += 100)
@@ -2364,14 +1883,14 @@ void multiply_matrices_ijk_ikj_800_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
 }
-void multiply_matrices_ijk_ikj_800_150() {
+void multiply_matrices_ijk_ikj_800_160() {
 	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 150)
-		for (int j = 0; j < 800; j += 150)
-			for (int k = 0; k < 800; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 800; i += 160)
+		for (int j = 0; j < 800; j += 160)
+			for (int k = 0; k < 800; k += 160)
+				for (int ii = i; ii < i + 160; ii++)
+					for (int kk = k; kk < k + 160; kk++)
+						for (int jj = j; jj < j + 160; jj++)
 							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
 }
 void multiply_matrices_ijk_ikj_800_200() {
@@ -2384,36 +1903,6 @@ void multiply_matrices_ijk_ikj_800_200() {
 						for (int jj = j; jj < j + 200; jj++)
 							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
 }
-void multiply_matrices_ijk_ikj_800_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 250)
-		for (int j = 0; j < 800; j += 250)
-			for (int k = 0; k < 800; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
-void multiply_matrices_ijk_ikj_800_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 300)
-		for (int j = 0; j < 800; j += 300)
-			for (int k = 0; k < 800; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
-void multiply_matrices_ijk_ikj_800_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 350)
-		for (int j = 0; j < 800; j += 350)
-			for (int k = 0; k < 800; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
 void multiply_matrices_ijk_ikj_800_400() {
 	#pragma omp parallel for
 	for (int i = 0; i < 800; i += 400)
@@ -2422,76 +1911,6 @@ void multiply_matrices_ijk_ikj_800_400() {
 				for (int ii = i; ii < i + 400; ii++)
 					for (int kk = k; kk < k + 400; kk++)
 						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
-void multiply_matrices_ijk_ikj_800_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 450)
-		for (int j = 0; j < 800; j += 450)
-			for (int k = 0; k < 800; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
-void multiply_matrices_ijk_ikj_800_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 500)
-		for (int j = 0; j < 800; j += 500)
-			for (int k = 0; k < 800; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
-void multiply_matrices_ijk_ikj_800_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 550)
-		for (int j = 0; j < 800; j += 550)
-			for (int k = 0; k < 800; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
-void multiply_matrices_ijk_ikj_800_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 600)
-		for (int j = 0; j < 800; j += 600)
-			for (int k = 0; k < 800; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
-void multiply_matrices_ijk_ikj_800_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 650)
-		for (int j = 0; j < 800; j += 650)
-			for (int k = 0; k < 800; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
-void multiply_matrices_ijk_ikj_800_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 700)
-		for (int j = 0; j < 800; j += 700)
-			for (int k = 0; k < 800; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
-}
-void multiply_matrices_ijk_ikj_800_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 800; i += 750)
-		for (int j = 0; j < 800; j += 750)
-			for (int k = 0; k < 800; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
 							matrix_r_800[ii][jj] += matrix_a_800[ii][kk] * matrix_b_800[kk][jj];
 }
 void multiply_matrices_ijk_ikj_800_800() {
@@ -2514,154 +1933,34 @@ void multiply_matrices_ijk_ikj_850_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
 }
-void multiply_matrices_ijk_ikj_850_100() {
+void multiply_matrices_ijk_ikj_850_85() {
 	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 100)
-		for (int j = 0; j < 850; j += 100)
-			for (int k = 0; k < 850; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 850; i += 85)
+		for (int j = 0; j < 850; j += 85)
+			for (int k = 0; k < 850; k += 85)
+				for (int ii = i; ii < i + 85; ii++)
+					for (int kk = k; kk < k + 85; kk++)
+						for (int jj = j; jj < j + 85; jj++)
 							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
 }
-void multiply_matrices_ijk_ikj_850_150() {
+void multiply_matrices_ijk_ikj_850_170() {
 	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 150)
-		for (int j = 0; j < 850; j += 150)
-			for (int k = 0; k < 850; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 850; i += 170)
+		for (int j = 0; j < 850; j += 170)
+			for (int k = 0; k < 850; k += 170)
+				for (int ii = i; ii < i + 170; ii++)
+					for (int kk = k; kk < k + 170; kk++)
+						for (int jj = j; jj < j + 170; jj++)
 							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
 }
-void multiply_matrices_ijk_ikj_850_200() {
+void multiply_matrices_ijk_ikj_850_425() {
 	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 200)
-		for (int j = 0; j < 850; j += 200)
-			for (int k = 0; k < 850; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 250)
-		for (int j = 0; j < 850; j += 250)
-			for (int k = 0; k < 850; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 300)
-		for (int j = 0; j < 850; j += 300)
-			for (int k = 0; k < 850; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 350)
-		for (int j = 0; j < 850; j += 350)
-			for (int k = 0; k < 850; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 400)
-		for (int j = 0; j < 850; j += 400)
-			for (int k = 0; k < 850; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 450)
-		for (int j = 0; j < 850; j += 450)
-			for (int k = 0; k < 850; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 500)
-		for (int j = 0; j < 850; j += 500)
-			for (int k = 0; k < 850; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 550)
-		for (int j = 0; j < 850; j += 550)
-			for (int k = 0; k < 850; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 600)
-		for (int j = 0; j < 850; j += 600)
-			for (int k = 0; k < 850; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 650)
-		for (int j = 0; j < 850; j += 650)
-			for (int k = 0; k < 850; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 700)
-		for (int j = 0; j < 850; j += 700)
-			for (int k = 0; k < 850; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 750)
-		for (int j = 0; j < 850; j += 750)
-			for (int k = 0; k < 850; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
-}
-void multiply_matrices_ijk_ikj_850_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 850; i += 800)
-		for (int j = 0; j < 850; j += 800)
-			for (int k = 0; k < 850; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
+	for (int i = 0; i < 850; i += 425)
+		for (int j = 0; j < 850; j += 425)
+			for (int k = 0; k < 850; k += 425)
+				for (int ii = i; ii < i + 425; ii++)
+					for (int kk = k; kk < k + 425; kk++)
+						for (int jj = j; jj < j + 425; jj++)
 							matrix_r_850[ii][jj] += matrix_a_850[ii][kk] * matrix_b_850[kk][jj];
 }
 void multiply_matrices_ijk_ikj_850_850() {
@@ -2684,6 +1983,36 @@ void multiply_matrices_ijk_ikj_900_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
 }
+void multiply_matrices_ijk_ikj_900_60() {
+	#pragma omp parallel for
+	for (int i = 0; i < 900; i += 60)
+		for (int j = 0; j < 900; j += 60)
+			for (int k = 0; k < 900; k += 60)
+				for (int ii = i; ii < i + 60; ii++)
+					for (int kk = k; kk < k + 60; kk++)
+						for (int jj = j; jj < j + 60; jj++)
+							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
+}
+void multiply_matrices_ijk_ikj_900_75() {
+	#pragma omp parallel for
+	for (int i = 0; i < 900; i += 75)
+		for (int j = 0; j < 900; j += 75)
+			for (int k = 0; k < 900; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
+							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
+}
+void multiply_matrices_ijk_ikj_900_90() {
+	#pragma omp parallel for
+	for (int i = 0; i < 900; i += 90)
+		for (int j = 0; j < 900; j += 90)
+			for (int k = 0; k < 900; k += 90)
+				for (int ii = i; ii < i + 90; ii++)
+					for (int kk = k; kk < k + 90; kk++)
+						for (int jj = j; jj < j + 90; jj++)
+							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
+}
 void multiply_matrices_ijk_ikj_900_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 900; i += 100)
@@ -2704,24 +2033,24 @@ void multiply_matrices_ijk_ikj_900_150() {
 						for (int jj = j; jj < j + 150; jj++)
 							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
 }
-void multiply_matrices_ijk_ikj_900_200() {
+void multiply_matrices_ijk_ikj_900_180() {
 	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 200)
-		for (int j = 0; j < 900; j += 200)
-			for (int k = 0; k < 900; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
+	for (int i = 0; i < 900; i += 180)
+		for (int j = 0; j < 900; j += 180)
+			for (int k = 0; k < 900; k += 180)
+				for (int ii = i; ii < i + 180; ii++)
+					for (int kk = k; kk < k + 180; kk++)
+						for (int jj = j; jj < j + 180; jj++)
 							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
 }
-void multiply_matrices_ijk_ikj_900_250() {
+void multiply_matrices_ijk_ikj_900_225() {
 	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 250)
-		for (int j = 0; j < 900; j += 250)
-			for (int k = 0; k < 900; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
+	for (int i = 0; i < 900; i += 225)
+		for (int j = 0; j < 900; j += 225)
+			for (int k = 0; k < 900; k += 225)
+				for (int ii = i; ii < i + 225; ii++)
+					for (int kk = k; kk < k + 225; kk++)
+						for (int jj = j; jj < j + 225; jj++)
 							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
 }
 void multiply_matrices_ijk_ikj_900_300() {
@@ -2734,26 +2063,6 @@ void multiply_matrices_ijk_ikj_900_300() {
 						for (int jj = j; jj < j + 300; jj++)
 							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
 }
-void multiply_matrices_ijk_ikj_900_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 350)
-		for (int j = 0; j < 900; j += 350)
-			for (int k = 0; k < 900; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
-void multiply_matrices_ijk_ikj_900_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 400)
-		for (int j = 0; j < 900; j += 400)
-			for (int k = 0; k < 900; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
 void multiply_matrices_ijk_ikj_900_450() {
 	#pragma omp parallel for
 	for (int i = 0; i < 900; i += 450)
@@ -2762,86 +2071,6 @@ void multiply_matrices_ijk_ikj_900_450() {
 				for (int ii = i; ii < i + 450; ii++)
 					for (int kk = k; kk < k + 450; kk++)
 						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
-void multiply_matrices_ijk_ikj_900_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 500)
-		for (int j = 0; j < 900; j += 500)
-			for (int k = 0; k < 900; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
-void multiply_matrices_ijk_ikj_900_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 550)
-		for (int j = 0; j < 900; j += 550)
-			for (int k = 0; k < 900; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
-void multiply_matrices_ijk_ikj_900_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 600)
-		for (int j = 0; j < 900; j += 600)
-			for (int k = 0; k < 900; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
-void multiply_matrices_ijk_ikj_900_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 650)
-		for (int j = 0; j < 900; j += 650)
-			for (int k = 0; k < 900; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
-void multiply_matrices_ijk_ikj_900_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 700)
-		for (int j = 0; j < 900; j += 700)
-			for (int k = 0; k < 900; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
-void multiply_matrices_ijk_ikj_900_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 750)
-		for (int j = 0; j < 900; j += 750)
-			for (int k = 0; k < 900; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
-void multiply_matrices_ijk_ikj_900_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 800)
-		for (int j = 0; j < 900; j += 800)
-			for (int k = 0; k < 900; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
-}
-void multiply_matrices_ijk_ikj_900_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 900; i += 850)
-		for (int j = 0; j < 900; j += 850)
-			for (int k = 0; k < 900; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
 							matrix_r_900[ii][jj] += matrix_a_900[ii][kk] * matrix_b_900[kk][jj];
 }
 void multiply_matrices_ijk_ikj_900_900() {
@@ -2864,174 +2093,34 @@ void multiply_matrices_ijk_ikj_950_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
 }
-void multiply_matrices_ijk_ikj_950_100() {
+void multiply_matrices_ijk_ikj_950_95() {
 	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 100)
-		for (int j = 0; j < 950; j += 100)
-			for (int k = 0; k < 950; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 950; i += 95)
+		for (int j = 0; j < 950; j += 95)
+			for (int k = 0; k < 950; k += 95)
+				for (int ii = i; ii < i + 95; ii++)
+					for (int kk = k; kk < k + 95; kk++)
+						for (int jj = j; jj < j + 95; jj++)
 							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
 }
-void multiply_matrices_ijk_ikj_950_150() {
+void multiply_matrices_ijk_ikj_950_190() {
 	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 150)
-		for (int j = 0; j < 950; j += 150)
-			for (int k = 0; k < 950; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 950; i += 190)
+		for (int j = 0; j < 950; j += 190)
+			for (int k = 0; k < 950; k += 190)
+				for (int ii = i; ii < i + 190; ii++)
+					for (int kk = k; kk < k + 190; kk++)
+						for (int jj = j; jj < j + 190; jj++)
 							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
 }
-void multiply_matrices_ijk_ikj_950_200() {
+void multiply_matrices_ijk_ikj_950_475() {
 	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 200)
-		for (int j = 0; j < 950; j += 200)
-			for (int k = 0; k < 950; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 250)
-		for (int j = 0; j < 950; j += 250)
-			for (int k = 0; k < 950; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 300)
-		for (int j = 0; j < 950; j += 300)
-			for (int k = 0; k < 950; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 350)
-		for (int j = 0; j < 950; j += 350)
-			for (int k = 0; k < 950; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 400)
-		for (int j = 0; j < 950; j += 400)
-			for (int k = 0; k < 950; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 450)
-		for (int j = 0; j < 950; j += 450)
-			for (int k = 0; k < 950; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 500)
-		for (int j = 0; j < 950; j += 500)
-			for (int k = 0; k < 950; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 550)
-		for (int j = 0; j < 950; j += 550)
-			for (int k = 0; k < 950; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 600)
-		for (int j = 0; j < 950; j += 600)
-			for (int k = 0; k < 950; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 650)
-		for (int j = 0; j < 950; j += 650)
-			for (int k = 0; k < 950; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 700)
-		for (int j = 0; j < 950; j += 700)
-			for (int k = 0; k < 950; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 750)
-		for (int j = 0; j < 950; j += 750)
-			for (int k = 0; k < 950; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 800)
-		for (int j = 0; j < 950; j += 800)
-			for (int k = 0; k < 950; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 850)
-		for (int j = 0; j < 950; j += 850)
-			for (int k = 0; k < 950; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
-}
-void multiply_matrices_ijk_ikj_950_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 950; i += 900)
-		for (int j = 0; j < 950; j += 900)
-			for (int k = 0; k < 950; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
+	for (int i = 0; i < 950; i += 475)
+		for (int j = 0; j < 950; j += 475)
+			for (int k = 0; k < 950; k += 475)
+				for (int ii = i; ii < i + 475; ii++)
+					for (int kk = k; kk < k + 475; kk++)
+						for (int jj = j; jj < j + 475; jj++)
 							matrix_r_950[ii][jj] += matrix_a_950[ii][kk] * matrix_b_950[kk][jj];
 }
 void multiply_matrices_ijk_ikj_950_950() {
@@ -3064,14 +2153,14 @@ void multiply_matrices_ijk_ikj_1000_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1000_150() {
+void multiply_matrices_ijk_ikj_1000_125() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 150)
-		for (int j = 0; j < 1000; j += 150)
-			for (int k = 0; k < 1000; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 1000; i += 125)
+		for (int j = 0; j < 1000; j += 125)
+			for (int k = 0; k < 1000; k += 125)
+				for (int ii = i; ii < i + 125; ii++)
+					for (int kk = k; kk < k + 125; kk++)
+						for (int jj = j; jj < j + 125; jj++)
 							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1000_200() {
@@ -3094,46 +2183,6 @@ void multiply_matrices_ijk_ikj_1000_250() {
 						for (int jj = j; jj < j + 250; jj++)
 							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1000_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 300)
-		for (int j = 0; j < 1000; j += 300)
-			for (int k = 0; k < 1000; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 350)
-		for (int j = 0; j < 1000; j += 350)
-			for (int k = 0; k < 1000; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 400)
-		for (int j = 0; j < 1000; j += 400)
-			for (int k = 0; k < 1000; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 450)
-		for (int j = 0; j < 1000; j += 450)
-			for (int k = 0; k < 1000; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
 void multiply_matrices_ijk_ikj_1000_500() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1000; i += 500)
@@ -3142,96 +2191,6 @@ void multiply_matrices_ijk_ikj_1000_500() {
 				for (int ii = i; ii < i + 500; ii++)
 					for (int kk = k; kk < k + 500; kk++)
 						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 550)
-		for (int j = 0; j < 1000; j += 550)
-			for (int k = 0; k < 1000; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 600)
-		for (int j = 0; j < 1000; j += 600)
-			for (int k = 0; k < 1000; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 650)
-		for (int j = 0; j < 1000; j += 650)
-			for (int k = 0; k < 1000; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 700)
-		for (int j = 0; j < 1000; j += 700)
-			for (int k = 0; k < 1000; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 750)
-		for (int j = 0; j < 1000; j += 750)
-			for (int k = 0; k < 1000; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 800)
-		for (int j = 0; j < 1000; j += 800)
-			for (int k = 0; k < 1000; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 850)
-		for (int j = 0; j < 1000; j += 850)
-			for (int k = 0; k < 1000; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 900)
-		for (int j = 0; j < 1000; j += 900)
-			for (int k = 0; k < 1000; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1000_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1000; i += 950)
-		for (int j = 0; j < 1000; j += 950)
-			for (int k = 0; k < 1000; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
 							matrix_r_1000[ii][jj] += matrix_a_1000[ii][kk] * matrix_b_1000[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1000_1000() {
@@ -3254,14 +2213,34 @@ void multiply_matrices_ijk_ikj_1050_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1050_100() {
+void multiply_matrices_ijk_ikj_1050_70() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 100)
-		for (int j = 0; j < 1050; j += 100)
-			for (int k = 0; k < 1050; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 1050; i += 70)
+		for (int j = 0; j < 1050; j += 70)
+			for (int k = 0; k < 1050; k += 70)
+				for (int ii = i; ii < i + 70; ii++)
+					for (int kk = k; kk < k + 70; kk++)
+						for (int jj = j; jj < j + 70; jj++)
+							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1050_75() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1050; i += 75)
+		for (int j = 0; j < 1050; j += 75)
+			for (int k = 0; k < 1050; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
+							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1050_105() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1050; i += 105)
+		for (int j = 0; j < 1050; j += 105)
+			for (int k = 0; k < 1050; k += 105)
+				for (int ii = i; ii < i + 105; ii++)
+					for (int kk = k; kk < k + 105; kk++)
+						for (int jj = j; jj < j + 105; jj++)
 							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1050_150() {
@@ -3274,34 +2253,24 @@ void multiply_matrices_ijk_ikj_1050_150() {
 						for (int jj = j; jj < j + 150; jj++)
 							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1050_200() {
+void multiply_matrices_ijk_ikj_1050_175() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 200)
-		for (int j = 0; j < 1050; j += 200)
-			for (int k = 0; k < 1050; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
+	for (int i = 0; i < 1050; i += 175)
+		for (int j = 0; j < 1050; j += 175)
+			for (int k = 0; k < 1050; k += 175)
+				for (int ii = i; ii < i + 175; ii++)
+					for (int kk = k; kk < k + 175; kk++)
+						for (int jj = j; jj < j + 175; jj++)
 							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1050_250() {
+void multiply_matrices_ijk_ikj_1050_210() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 250)
-		for (int j = 0; j < 1050; j += 250)
-			for (int k = 0; k < 1050; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 300)
-		for (int j = 0; j < 1050; j += 300)
-			for (int k = 0; k < 1050; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
+	for (int i = 0; i < 1050; i += 210)
+		for (int j = 0; j < 1050; j += 210)
+			for (int k = 0; k < 1050; k += 210)
+				for (int ii = i; ii < i + 210; ii++)
+					for (int kk = k; kk < k + 210; kk++)
+						for (int jj = j; jj < j + 210; jj++)
 							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1050_350() {
@@ -3314,134 +2283,14 @@ void multiply_matrices_ijk_ikj_1050_350() {
 						for (int jj = j; jj < j + 350; jj++)
 							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1050_400() {
+void multiply_matrices_ijk_ikj_1050_525() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 400)
-		for (int j = 0; j < 1050; j += 400)
-			for (int k = 0; k < 1050; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 450)
-		for (int j = 0; j < 1050; j += 450)
-			for (int k = 0; k < 1050; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 500)
-		for (int j = 0; j < 1050; j += 500)
-			for (int k = 0; k < 1050; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 550)
-		for (int j = 0; j < 1050; j += 550)
-			for (int k = 0; k < 1050; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 600)
-		for (int j = 0; j < 1050; j += 600)
-			for (int k = 0; k < 1050; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 650)
-		for (int j = 0; j < 1050; j += 650)
-			for (int k = 0; k < 1050; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 700)
-		for (int j = 0; j < 1050; j += 700)
-			for (int k = 0; k < 1050; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 750)
-		for (int j = 0; j < 1050; j += 750)
-			for (int k = 0; k < 1050; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 800)
-		for (int j = 0; j < 1050; j += 800)
-			for (int k = 0; k < 1050; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 850)
-		for (int j = 0; j < 1050; j += 850)
-			for (int k = 0; k < 1050; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 900)
-		for (int j = 0; j < 1050; j += 900)
-			for (int k = 0; k < 1050; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 950)
-		for (int j = 0; j < 1050; j += 950)
-			for (int k = 0; k < 1050; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1050_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1050; i += 1000)
-		for (int j = 0; j < 1050; j += 1000)
-			for (int k = 0; k < 1050; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
+	for (int i = 0; i < 1050; i += 525)
+		for (int j = 0; j < 1050; j += 525)
+			for (int k = 0; k < 1050; k += 525)
+				for (int ii = i; ii < i + 525; ii++)
+					for (int kk = k; kk < k + 525; kk++)
+						for (int jj = j; jj < j + 525; jj++)
 							matrix_r_1050[ii][jj] += matrix_a_1050[ii][kk] * matrix_b_1050[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1050_1050() {
@@ -3464,6 +2313,16 @@ void multiply_matrices_ijk_ikj_1100_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
 }
+void multiply_matrices_ijk_ikj_1100_55() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1100; i += 55)
+		for (int j = 0; j < 1100; j += 55)
+			for (int k = 0; k < 1100; k += 55)
+				for (int ii = i; ii < i + 55; ii++)
+					for (int kk = k; kk < k + 55; kk++)
+						for (int jj = j; jj < j + 55; jj++)
+							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
+}
 void multiply_matrices_ijk_ikj_1100_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1100; i += 100)
@@ -3474,84 +2333,34 @@ void multiply_matrices_ijk_ikj_1100_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1100_150() {
+void multiply_matrices_ijk_ikj_1100_110() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 150)
-		for (int j = 0; j < 1100; j += 150)
-			for (int k = 0; k < 1100; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 1100; i += 110)
+		for (int j = 0; j < 1100; j += 110)
+			for (int k = 0; k < 1100; k += 110)
+				for (int ii = i; ii < i + 110; ii++)
+					for (int kk = k; kk < k + 110; kk++)
+						for (int jj = j; jj < j + 110; jj++)
 							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1100_200() {
+void multiply_matrices_ijk_ikj_1100_220() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 200)
-		for (int j = 0; j < 1100; j += 200)
-			for (int k = 0; k < 1100; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
+	for (int i = 0; i < 1100; i += 220)
+		for (int j = 0; j < 1100; j += 220)
+			for (int k = 0; k < 1100; k += 220)
+				for (int ii = i; ii < i + 220; ii++)
+					for (int kk = k; kk < k + 220; kk++)
+						for (int jj = j; jj < j + 220; jj++)
 							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1100_250() {
+void multiply_matrices_ijk_ikj_1100_275() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 250)
-		for (int j = 0; j < 1100; j += 250)
-			for (int k = 0; k < 1100; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 300)
-		for (int j = 0; j < 1100; j += 300)
-			for (int k = 0; k < 1100; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 350)
-		for (int j = 0; j < 1100; j += 350)
-			for (int k = 0; k < 1100; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 400)
-		for (int j = 0; j < 1100; j += 400)
-			for (int k = 0; k < 1100; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 450)
-		for (int j = 0; j < 1100; j += 450)
-			for (int k = 0; k < 1100; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 500)
-		for (int j = 0; j < 1100; j += 500)
-			for (int k = 0; k < 1100; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
+	for (int i = 0; i < 1100; i += 275)
+		for (int j = 0; j < 1100; j += 275)
+			for (int k = 0; k < 1100; k += 275)
+				for (int ii = i; ii < i + 275; ii++)
+					for (int kk = k; kk < k + 275; kk++)
+						for (int jj = j; jj < j + 275; jj++)
 							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1100_550() {
@@ -3562,106 +2371,6 @@ void multiply_matrices_ijk_ikj_1100_550() {
 				for (int ii = i; ii < i + 550; ii++)
 					for (int kk = k; kk < k + 550; kk++)
 						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 600)
-		for (int j = 0; j < 1100; j += 600)
-			for (int k = 0; k < 1100; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 650)
-		for (int j = 0; j < 1100; j += 650)
-			for (int k = 0; k < 1100; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 700)
-		for (int j = 0; j < 1100; j += 700)
-			for (int k = 0; k < 1100; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 750)
-		for (int j = 0; j < 1100; j += 750)
-			for (int k = 0; k < 1100; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 800)
-		for (int j = 0; j < 1100; j += 800)
-			for (int k = 0; k < 1100; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 850)
-		for (int j = 0; j < 1100; j += 850)
-			for (int k = 0; k < 1100; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 900)
-		for (int j = 0; j < 1100; j += 900)
-			for (int k = 0; k < 1100; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 950)
-		for (int j = 0; j < 1100; j += 950)
-			for (int k = 0; k < 1100; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 1000)
-		for (int j = 0; j < 1100; j += 1000)
-			for (int k = 0; k < 1100; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
-							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1100_1050() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1100; i += 1050)
-		for (int j = 0; j < 1100; j += 1050)
-			for (int k = 0; k < 1100; k += 1050)
-				for (int ii = i; ii < i + 1050; ii++)
-					for (int kk = k; kk < k + 1050; kk++)
-						for (int jj = j; jj < j + 1050; jj++)
 							matrix_r_1100[ii][jj] += matrix_a_1100[ii][kk] * matrix_b_1100[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1100_1100() {
@@ -3684,214 +2393,34 @@ void multiply_matrices_ijk_ikj_1150_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1150_100() {
+void multiply_matrices_ijk_ikj_1150_115() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 100)
-		for (int j = 0; j < 1150; j += 100)
-			for (int k = 0; k < 1150; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 1150; i += 115)
+		for (int j = 0; j < 1150; j += 115)
+			for (int k = 0; k < 1150; k += 115)
+				for (int ii = i; ii < i + 115; ii++)
+					for (int kk = k; kk < k + 115; kk++)
+						for (int jj = j; jj < j + 115; jj++)
 							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1150_150() {
+void multiply_matrices_ijk_ikj_1150_230() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 150)
-		for (int j = 0; j < 1150; j += 150)
-			for (int k = 0; k < 1150; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 1150; i += 230)
+		for (int j = 0; j < 1150; j += 230)
+			for (int k = 0; k < 1150; k += 230)
+				for (int ii = i; ii < i + 230; ii++)
+					for (int kk = k; kk < k + 230; kk++)
+						for (int jj = j; jj < j + 230; jj++)
 							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1150_200() {
+void multiply_matrices_ijk_ikj_1150_575() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 200)
-		for (int j = 0; j < 1150; j += 200)
-			for (int k = 0; k < 1150; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 250)
-		for (int j = 0; j < 1150; j += 250)
-			for (int k = 0; k < 1150; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 300)
-		for (int j = 0; j < 1150; j += 300)
-			for (int k = 0; k < 1150; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 350)
-		for (int j = 0; j < 1150; j += 350)
-			for (int k = 0; k < 1150; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 400)
-		for (int j = 0; j < 1150; j += 400)
-			for (int k = 0; k < 1150; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 450)
-		for (int j = 0; j < 1150; j += 450)
-			for (int k = 0; k < 1150; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 500)
-		for (int j = 0; j < 1150; j += 500)
-			for (int k = 0; k < 1150; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 550)
-		for (int j = 0; j < 1150; j += 550)
-			for (int k = 0; k < 1150; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 600)
-		for (int j = 0; j < 1150; j += 600)
-			for (int k = 0; k < 1150; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 650)
-		for (int j = 0; j < 1150; j += 650)
-			for (int k = 0; k < 1150; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 700)
-		for (int j = 0; j < 1150; j += 700)
-			for (int k = 0; k < 1150; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 750)
-		for (int j = 0; j < 1150; j += 750)
-			for (int k = 0; k < 1150; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 800)
-		for (int j = 0; j < 1150; j += 800)
-			for (int k = 0; k < 1150; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 850)
-		for (int j = 0; j < 1150; j += 850)
-			for (int k = 0; k < 1150; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 900)
-		for (int j = 0; j < 1150; j += 900)
-			for (int k = 0; k < 1150; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 950)
-		for (int j = 0; j < 1150; j += 950)
-			for (int k = 0; k < 1150; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 1000)
-		for (int j = 0; j < 1150; j += 1000)
-			for (int k = 0; k < 1150; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_1050() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 1050)
-		for (int j = 0; j < 1150; j += 1050)
-			for (int k = 0; k < 1150; k += 1050)
-				for (int ii = i; ii < i + 1050; ii++)
-					for (int kk = k; kk < k + 1050; kk++)
-						for (int jj = j; jj < j + 1050; jj++)
-							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1150_1100() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1150; i += 1100)
-		for (int j = 0; j < 1150; j += 1100)
-			for (int k = 0; k < 1150; k += 1100)
-				for (int ii = i; ii < i + 1100; ii++)
-					for (int kk = k; kk < k + 1100; kk++)
-						for (int jj = j; jj < j + 1100; jj++)
+	for (int i = 0; i < 1150; i += 575)
+		for (int j = 0; j < 1150; j += 575)
+			for (int k = 0; k < 1150; k += 575)
+				for (int ii = i; ii < i + 575; ii++)
+					for (int kk = k; kk < k + 575; kk++)
+						for (int jj = j; jj < j + 575; jj++)
 							matrix_r_1150[ii][jj] += matrix_a_1150[ii][kk] * matrix_b_1150[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1150_1150() {
@@ -3914,6 +2443,36 @@ void multiply_matrices_ijk_ikj_1200_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
 }
+void multiply_matrices_ijk_ikj_1200_60() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1200; i += 60)
+		for (int j = 0; j < 1200; j += 60)
+			for (int k = 0; k < 1200; k += 60)
+				for (int ii = i; ii < i + 60; ii++)
+					for (int kk = k; kk < k + 60; kk++)
+						for (int jj = j; jj < j + 60; jj++)
+							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1200_75() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1200; i += 75)
+		for (int j = 0; j < 1200; j += 75)
+			for (int k = 0; k < 1200; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
+							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1200_80() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1200; i += 80)
+		for (int j = 0; j < 1200; j += 80)
+			for (int k = 0; k < 1200; k += 80)
+				for (int ii = i; ii < i + 80; ii++)
+					for (int kk = k; kk < k + 80; kk++)
+						for (int jj = j; jj < j + 80; jj++)
+							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
+}
 void multiply_matrices_ijk_ikj_1200_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1200; i += 100)
@@ -3922,6 +2481,16 @@ void multiply_matrices_ijk_ikj_1200_100() {
 				for (int ii = i; ii < i + 100; ii++)
 					for (int kk = k; kk < k + 100; kk++)
 						for (int jj = j; jj < j + 100; jj++)
+							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1200_120() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1200; i += 120)
+		for (int j = 0; j < 1200; j += 120)
+			for (int k = 0; k < 1200; k += 120)
+				for (int ii = i; ii < i + 120; ii++)
+					for (int kk = k; kk < k + 120; kk++)
+						for (int jj = j; jj < j + 120; jj++)
 							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1200_150() {
@@ -3944,14 +2513,14 @@ void multiply_matrices_ijk_ikj_1200_200() {
 						for (int jj = j; jj < j + 200; jj++)
 							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1200_250() {
+void multiply_matrices_ijk_ikj_1200_240() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 250)
-		for (int j = 0; j < 1200; j += 250)
-			for (int k = 0; k < 1200; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
+	for (int i = 0; i < 1200; i += 240)
+		for (int j = 0; j < 1200; j += 240)
+			for (int k = 0; k < 1200; k += 240)
+				for (int ii = i; ii < i + 240; ii++)
+					for (int kk = k; kk < k + 240; kk++)
+						for (int jj = j; jj < j + 240; jj++)
 							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1200_300() {
@@ -3964,16 +2533,6 @@ void multiply_matrices_ijk_ikj_1200_300() {
 						for (int jj = j; jj < j + 300; jj++)
 							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1200_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 350)
-		for (int j = 0; j < 1200; j += 350)
-			for (int k = 0; k < 1200; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
 void multiply_matrices_ijk_ikj_1200_400() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1200; i += 400)
@@ -3984,36 +2543,6 @@ void multiply_matrices_ijk_ikj_1200_400() {
 						for (int jj = j; jj < j + 400; jj++)
 							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1200_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 450)
-		for (int j = 0; j < 1200; j += 450)
-			for (int k = 0; k < 1200; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 500)
-		for (int j = 0; j < 1200; j += 500)
-			for (int k = 0; k < 1200; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 550)
-		for (int j = 0; j < 1200; j += 550)
-			for (int k = 0; k < 1200; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
 void multiply_matrices_ijk_ikj_1200_600() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1200; i += 600)
@@ -4022,116 +2551,6 @@ void multiply_matrices_ijk_ikj_1200_600() {
 				for (int ii = i; ii < i + 600; ii++)
 					for (int kk = k; kk < k + 600; kk++)
 						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 650)
-		for (int j = 0; j < 1200; j += 650)
-			for (int k = 0; k < 1200; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 700)
-		for (int j = 0; j < 1200; j += 700)
-			for (int k = 0; k < 1200; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 750)
-		for (int j = 0; j < 1200; j += 750)
-			for (int k = 0; k < 1200; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 800)
-		for (int j = 0; j < 1200; j += 800)
-			for (int k = 0; k < 1200; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 850)
-		for (int j = 0; j < 1200; j += 850)
-			for (int k = 0; k < 1200; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 900)
-		for (int j = 0; j < 1200; j += 900)
-			for (int k = 0; k < 1200; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 950)
-		for (int j = 0; j < 1200; j += 950)
-			for (int k = 0; k < 1200; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 1000)
-		for (int j = 0; j < 1200; j += 1000)
-			for (int k = 0; k < 1200; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_1050() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 1050)
-		for (int j = 0; j < 1200; j += 1050)
-			for (int k = 0; k < 1200; k += 1050)
-				for (int ii = i; ii < i + 1050; ii++)
-					for (int kk = k; kk < k + 1050; kk++)
-						for (int jj = j; jj < j + 1050; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_1100() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 1100)
-		for (int j = 0; j < 1200; j += 1100)
-			for (int k = 0; k < 1200; k += 1100)
-				for (int ii = i; ii < i + 1100; ii++)
-					for (int kk = k; kk < k + 1100; kk++)
-						for (int jj = j; jj < j + 1100; jj++)
-							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1200_1150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1200; i += 1150)
-		for (int j = 0; j < 1200; j += 1150)
-			for (int k = 0; k < 1200; k += 1150)
-				for (int ii = i; ii < i + 1150; ii++)
-					for (int kk = k; kk < k + 1150; kk++)
-						for (int jj = j; jj < j + 1150; jj++)
 							matrix_r_1200[ii][jj] += matrix_a_1200[ii][kk] * matrix_b_1200[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1200_1200() {
@@ -4154,34 +2573,14 @@ void multiply_matrices_ijk_ikj_1250_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1250_100() {
+void multiply_matrices_ijk_ikj_1250_125() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 100)
-		for (int j = 0; j < 1250; j += 100)
-			for (int k = 0; k < 1250; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 150)
-		for (int j = 0; j < 1250; j += 150)
-			for (int k = 0; k < 1250; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 200)
-		for (int j = 0; j < 1250; j += 200)
-			for (int k = 0; k < 1250; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
+	for (int i = 0; i < 1250; i += 125)
+		for (int j = 0; j < 1250; j += 125)
+			for (int k = 0; k < 1250; k += 125)
+				for (int ii = i; ii < i + 125; ii++)
+					for (int kk = k; kk < k + 125; kk++)
+						for (int jj = j; jj < j + 125; jj++)
 							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1250_250() {
@@ -4194,194 +2593,14 @@ void multiply_matrices_ijk_ikj_1250_250() {
 						for (int jj = j; jj < j + 250; jj++)
 							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1250_300() {
+void multiply_matrices_ijk_ikj_1250_625() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 300)
-		for (int j = 0; j < 1250; j += 300)
-			for (int k = 0; k < 1250; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 350)
-		for (int j = 0; j < 1250; j += 350)
-			for (int k = 0; k < 1250; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 400)
-		for (int j = 0; j < 1250; j += 400)
-			for (int k = 0; k < 1250; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 450)
-		for (int j = 0; j < 1250; j += 450)
-			for (int k = 0; k < 1250; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 500)
-		for (int j = 0; j < 1250; j += 500)
-			for (int k = 0; k < 1250; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 550)
-		for (int j = 0; j < 1250; j += 550)
-			for (int k = 0; k < 1250; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 600)
-		for (int j = 0; j < 1250; j += 600)
-			for (int k = 0; k < 1250; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 650)
-		for (int j = 0; j < 1250; j += 650)
-			for (int k = 0; k < 1250; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 700)
-		for (int j = 0; j < 1250; j += 700)
-			for (int k = 0; k < 1250; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 750)
-		for (int j = 0; j < 1250; j += 750)
-			for (int k = 0; k < 1250; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 800)
-		for (int j = 0; j < 1250; j += 800)
-			for (int k = 0; k < 1250; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 850)
-		for (int j = 0; j < 1250; j += 850)
-			for (int k = 0; k < 1250; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 900)
-		for (int j = 0; j < 1250; j += 900)
-			for (int k = 0; k < 1250; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 950)
-		for (int j = 0; j < 1250; j += 950)
-			for (int k = 0; k < 1250; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 1000)
-		for (int j = 0; j < 1250; j += 1000)
-			for (int k = 0; k < 1250; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_1050() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 1050)
-		for (int j = 0; j < 1250; j += 1050)
-			for (int k = 0; k < 1250; k += 1050)
-				for (int ii = i; ii < i + 1050; ii++)
-					for (int kk = k; kk < k + 1050; kk++)
-						for (int jj = j; jj < j + 1050; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_1100() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 1100)
-		for (int j = 0; j < 1250; j += 1100)
-			for (int k = 0; k < 1250; k += 1100)
-				for (int ii = i; ii < i + 1100; ii++)
-					for (int kk = k; kk < k + 1100; kk++)
-						for (int jj = j; jj < j + 1100; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_1150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 1150)
-		for (int j = 0; j < 1250; j += 1150)
-			for (int k = 0; k < 1250; k += 1150)
-				for (int ii = i; ii < i + 1150; ii++)
-					for (int kk = k; kk < k + 1150; kk++)
-						for (int jj = j; jj < j + 1150; jj++)
-							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1250_1200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1250; i += 1200)
-		for (int j = 0; j < 1250; j += 1200)
-			for (int k = 0; k < 1250; k += 1200)
-				for (int ii = i; ii < i + 1200; ii++)
-					for (int kk = k; kk < k + 1200; kk++)
-						for (int jj = j; jj < j + 1200; jj++)
+	for (int i = 0; i < 1250; i += 625)
+		for (int j = 0; j < 1250; j += 625)
+			for (int k = 0; k < 1250; k += 625)
+				for (int ii = i; ii < i + 625; ii++)
+					for (int kk = k; kk < k + 625; kk++)
+						for (int jj = j; jj < j + 625; jj++)
 							matrix_r_1250[ii][jj] += matrix_a_1250[ii][kk] * matrix_b_1250[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1250_1250() {
@@ -4404,6 +2623,26 @@ void multiply_matrices_ijk_ikj_1300_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
 }
+void multiply_matrices_ijk_ikj_1300_52() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1300; i += 52)
+		for (int j = 0; j < 1300; j += 52)
+			for (int k = 0; k < 1300; k += 52)
+				for (int ii = i; ii < i + 52; ii++)
+					for (int kk = k; kk < k + 52; kk++)
+						for (int jj = j; jj < j + 52; jj++)
+							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1300_65() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1300; i += 65)
+		for (int j = 0; j < 1300; j += 65)
+			for (int k = 0; k < 1300; k += 65)
+				for (int ii = i; ii < i + 65; ii++)
+					for (int kk = k; kk < k + 65; kk++)
+						for (int jj = j; jj < j + 65; jj++)
+							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
+}
 void multiply_matrices_ijk_ikj_1300_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1300; i += 100)
@@ -4414,104 +2653,34 @@ void multiply_matrices_ijk_ikj_1300_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1300_150() {
+void multiply_matrices_ijk_ikj_1300_130() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 150)
-		for (int j = 0; j < 1300; j += 150)
-			for (int k = 0; k < 1300; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 1300; i += 130)
+		for (int j = 0; j < 1300; j += 130)
+			for (int k = 0; k < 1300; k += 130)
+				for (int ii = i; ii < i + 130; ii++)
+					for (int kk = k; kk < k + 130; kk++)
+						for (int jj = j; jj < j + 130; jj++)
 							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1300_200() {
+void multiply_matrices_ijk_ikj_1300_260() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 200)
-		for (int j = 0; j < 1300; j += 200)
-			for (int k = 0; k < 1300; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
+	for (int i = 0; i < 1300; i += 260)
+		for (int j = 0; j < 1300; j += 260)
+			for (int k = 0; k < 1300; k += 260)
+				for (int ii = i; ii < i + 260; ii++)
+					for (int kk = k; kk < k + 260; kk++)
+						for (int jj = j; jj < j + 260; jj++)
 							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1300_250() {
+void multiply_matrices_ijk_ikj_1300_325() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 250)
-		for (int j = 0; j < 1300; j += 250)
-			for (int k = 0; k < 1300; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 300)
-		for (int j = 0; j < 1300; j += 300)
-			for (int k = 0; k < 1300; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 350)
-		for (int j = 0; j < 1300; j += 350)
-			for (int k = 0; k < 1300; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 400)
-		for (int j = 0; j < 1300; j += 400)
-			for (int k = 0; k < 1300; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 450)
-		for (int j = 0; j < 1300; j += 450)
-			for (int k = 0; k < 1300; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 500)
-		for (int j = 0; j < 1300; j += 500)
-			for (int k = 0; k < 1300; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 550)
-		for (int j = 0; j < 1300; j += 550)
-			for (int k = 0; k < 1300; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 600)
-		for (int j = 0; j < 1300; j += 600)
-			for (int k = 0; k < 1300; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
+	for (int i = 0; i < 1300; i += 325)
+		for (int j = 0; j < 1300; j += 325)
+			for (int k = 0; k < 1300; k += 325)
+				for (int ii = i; ii < i + 325; ii++)
+					for (int kk = k; kk < k + 325; kk++)
+						for (int jj = j; jj < j + 325; jj++)
 							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1300_650() {
@@ -4522,126 +2691,6 @@ void multiply_matrices_ijk_ikj_1300_650() {
 				for (int ii = i; ii < i + 650; ii++)
 					for (int kk = k; kk < k + 650; kk++)
 						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 700)
-		for (int j = 0; j < 1300; j += 700)
-			for (int k = 0; k < 1300; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 750)
-		for (int j = 0; j < 1300; j += 750)
-			for (int k = 0; k < 1300; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 800)
-		for (int j = 0; j < 1300; j += 800)
-			for (int k = 0; k < 1300; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 850)
-		for (int j = 0; j < 1300; j += 850)
-			for (int k = 0; k < 1300; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 900)
-		for (int j = 0; j < 1300; j += 900)
-			for (int k = 0; k < 1300; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 950)
-		for (int j = 0; j < 1300; j += 950)
-			for (int k = 0; k < 1300; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 1000)
-		for (int j = 0; j < 1300; j += 1000)
-			for (int k = 0; k < 1300; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_1050() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 1050)
-		for (int j = 0; j < 1300; j += 1050)
-			for (int k = 0; k < 1300; k += 1050)
-				for (int ii = i; ii < i + 1050; ii++)
-					for (int kk = k; kk < k + 1050; kk++)
-						for (int jj = j; jj < j + 1050; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_1100() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 1100)
-		for (int j = 0; j < 1300; j += 1100)
-			for (int k = 0; k < 1300; k += 1100)
-				for (int ii = i; ii < i + 1100; ii++)
-					for (int kk = k; kk < k + 1100; kk++)
-						for (int jj = j; jj < j + 1100; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_1150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 1150)
-		for (int j = 0; j < 1300; j += 1150)
-			for (int k = 0; k < 1300; k += 1150)
-				for (int ii = i; ii < i + 1150; ii++)
-					for (int kk = k; kk < k + 1150; kk++)
-						for (int jj = j; jj < j + 1150; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_1200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 1200)
-		for (int j = 0; j < 1300; j += 1200)
-			for (int k = 0; k < 1300; k += 1200)
-				for (int ii = i; ii < i + 1200; ii++)
-					for (int kk = k; kk < k + 1200; kk++)
-						for (int jj = j; jj < j + 1200; jj++)
-							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1300_1250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1300; i += 1250)
-		for (int j = 0; j < 1300; j += 1250)
-			for (int k = 0; k < 1300; k += 1250)
-				for (int ii = i; ii < i + 1250; ii++)
-					for (int kk = k; kk < k + 1250; kk++)
-						for (int jj = j; jj < j + 1250; jj++)
 							matrix_r_1300[ii][jj] += matrix_a_1300[ii][kk] * matrix_b_1300[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1300_1300() {
@@ -4664,14 +2713,44 @@ void multiply_matrices_ijk_ikj_1350_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1350_100() {
+void multiply_matrices_ijk_ikj_1350_54() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 100)
-		for (int j = 0; j < 1350; j += 100)
-			for (int k = 0; k < 1350; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 1350; i += 54)
+		for (int j = 0; j < 1350; j += 54)
+			for (int k = 0; k < 1350; k += 54)
+				for (int ii = i; ii < i + 54; ii++)
+					for (int kk = k; kk < k + 54; kk++)
+						for (int jj = j; jj < j + 54; jj++)
+							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1350_75() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1350; i += 75)
+		for (int j = 0; j < 1350; j += 75)
+			for (int k = 0; k < 1350; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
+							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1350_90() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1350; i += 90)
+		for (int j = 0; j < 1350; j += 90)
+			for (int k = 0; k < 1350; k += 90)
+				for (int ii = i; ii < i + 90; ii++)
+					for (int kk = k; kk < k + 90; kk++)
+						for (int jj = j; jj < j + 90; jj++)
+							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1350_135() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1350; i += 135)
+		for (int j = 0; j < 1350; j += 135)
+			for (int k = 0; k < 1350; k += 135)
+				for (int ii = i; ii < i + 135; ii++)
+					for (int kk = k; kk < k + 135; kk++)
+						for (int jj = j; jj < j + 135; jj++)
 							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1350_150() {
@@ -4684,54 +2763,24 @@ void multiply_matrices_ijk_ikj_1350_150() {
 						for (int jj = j; jj < j + 150; jj++)
 							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1350_200() {
+void multiply_matrices_ijk_ikj_1350_225() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 200)
-		for (int j = 0; j < 1350; j += 200)
-			for (int k = 0; k < 1350; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
+	for (int i = 0; i < 1350; i += 225)
+		for (int j = 0; j < 1350; j += 225)
+			for (int k = 0; k < 1350; k += 225)
+				for (int ii = i; ii < i + 225; ii++)
+					for (int kk = k; kk < k + 225; kk++)
+						for (int jj = j; jj < j + 225; jj++)
 							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1350_250() {
+void multiply_matrices_ijk_ikj_1350_270() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 250)
-		for (int j = 0; j < 1350; j += 250)
-			for (int k = 0; k < 1350; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 300)
-		for (int j = 0; j < 1350; j += 300)
-			for (int k = 0; k < 1350; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 350)
-		for (int j = 0; j < 1350; j += 350)
-			for (int k = 0; k < 1350; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 400)
-		for (int j = 0; j < 1350; j += 400)
-			for (int k = 0; k < 1350; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
+	for (int i = 0; i < 1350; i += 270)
+		for (int j = 0; j < 1350; j += 270)
+			for (int k = 0; k < 1350; k += 270)
+				for (int ii = i; ii < i + 270; ii++)
+					for (int kk = k; kk < k + 270; kk++)
+						for (int jj = j; jj < j + 270; jj++)
 							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1350_450() {
@@ -4744,174 +2793,14 @@ void multiply_matrices_ijk_ikj_1350_450() {
 						for (int jj = j; jj < j + 450; jj++)
 							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1350_500() {
+void multiply_matrices_ijk_ikj_1350_675() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 500)
-		for (int j = 0; j < 1350; j += 500)
-			for (int k = 0; k < 1350; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 550)
-		for (int j = 0; j < 1350; j += 550)
-			for (int k = 0; k < 1350; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 600)
-		for (int j = 0; j < 1350; j += 600)
-			for (int k = 0; k < 1350; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 650)
-		for (int j = 0; j < 1350; j += 650)
-			for (int k = 0; k < 1350; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 700)
-		for (int j = 0; j < 1350; j += 700)
-			for (int k = 0; k < 1350; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 750)
-		for (int j = 0; j < 1350; j += 750)
-			for (int k = 0; k < 1350; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 800)
-		for (int j = 0; j < 1350; j += 800)
-			for (int k = 0; k < 1350; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 850)
-		for (int j = 0; j < 1350; j += 850)
-			for (int k = 0; k < 1350; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 900)
-		for (int j = 0; j < 1350; j += 900)
-			for (int k = 0; k < 1350; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 950)
-		for (int j = 0; j < 1350; j += 950)
-			for (int k = 0; k < 1350; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 1000)
-		for (int j = 0; j < 1350; j += 1000)
-			for (int k = 0; k < 1350; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_1050() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 1050)
-		for (int j = 0; j < 1350; j += 1050)
-			for (int k = 0; k < 1350; k += 1050)
-				for (int ii = i; ii < i + 1050; ii++)
-					for (int kk = k; kk < k + 1050; kk++)
-						for (int jj = j; jj < j + 1050; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_1100() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 1100)
-		for (int j = 0; j < 1350; j += 1100)
-			for (int k = 0; k < 1350; k += 1100)
-				for (int ii = i; ii < i + 1100; ii++)
-					for (int kk = k; kk < k + 1100; kk++)
-						for (int jj = j; jj < j + 1100; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_1150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 1150)
-		for (int j = 0; j < 1350; j += 1150)
-			for (int k = 0; k < 1350; k += 1150)
-				for (int ii = i; ii < i + 1150; ii++)
-					for (int kk = k; kk < k + 1150; kk++)
-						for (int jj = j; jj < j + 1150; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_1200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 1200)
-		for (int j = 0; j < 1350; j += 1200)
-			for (int k = 0; k < 1350; k += 1200)
-				for (int ii = i; ii < i + 1200; ii++)
-					for (int kk = k; kk < k + 1200; kk++)
-						for (int jj = j; jj < j + 1200; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_1250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 1250)
-		for (int j = 0; j < 1350; j += 1250)
-			for (int k = 0; k < 1350; k += 1250)
-				for (int ii = i; ii < i + 1250; ii++)
-					for (int kk = k; kk < k + 1250; kk++)
-						for (int jj = j; jj < j + 1250; jj++)
-							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1350_1300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1350; i += 1300)
-		for (int j = 0; j < 1350; j += 1300)
-			for (int k = 0; k < 1350; k += 1300)
-				for (int ii = i; ii < i + 1300; ii++)
-					for (int kk = k; kk < k + 1300; kk++)
-						for (int jj = j; jj < j + 1300; jj++)
+	for (int i = 0; i < 1350; i += 675)
+		for (int j = 0; j < 1350; j += 675)
+			for (int k = 0; k < 1350; k += 675)
+				for (int ii = i; ii < i + 675; ii++)
+					for (int kk = k; kk < k + 675; kk++)
+						for (int jj = j; jj < j + 675; jj++)
 							matrix_r_1350[ii][jj] += matrix_a_1350[ii][kk] * matrix_b_1350[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1350_1350() {
@@ -4934,6 +2823,26 @@ void multiply_matrices_ijk_ikj_1400_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
 }
+void multiply_matrices_ijk_ikj_1400_56() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1400; i += 56)
+		for (int j = 0; j < 1400; j += 56)
+			for (int k = 0; k < 1400; k += 56)
+				for (int ii = i; ii < i + 56; ii++)
+					for (int kk = k; kk < k + 56; kk++)
+						for (int jj = j; jj < j + 56; jj++)
+							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1400_70() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1400; i += 70)
+		for (int j = 0; j < 1400; j += 70)
+			for (int k = 0; k < 1400; k += 70)
+				for (int ii = i; ii < i + 70; ii++)
+					for (int kk = k; kk < k + 70; kk++)
+						for (int jj = j; jj < j + 70; jj++)
+							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
+}
 void multiply_matrices_ijk_ikj_1400_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1400; i += 100)
@@ -4944,14 +2853,24 @@ void multiply_matrices_ijk_ikj_1400_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1400_150() {
+void multiply_matrices_ijk_ikj_1400_140() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 150)
-		for (int j = 0; j < 1400; j += 150)
-			for (int k = 0; k < 1400; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 1400; i += 140)
+		for (int j = 0; j < 1400; j += 140)
+			for (int k = 0; k < 1400; k += 140)
+				for (int ii = i; ii < i + 140; ii++)
+					for (int kk = k; kk < k + 140; kk++)
+						for (int jj = j; jj < j + 140; jj++)
+							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1400_175() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1400; i += 175)
+		for (int j = 0; j < 1400; j += 175)
+			for (int k = 0; k < 1400; k += 175)
+				for (int ii = i; ii < i + 175; ii++)
+					for (int kk = k; kk < k + 175; kk++)
+						for (int jj = j; jj < j + 175; jj++)
 							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1400_200() {
@@ -4964,24 +2883,14 @@ void multiply_matrices_ijk_ikj_1400_200() {
 						for (int jj = j; jj < j + 200; jj++)
 							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1400_250() {
+void multiply_matrices_ijk_ikj_1400_280() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 250)
-		for (int j = 0; j < 1400; j += 250)
-			for (int k = 0; k < 1400; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 300)
-		for (int j = 0; j < 1400; j += 300)
-			for (int k = 0; k < 1400; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
+	for (int i = 0; i < 1400; i += 280)
+		for (int j = 0; j < 1400; j += 280)
+			for (int k = 0; k < 1400; k += 280)
+				for (int ii = i; ii < i + 280; ii++)
+					for (int kk = k; kk < k + 280; kk++)
+						for (int jj = j; jj < j + 280; jj++)
 							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1400_350() {
@@ -4994,66 +2903,6 @@ void multiply_matrices_ijk_ikj_1400_350() {
 						for (int jj = j; jj < j + 350; jj++)
 							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1400_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 400)
-		for (int j = 0; j < 1400; j += 400)
-			for (int k = 0; k < 1400; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 450)
-		for (int j = 0; j < 1400; j += 450)
-			for (int k = 0; k < 1400; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 500)
-		for (int j = 0; j < 1400; j += 500)
-			for (int k = 0; k < 1400; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 550)
-		for (int j = 0; j < 1400; j += 550)
-			for (int k = 0; k < 1400; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 600)
-		for (int j = 0; j < 1400; j += 600)
-			for (int k = 0; k < 1400; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 650)
-		for (int j = 0; j < 1400; j += 650)
-			for (int k = 0; k < 1400; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
 void multiply_matrices_ijk_ikj_1400_700() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1400; i += 700)
@@ -5062,136 +2911,6 @@ void multiply_matrices_ijk_ikj_1400_700() {
 				for (int ii = i; ii < i + 700; ii++)
 					for (int kk = k; kk < k + 700; kk++)
 						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 750)
-		for (int j = 0; j < 1400; j += 750)
-			for (int k = 0; k < 1400; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 800)
-		for (int j = 0; j < 1400; j += 800)
-			for (int k = 0; k < 1400; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 850)
-		for (int j = 0; j < 1400; j += 850)
-			for (int k = 0; k < 1400; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 900)
-		for (int j = 0; j < 1400; j += 900)
-			for (int k = 0; k < 1400; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 950)
-		for (int j = 0; j < 1400; j += 950)
-			for (int k = 0; k < 1400; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 1000)
-		for (int j = 0; j < 1400; j += 1000)
-			for (int k = 0; k < 1400; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_1050() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 1050)
-		for (int j = 0; j < 1400; j += 1050)
-			for (int k = 0; k < 1400; k += 1050)
-				for (int ii = i; ii < i + 1050; ii++)
-					for (int kk = k; kk < k + 1050; kk++)
-						for (int jj = j; jj < j + 1050; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_1100() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 1100)
-		for (int j = 0; j < 1400; j += 1100)
-			for (int k = 0; k < 1400; k += 1100)
-				for (int ii = i; ii < i + 1100; ii++)
-					for (int kk = k; kk < k + 1100; kk++)
-						for (int jj = j; jj < j + 1100; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_1150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 1150)
-		for (int j = 0; j < 1400; j += 1150)
-			for (int k = 0; k < 1400; k += 1150)
-				for (int ii = i; ii < i + 1150; ii++)
-					for (int kk = k; kk < k + 1150; kk++)
-						for (int jj = j; jj < j + 1150; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_1200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 1200)
-		for (int j = 0; j < 1400; j += 1200)
-			for (int k = 0; k < 1400; k += 1200)
-				for (int ii = i; ii < i + 1200; ii++)
-					for (int kk = k; kk < k + 1200; kk++)
-						for (int jj = j; jj < j + 1200; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_1250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 1250)
-		for (int j = 0; j < 1400; j += 1250)
-			for (int k = 0; k < 1400; k += 1250)
-				for (int ii = i; ii < i + 1250; ii++)
-					for (int kk = k; kk < k + 1250; kk++)
-						for (int jj = j; jj < j + 1250; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_1300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 1300)
-		for (int j = 0; j < 1400; j += 1300)
-			for (int k = 0; k < 1400; k += 1300)
-				for (int ii = i; ii < i + 1300; ii++)
-					for (int kk = k; kk < k + 1300; kk++)
-						for (int jj = j; jj < j + 1300; jj++)
-							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1400_1350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1400; i += 1350)
-		for (int j = 0; j < 1400; j += 1350)
-			for (int k = 0; k < 1400; k += 1350)
-				for (int ii = i; ii < i + 1350; ii++)
-					for (int kk = k; kk < k + 1350; kk++)
-						for (int jj = j; jj < j + 1350; jj++)
 							matrix_r_1400[ii][jj] += matrix_a_1400[ii][kk] * matrix_b_1400[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1400_1400() {
@@ -5214,274 +2933,44 @@ void multiply_matrices_ijk_ikj_1450_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1450_100() {
+void multiply_matrices_ijk_ikj_1450_58() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 100)
-		for (int j = 0; j < 1450; j += 100)
-			for (int k = 0; k < 1450; k += 100)
-				for (int ii = i; ii < i + 100; ii++)
-					for (int kk = k; kk < k + 100; kk++)
-						for (int jj = j; jj < j + 100; jj++)
+	for (int i = 0; i < 1450; i += 58)
+		for (int j = 0; j < 1450; j += 58)
+			for (int k = 0; k < 1450; k += 58)
+				for (int ii = i; ii < i + 58; ii++)
+					for (int kk = k; kk < k + 58; kk++)
+						for (int jj = j; jj < j + 58; jj++)
 							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1450_150() {
+void multiply_matrices_ijk_ikj_1450_145() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 150)
-		for (int j = 0; j < 1450; j += 150)
-			for (int k = 0; k < 1450; k += 150)
-				for (int ii = i; ii < i + 150; ii++)
-					for (int kk = k; kk < k + 150; kk++)
-						for (int jj = j; jj < j + 150; jj++)
+	for (int i = 0; i < 1450; i += 145)
+		for (int j = 0; j < 1450; j += 145)
+			for (int k = 0; k < 1450; k += 145)
+				for (int ii = i; ii < i + 145; ii++)
+					for (int kk = k; kk < k + 145; kk++)
+						for (int jj = j; jj < j + 145; jj++)
 							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1450_200() {
+void multiply_matrices_ijk_ikj_1450_290() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 200)
-		for (int j = 0; j < 1450; j += 200)
-			for (int k = 0; k < 1450; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
+	for (int i = 0; i < 1450; i += 290)
+		for (int j = 0; j < 1450; j += 290)
+			for (int k = 0; k < 1450; k += 290)
+				for (int ii = i; ii < i + 290; ii++)
+					for (int kk = k; kk < k + 290; kk++)
+						for (int jj = j; jj < j + 290; jj++)
 							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1450_250() {
+void multiply_matrices_ijk_ikj_1450_725() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 250)
-		for (int j = 0; j < 1450; j += 250)
-			for (int k = 0; k < 1450; k += 250)
-				for (int ii = i; ii < i + 250; ii++)
-					for (int kk = k; kk < k + 250; kk++)
-						for (int jj = j; jj < j + 250; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 300)
-		for (int j = 0; j < 1450; j += 300)
-			for (int k = 0; k < 1450; k += 300)
-				for (int ii = i; ii < i + 300; ii++)
-					for (int kk = k; kk < k + 300; kk++)
-						for (int jj = j; jj < j + 300; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 350)
-		for (int j = 0; j < 1450; j += 350)
-			for (int k = 0; k < 1450; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 400)
-		for (int j = 0; j < 1450; j += 400)
-			for (int k = 0; k < 1450; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 450)
-		for (int j = 0; j < 1450; j += 450)
-			for (int k = 0; k < 1450; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_500() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 500)
-		for (int j = 0; j < 1450; j += 500)
-			for (int k = 0; k < 1450; k += 500)
-				for (int ii = i; ii < i + 500; ii++)
-					for (int kk = k; kk < k + 500; kk++)
-						for (int jj = j; jj < j + 500; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 550)
-		for (int j = 0; j < 1450; j += 550)
-			for (int k = 0; k < 1450; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 600)
-		for (int j = 0; j < 1450; j += 600)
-			for (int k = 0; k < 1450; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 650)
-		for (int j = 0; j < 1450; j += 650)
-			for (int k = 0; k < 1450; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 700)
-		for (int j = 0; j < 1450; j += 700)
-			for (int k = 0; k < 1450; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_750() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 750)
-		for (int j = 0; j < 1450; j += 750)
-			for (int k = 0; k < 1450; k += 750)
-				for (int ii = i; ii < i + 750; ii++)
-					for (int kk = k; kk < k + 750; kk++)
-						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 800)
-		for (int j = 0; j < 1450; j += 800)
-			for (int k = 0; k < 1450; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 850)
-		for (int j = 0; j < 1450; j += 850)
-			for (int k = 0; k < 1450; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 900)
-		for (int j = 0; j < 1450; j += 900)
-			for (int k = 0; k < 1450; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 950)
-		for (int j = 0; j < 1450; j += 950)
-			for (int k = 0; k < 1450; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 1000)
-		for (int j = 0; j < 1450; j += 1000)
-			for (int k = 0; k < 1450; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_1050() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 1050)
-		for (int j = 0; j < 1450; j += 1050)
-			for (int k = 0; k < 1450; k += 1050)
-				for (int ii = i; ii < i + 1050; ii++)
-					for (int kk = k; kk < k + 1050; kk++)
-						for (int jj = j; jj < j + 1050; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_1100() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 1100)
-		for (int j = 0; j < 1450; j += 1100)
-			for (int k = 0; k < 1450; k += 1100)
-				for (int ii = i; ii < i + 1100; ii++)
-					for (int kk = k; kk < k + 1100; kk++)
-						for (int jj = j; jj < j + 1100; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_1150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 1150)
-		for (int j = 0; j < 1450; j += 1150)
-			for (int k = 0; k < 1450; k += 1150)
-				for (int ii = i; ii < i + 1150; ii++)
-					for (int kk = k; kk < k + 1150; kk++)
-						for (int jj = j; jj < j + 1150; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_1200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 1200)
-		for (int j = 0; j < 1450; j += 1200)
-			for (int k = 0; k < 1450; k += 1200)
-				for (int ii = i; ii < i + 1200; ii++)
-					for (int kk = k; kk < k + 1200; kk++)
-						for (int jj = j; jj < j + 1200; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_1250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 1250)
-		for (int j = 0; j < 1450; j += 1250)
-			for (int k = 0; k < 1450; k += 1250)
-				for (int ii = i; ii < i + 1250; ii++)
-					for (int kk = k; kk < k + 1250; kk++)
-						for (int jj = j; jj < j + 1250; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_1300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 1300)
-		for (int j = 0; j < 1450; j += 1300)
-			for (int k = 0; k < 1450; k += 1300)
-				for (int ii = i; ii < i + 1300; ii++)
-					for (int kk = k; kk < k + 1300; kk++)
-						for (int jj = j; jj < j + 1300; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_1350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 1350)
-		for (int j = 0; j < 1450; j += 1350)
-			for (int k = 0; k < 1450; k += 1350)
-				for (int ii = i; ii < i + 1350; ii++)
-					for (int kk = k; kk < k + 1350; kk++)
-						for (int jj = j; jj < j + 1350; jj++)
-							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1450_1400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1450; i += 1400)
-		for (int j = 0; j < 1450; j += 1400)
-			for (int k = 0; k < 1450; k += 1400)
-				for (int ii = i; ii < i + 1400; ii++)
-					for (int kk = k; kk < k + 1400; kk++)
-						for (int jj = j; jj < j + 1400; jj++)
+	for (int i = 0; i < 1450; i += 725)
+		for (int j = 0; j < 1450; j += 725)
+			for (int k = 0; k < 1450; k += 725)
+				for (int ii = i; ii < i + 725; ii++)
+					for (int kk = k; kk < k + 725; kk++)
+						for (int jj = j; jj < j + 725; jj++)
 							matrix_r_1450[ii][jj] += matrix_a_1450[ii][kk] * matrix_b_1450[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1450_1450() {
@@ -5504,6 +2993,26 @@ void multiply_matrices_ijk_ikj_1500_50() {
 						for (int jj = j; jj < j + 50; jj++)
 							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
 }
+void multiply_matrices_ijk_ikj_1500_60() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1500; i += 60)
+		for (int j = 0; j < 1500; j += 60)
+			for (int k = 0; k < 1500; k += 60)
+				for (int ii = i; ii < i + 60; ii++)
+					for (int kk = k; kk < k + 60; kk++)
+						for (int jj = j; jj < j + 60; jj++)
+							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
+}
+void multiply_matrices_ijk_ikj_1500_75() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1500; i += 75)
+		for (int j = 0; j < 1500; j += 75)
+			for (int k = 0; k < 1500; k += 75)
+				for (int ii = i; ii < i + 75; ii++)
+					for (int kk = k; kk < k + 75; kk++)
+						for (int jj = j; jj < j + 75; jj++)
+							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
+}
 void multiply_matrices_ijk_ikj_1500_100() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1500; i += 100)
@@ -5514,6 +3023,16 @@ void multiply_matrices_ijk_ikj_1500_100() {
 						for (int jj = j; jj < j + 100; jj++)
 							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
 }
+void multiply_matrices_ijk_ikj_1500_125() {
+	#pragma omp parallel for
+	for (int i = 0; i < 1500; i += 125)
+		for (int j = 0; j < 1500; j += 125)
+			for (int k = 0; k < 1500; k += 125)
+				for (int ii = i; ii < i + 125; ii++)
+					for (int kk = k; kk < k + 125; kk++)
+						for (int jj = j; jj < j + 125; jj++)
+							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
+}
 void multiply_matrices_ijk_ikj_1500_150() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1500; i += 150)
@@ -5522,16 +3041,6 @@ void multiply_matrices_ijk_ikj_1500_150() {
 				for (int ii = i; ii < i + 150; ii++)
 					for (int kk = k; kk < k + 150; kk++)
 						for (int jj = j; jj < j + 150; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 200)
-		for (int j = 0; j < 1500; j += 200)
-			for (int k = 0; k < 1500; k += 200)
-				for (int ii = i; ii < i + 200; ii++)
-					for (int kk = k; kk < k + 200; kk++)
-						for (int jj = j; jj < j + 200; jj++)
 							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1500_250() {
@@ -5554,34 +3063,14 @@ void multiply_matrices_ijk_ikj_1500_300() {
 						for (int jj = j; jj < j + 300; jj++)
 							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1500_350() {
+void multiply_matrices_ijk_ikj_1500_375() {
 	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 350)
-		for (int j = 0; j < 1500; j += 350)
-			for (int k = 0; k < 1500; k += 350)
-				for (int ii = i; ii < i + 350; ii++)
-					for (int kk = k; kk < k + 350; kk++)
-						for (int jj = j; jj < j + 350; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 400)
-		for (int j = 0; j < 1500; j += 400)
-			for (int k = 0; k < 1500; k += 400)
-				for (int ii = i; ii < i + 400; ii++)
-					for (int kk = k; kk < k + 400; kk++)
-						for (int jj = j; jj < j + 400; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 450)
-		for (int j = 0; j < 1500; j += 450)
-			for (int k = 0; k < 1500; k += 450)
-				for (int ii = i; ii < i + 450; ii++)
-					for (int kk = k; kk < k + 450; kk++)
-						for (int jj = j; jj < j + 450; jj++)
+	for (int i = 0; i < 1500; i += 375)
+		for (int j = 0; j < 1500; j += 375)
+			for (int k = 0; k < 1500; k += 375)
+				for (int ii = i; ii < i + 375; ii++)
+					for (int kk = k; kk < k + 375; kk++)
+						for (int jj = j; jj < j + 375; jj++)
 							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1500_500() {
@@ -5594,46 +3083,6 @@ void multiply_matrices_ijk_ikj_1500_500() {
 						for (int jj = j; jj < j + 500; jj++)
 							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
 }
-void multiply_matrices_ijk_ikj_1500_550() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 550)
-		for (int j = 0; j < 1500; j += 550)
-			for (int k = 0; k < 1500; k += 550)
-				for (int ii = i; ii < i + 550; ii++)
-					for (int kk = k; kk < k + 550; kk++)
-						for (int jj = j; jj < j + 550; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_600() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 600)
-		for (int j = 0; j < 1500; j += 600)
-			for (int k = 0; k < 1500; k += 600)
-				for (int ii = i; ii < i + 600; ii++)
-					for (int kk = k; kk < k + 600; kk++)
-						for (int jj = j; jj < j + 600; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_650() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 650)
-		for (int j = 0; j < 1500; j += 650)
-			for (int k = 0; k < 1500; k += 650)
-				for (int ii = i; ii < i + 650; ii++)
-					for (int kk = k; kk < k + 650; kk++)
-						for (int jj = j; jj < j + 650; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_700() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 700)
-		for (int j = 0; j < 1500; j += 700)
-			for (int k = 0; k < 1500; k += 700)
-				for (int ii = i; ii < i + 700; ii++)
-					for (int kk = k; kk < k + 700; kk++)
-						for (int jj = j; jj < j + 700; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
 void multiply_matrices_ijk_ikj_1500_750() {
 	#pragma omp parallel for
 	for (int i = 0; i < 1500; i += 750)
@@ -5642,146 +3091,6 @@ void multiply_matrices_ijk_ikj_1500_750() {
 				for (int ii = i; ii < i + 750; ii++)
 					for (int kk = k; kk < k + 750; kk++)
 						for (int jj = j; jj < j + 750; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_800() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 800)
-		for (int j = 0; j < 1500; j += 800)
-			for (int k = 0; k < 1500; k += 800)
-				for (int ii = i; ii < i + 800; ii++)
-					for (int kk = k; kk < k + 800; kk++)
-						for (int jj = j; jj < j + 800; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_850() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 850)
-		for (int j = 0; j < 1500; j += 850)
-			for (int k = 0; k < 1500; k += 850)
-				for (int ii = i; ii < i + 850; ii++)
-					for (int kk = k; kk < k + 850; kk++)
-						for (int jj = j; jj < j + 850; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_900() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 900)
-		for (int j = 0; j < 1500; j += 900)
-			for (int k = 0; k < 1500; k += 900)
-				for (int ii = i; ii < i + 900; ii++)
-					for (int kk = k; kk < k + 900; kk++)
-						for (int jj = j; jj < j + 900; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_950() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 950)
-		for (int j = 0; j < 1500; j += 950)
-			for (int k = 0; k < 1500; k += 950)
-				for (int ii = i; ii < i + 950; ii++)
-					for (int kk = k; kk < k + 950; kk++)
-						for (int jj = j; jj < j + 950; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1000() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1000)
-		for (int j = 0; j < 1500; j += 1000)
-			for (int k = 0; k < 1500; k += 1000)
-				for (int ii = i; ii < i + 1000; ii++)
-					for (int kk = k; kk < k + 1000; kk++)
-						for (int jj = j; jj < j + 1000; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1050() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1050)
-		for (int j = 0; j < 1500; j += 1050)
-			for (int k = 0; k < 1500; k += 1050)
-				for (int ii = i; ii < i + 1050; ii++)
-					for (int kk = k; kk < k + 1050; kk++)
-						for (int jj = j; jj < j + 1050; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1100() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1100)
-		for (int j = 0; j < 1500; j += 1100)
-			for (int k = 0; k < 1500; k += 1100)
-				for (int ii = i; ii < i + 1100; ii++)
-					for (int kk = k; kk < k + 1100; kk++)
-						for (int jj = j; jj < j + 1100; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1150() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1150)
-		for (int j = 0; j < 1500; j += 1150)
-			for (int k = 0; k < 1500; k += 1150)
-				for (int ii = i; ii < i + 1150; ii++)
-					for (int kk = k; kk < k + 1150; kk++)
-						for (int jj = j; jj < j + 1150; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1200() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1200)
-		for (int j = 0; j < 1500; j += 1200)
-			for (int k = 0; k < 1500; k += 1200)
-				for (int ii = i; ii < i + 1200; ii++)
-					for (int kk = k; kk < k + 1200; kk++)
-						for (int jj = j; jj < j + 1200; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1250() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1250)
-		for (int j = 0; j < 1500; j += 1250)
-			for (int k = 0; k < 1500; k += 1250)
-				for (int ii = i; ii < i + 1250; ii++)
-					for (int kk = k; kk < k + 1250; kk++)
-						for (int jj = j; jj < j + 1250; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1300() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1300)
-		for (int j = 0; j < 1500; j += 1300)
-			for (int k = 0; k < 1500; k += 1300)
-				for (int ii = i; ii < i + 1300; ii++)
-					for (int kk = k; kk < k + 1300; kk++)
-						for (int jj = j; jj < j + 1300; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1350() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1350)
-		for (int j = 0; j < 1500; j += 1350)
-			for (int k = 0; k < 1500; k += 1350)
-				for (int ii = i; ii < i + 1350; ii++)
-					for (int kk = k; kk < k + 1350; kk++)
-						for (int jj = j; jj < j + 1350; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1400() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1400)
-		for (int j = 0; j < 1500; j += 1400)
-			for (int k = 0; k < 1500; k += 1400)
-				for (int ii = i; ii < i + 1400; ii++)
-					for (int kk = k; kk < k + 1400; kk++)
-						for (int jj = j; jj < j + 1400; jj++)
-							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
-}
-void multiply_matrices_ijk_ikj_1500_1450() {
-	#pragma omp parallel for
-	for (int i = 0; i < 1500; i += 1450)
-		for (int j = 0; j < 1500; j += 1450)
-			for (int k = 0; k < 1500; k += 1450)
-				for (int ii = i; ii < i + 1450; ii++)
-					for (int kk = k; kk < k + 1450; kk++)
-						for (int jj = j; jj < j + 1450; jj++)
 							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
 }
 void multiply_matrices_ijk_ikj_1500_1500() {
@@ -5794,8 +3103,6 @@ void multiply_matrices_ijk_ikj_1500_1500() {
 						for (int jj = j; jj < j + 1500; jj++)
 							matrix_r_1500[ii][jj] += matrix_a_1500[ii][kk] * matrix_b_1500[kk][jj];
 }
-
-
 void measure(void(*measure_invocation)(void(*ff)())) {
 	measure_invocation_50("SEQ_IKJ 50", multiply_matrices_ikj_50, measure_invocation);
 	measure_invocation_50("IJK 50", multiply_matrices_ijk_50, measure_invocation);
@@ -5861,467 +3168,196 @@ void measure(void(*measure_invocation)(void(*ff)())) {
 	measure_invocation_100("IJK_IKJ 100_50", multiply_matrices_ijk_ikj_100_50, measure_invocation);
 	measure_invocation_100("IJK_IKJ 100_100", multiply_matrices_ijk_ikj_100_100, measure_invocation);
 	measure_invocation_150("IJK_IKJ 150_50", multiply_matrices_ijk_ikj_150_50, measure_invocation);
-	measure_invocation_150("IJK_IKJ 150_100", multiply_matrices_ijk_ikj_150_100, measure_invocation);
+	measure_invocation_150("IJK_IKJ 150_75", multiply_matrices_ijk_ikj_150_75, measure_invocation);
 	measure_invocation_150("IJK_IKJ 150_150", multiply_matrices_ijk_ikj_150_150, measure_invocation);
 	measure_invocation_200("IJK_IKJ 200_50", multiply_matrices_ijk_ikj_200_50, measure_invocation);
 	measure_invocation_200("IJK_IKJ 200_100", multiply_matrices_ijk_ikj_200_100, measure_invocation);
-	measure_invocation_200("IJK_IKJ 200_150", multiply_matrices_ijk_ikj_200_150, measure_invocation);
 	measure_invocation_200("IJK_IKJ 200_200", multiply_matrices_ijk_ikj_200_200, measure_invocation);
 	measure_invocation_250("IJK_IKJ 250_50", multiply_matrices_ijk_ikj_250_50, measure_invocation);
-	measure_invocation_250("IJK_IKJ 250_100", multiply_matrices_ijk_ikj_250_100, measure_invocation);
-	measure_invocation_250("IJK_IKJ 250_150", multiply_matrices_ijk_ikj_250_150, measure_invocation);
-	measure_invocation_250("IJK_IKJ 250_200", multiply_matrices_ijk_ikj_250_200, measure_invocation);
+	measure_invocation_250("IJK_IKJ 250_125", multiply_matrices_ijk_ikj_250_125, measure_invocation);
 	measure_invocation_250("IJK_IKJ 250_250", multiply_matrices_ijk_ikj_250_250, measure_invocation);
 	measure_invocation_300("IJK_IKJ 300_50", multiply_matrices_ijk_ikj_300_50, measure_invocation);
+	measure_invocation_300("IJK_IKJ 300_60", multiply_matrices_ijk_ikj_300_60, measure_invocation);
+	measure_invocation_300("IJK_IKJ 300_75", multiply_matrices_ijk_ikj_300_75, measure_invocation);
 	measure_invocation_300("IJK_IKJ 300_100", multiply_matrices_ijk_ikj_300_100, measure_invocation);
 	measure_invocation_300("IJK_IKJ 300_150", multiply_matrices_ijk_ikj_300_150, measure_invocation);
-	measure_invocation_300("IJK_IKJ 300_200", multiply_matrices_ijk_ikj_300_200, measure_invocation);
-	measure_invocation_300("IJK_IKJ 300_250", multiply_matrices_ijk_ikj_300_250, measure_invocation);
 	measure_invocation_300("IJK_IKJ 300_300", multiply_matrices_ijk_ikj_300_300, measure_invocation);
 	measure_invocation_350("IJK_IKJ 350_50", multiply_matrices_ijk_ikj_350_50, measure_invocation);
-	measure_invocation_350("IJK_IKJ 350_100", multiply_matrices_ijk_ikj_350_100, measure_invocation);
-	measure_invocation_350("IJK_IKJ 350_150", multiply_matrices_ijk_ikj_350_150, measure_invocation);
-	measure_invocation_350("IJK_IKJ 350_200", multiply_matrices_ijk_ikj_350_200, measure_invocation);
-	measure_invocation_350("IJK_IKJ 350_250", multiply_matrices_ijk_ikj_350_250, measure_invocation);
-	measure_invocation_350("IJK_IKJ 350_300", multiply_matrices_ijk_ikj_350_300, measure_invocation);
+	measure_invocation_350("IJK_IKJ 350_70", multiply_matrices_ijk_ikj_350_70, measure_invocation);
+	measure_invocation_350("IJK_IKJ 350_175", multiply_matrices_ijk_ikj_350_175, measure_invocation);
 	measure_invocation_350("IJK_IKJ 350_350", multiply_matrices_ijk_ikj_350_350, measure_invocation);
 	measure_invocation_400("IJK_IKJ 400_50", multiply_matrices_ijk_ikj_400_50, measure_invocation);
+	measure_invocation_400("IJK_IKJ 400_80", multiply_matrices_ijk_ikj_400_80, measure_invocation);
 	measure_invocation_400("IJK_IKJ 400_100", multiply_matrices_ijk_ikj_400_100, measure_invocation);
-	measure_invocation_400("IJK_IKJ 400_150", multiply_matrices_ijk_ikj_400_150, measure_invocation);
 	measure_invocation_400("IJK_IKJ 400_200", multiply_matrices_ijk_ikj_400_200, measure_invocation);
-	measure_invocation_400("IJK_IKJ 400_250", multiply_matrices_ijk_ikj_400_250, measure_invocation);
-	measure_invocation_400("IJK_IKJ 400_300", multiply_matrices_ijk_ikj_400_300, measure_invocation);
-	measure_invocation_400("IJK_IKJ 400_350", multiply_matrices_ijk_ikj_400_350, measure_invocation);
 	measure_invocation_400("IJK_IKJ 400_400", multiply_matrices_ijk_ikj_400_400, measure_invocation);
 	measure_invocation_450("IJK_IKJ 450_50", multiply_matrices_ijk_ikj_450_50, measure_invocation);
-	measure_invocation_450("IJK_IKJ 450_100", multiply_matrices_ijk_ikj_450_100, measure_invocation);
+	measure_invocation_450("IJK_IKJ 450_75", multiply_matrices_ijk_ikj_450_75, measure_invocation);
+	measure_invocation_450("IJK_IKJ 450_90", multiply_matrices_ijk_ikj_450_90, measure_invocation);
 	measure_invocation_450("IJK_IKJ 450_150", multiply_matrices_ijk_ikj_450_150, measure_invocation);
-	measure_invocation_450("IJK_IKJ 450_200", multiply_matrices_ijk_ikj_450_200, measure_invocation);
-	measure_invocation_450("IJK_IKJ 450_250", multiply_matrices_ijk_ikj_450_250, measure_invocation);
-	measure_invocation_450("IJK_IKJ 450_300", multiply_matrices_ijk_ikj_450_300, measure_invocation);
-	measure_invocation_450("IJK_IKJ 450_350", multiply_matrices_ijk_ikj_450_350, measure_invocation);
-	measure_invocation_450("IJK_IKJ 450_400", multiply_matrices_ijk_ikj_450_400, measure_invocation);
+	measure_invocation_450("IJK_IKJ 450_225", multiply_matrices_ijk_ikj_450_225, measure_invocation);
 	measure_invocation_450("IJK_IKJ 450_450", multiply_matrices_ijk_ikj_450_450, measure_invocation);
 	measure_invocation_500("IJK_IKJ 500_50", multiply_matrices_ijk_ikj_500_50, measure_invocation);
 	measure_invocation_500("IJK_IKJ 500_100", multiply_matrices_ijk_ikj_500_100, measure_invocation);
-	measure_invocation_500("IJK_IKJ 500_150", multiply_matrices_ijk_ikj_500_150, measure_invocation);
-	measure_invocation_500("IJK_IKJ 500_200", multiply_matrices_ijk_ikj_500_200, measure_invocation);
+	measure_invocation_500("IJK_IKJ 500_125", multiply_matrices_ijk_ikj_500_125, measure_invocation);
 	measure_invocation_500("IJK_IKJ 500_250", multiply_matrices_ijk_ikj_500_250, measure_invocation);
-	measure_invocation_500("IJK_IKJ 500_300", multiply_matrices_ijk_ikj_500_300, measure_invocation);
-	measure_invocation_500("IJK_IKJ 500_350", multiply_matrices_ijk_ikj_500_350, measure_invocation);
-	measure_invocation_500("IJK_IKJ 500_400", multiply_matrices_ijk_ikj_500_400, measure_invocation);
-	measure_invocation_500("IJK_IKJ 500_450", multiply_matrices_ijk_ikj_500_450, measure_invocation);
 	measure_invocation_500("IJK_IKJ 500_500", multiply_matrices_ijk_ikj_500_500, measure_invocation);
 	measure_invocation_550("IJK_IKJ 550_50", multiply_matrices_ijk_ikj_550_50, measure_invocation);
-	measure_invocation_550("IJK_IKJ 550_100", multiply_matrices_ijk_ikj_550_100, measure_invocation);
-	measure_invocation_550("IJK_IKJ 550_150", multiply_matrices_ijk_ikj_550_150, measure_invocation);
-	measure_invocation_550("IJK_IKJ 550_200", multiply_matrices_ijk_ikj_550_200, measure_invocation);
-	measure_invocation_550("IJK_IKJ 550_250", multiply_matrices_ijk_ikj_550_250, measure_invocation);
-	measure_invocation_550("IJK_IKJ 550_300", multiply_matrices_ijk_ikj_550_300, measure_invocation);
-	measure_invocation_550("IJK_IKJ 550_350", multiply_matrices_ijk_ikj_550_350, measure_invocation);
-	measure_invocation_550("IJK_IKJ 550_400", multiply_matrices_ijk_ikj_550_400, measure_invocation);
-	measure_invocation_550("IJK_IKJ 550_450", multiply_matrices_ijk_ikj_550_450, measure_invocation);
-	measure_invocation_550("IJK_IKJ 550_500", multiply_matrices_ijk_ikj_550_500, measure_invocation);
+	measure_invocation_550("IJK_IKJ 550_55", multiply_matrices_ijk_ikj_550_55, measure_invocation);
+	measure_invocation_550("IJK_IKJ 550_110", multiply_matrices_ijk_ikj_550_110, measure_invocation);
+	measure_invocation_550("IJK_IKJ 550_275", multiply_matrices_ijk_ikj_550_275, measure_invocation);
 	measure_invocation_550("IJK_IKJ 550_550", multiply_matrices_ijk_ikj_550_550, measure_invocation);
 	measure_invocation_600("IJK_IKJ 600_50", multiply_matrices_ijk_ikj_600_50, measure_invocation);
+	measure_invocation_600("IJK_IKJ 600_60", multiply_matrices_ijk_ikj_600_60, measure_invocation);
+	measure_invocation_600("IJK_IKJ 600_75", multiply_matrices_ijk_ikj_600_75, measure_invocation);
 	measure_invocation_600("IJK_IKJ 600_100", multiply_matrices_ijk_ikj_600_100, measure_invocation);
+	measure_invocation_600("IJK_IKJ 600_120", multiply_matrices_ijk_ikj_600_120, measure_invocation);
 	measure_invocation_600("IJK_IKJ 600_150", multiply_matrices_ijk_ikj_600_150, measure_invocation);
 	measure_invocation_600("IJK_IKJ 600_200", multiply_matrices_ijk_ikj_600_200, measure_invocation);
-	measure_invocation_600("IJK_IKJ 600_250", multiply_matrices_ijk_ikj_600_250, measure_invocation);
 	measure_invocation_600("IJK_IKJ 600_300", multiply_matrices_ijk_ikj_600_300, measure_invocation);
-	measure_invocation_600("IJK_IKJ 600_350", multiply_matrices_ijk_ikj_600_350, measure_invocation);
-	measure_invocation_600("IJK_IKJ 600_400", multiply_matrices_ijk_ikj_600_400, measure_invocation);
-	measure_invocation_600("IJK_IKJ 600_450", multiply_matrices_ijk_ikj_600_450, measure_invocation);
-	measure_invocation_600("IJK_IKJ 600_500", multiply_matrices_ijk_ikj_600_500, measure_invocation);
-	measure_invocation_600("IJK_IKJ 600_550", multiply_matrices_ijk_ikj_600_550, measure_invocation);
 	measure_invocation_600("IJK_IKJ 600_600", multiply_matrices_ijk_ikj_600_600, measure_invocation);
 	measure_invocation_650("IJK_IKJ 650_50", multiply_matrices_ijk_ikj_650_50, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_100", multiply_matrices_ijk_ikj_650_100, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_150", multiply_matrices_ijk_ikj_650_150, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_200", multiply_matrices_ijk_ikj_650_200, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_250", multiply_matrices_ijk_ikj_650_250, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_300", multiply_matrices_ijk_ikj_650_300, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_350", multiply_matrices_ijk_ikj_650_350, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_400", multiply_matrices_ijk_ikj_650_400, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_450", multiply_matrices_ijk_ikj_650_450, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_500", multiply_matrices_ijk_ikj_650_500, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_550", multiply_matrices_ijk_ikj_650_550, measure_invocation);
-	measure_invocation_650("IJK_IKJ 650_600", multiply_matrices_ijk_ikj_650_600, measure_invocation);
+	measure_invocation_650("IJK_IKJ 650_65", multiply_matrices_ijk_ikj_650_65, measure_invocation);
+	measure_invocation_650("IJK_IKJ 650_130", multiply_matrices_ijk_ikj_650_130, measure_invocation);
+	measure_invocation_650("IJK_IKJ 650_325", multiply_matrices_ijk_ikj_650_325, measure_invocation);
 	measure_invocation_650("IJK_IKJ 650_650", multiply_matrices_ijk_ikj_650_650, measure_invocation);
 	measure_invocation_700("IJK_IKJ 700_50", multiply_matrices_ijk_ikj_700_50, measure_invocation);
+	measure_invocation_700("IJK_IKJ 700_70", multiply_matrices_ijk_ikj_700_70, measure_invocation);
 	measure_invocation_700("IJK_IKJ 700_100", multiply_matrices_ijk_ikj_700_100, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_150", multiply_matrices_ijk_ikj_700_150, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_200", multiply_matrices_ijk_ikj_700_200, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_250", multiply_matrices_ijk_ikj_700_250, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_300", multiply_matrices_ijk_ikj_700_300, measure_invocation);
+	measure_invocation_700("IJK_IKJ 700_140", multiply_matrices_ijk_ikj_700_140, measure_invocation);
+	measure_invocation_700("IJK_IKJ 700_175", multiply_matrices_ijk_ikj_700_175, measure_invocation);
 	measure_invocation_700("IJK_IKJ 700_350", multiply_matrices_ijk_ikj_700_350, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_400", multiply_matrices_ijk_ikj_700_400, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_450", multiply_matrices_ijk_ikj_700_450, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_500", multiply_matrices_ijk_ikj_700_500, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_550", multiply_matrices_ijk_ikj_700_550, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_600", multiply_matrices_ijk_ikj_700_600, measure_invocation);
-	measure_invocation_700("IJK_IKJ 700_650", multiply_matrices_ijk_ikj_700_650, measure_invocation);
 	measure_invocation_700("IJK_IKJ 700_700", multiply_matrices_ijk_ikj_700_700, measure_invocation);
 	measure_invocation_750("IJK_IKJ 750_50", multiply_matrices_ijk_ikj_750_50, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_100", multiply_matrices_ijk_ikj_750_100, measure_invocation);
+	measure_invocation_750("IJK_IKJ 750_75", multiply_matrices_ijk_ikj_750_75, measure_invocation);
+	measure_invocation_750("IJK_IKJ 750_125", multiply_matrices_ijk_ikj_750_125, measure_invocation);
 	measure_invocation_750("IJK_IKJ 750_150", multiply_matrices_ijk_ikj_750_150, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_200", multiply_matrices_ijk_ikj_750_200, measure_invocation);
 	measure_invocation_750("IJK_IKJ 750_250", multiply_matrices_ijk_ikj_750_250, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_300", multiply_matrices_ijk_ikj_750_300, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_350", multiply_matrices_ijk_ikj_750_350, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_400", multiply_matrices_ijk_ikj_750_400, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_450", multiply_matrices_ijk_ikj_750_450, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_500", multiply_matrices_ijk_ikj_750_500, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_550", multiply_matrices_ijk_ikj_750_550, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_600", multiply_matrices_ijk_ikj_750_600, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_650", multiply_matrices_ijk_ikj_750_650, measure_invocation);
-	measure_invocation_750("IJK_IKJ 750_700", multiply_matrices_ijk_ikj_750_700, measure_invocation);
+	measure_invocation_750("IJK_IKJ 750_375", multiply_matrices_ijk_ikj_750_375, measure_invocation);
 	measure_invocation_750("IJK_IKJ 750_750", multiply_matrices_ijk_ikj_750_750, measure_invocation);
 	measure_invocation_800("IJK_IKJ 800_50", multiply_matrices_ijk_ikj_800_50, measure_invocation);
+	measure_invocation_800("IJK_IKJ 800_80", multiply_matrices_ijk_ikj_800_80, measure_invocation);
 	measure_invocation_800("IJK_IKJ 800_100", multiply_matrices_ijk_ikj_800_100, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_150", multiply_matrices_ijk_ikj_800_150, measure_invocation);
+	measure_invocation_800("IJK_IKJ 800_160", multiply_matrices_ijk_ikj_800_160, measure_invocation);
 	measure_invocation_800("IJK_IKJ 800_200", multiply_matrices_ijk_ikj_800_200, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_250", multiply_matrices_ijk_ikj_800_250, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_300", multiply_matrices_ijk_ikj_800_300, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_350", multiply_matrices_ijk_ikj_800_350, measure_invocation);
 	measure_invocation_800("IJK_IKJ 800_400", multiply_matrices_ijk_ikj_800_400, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_450", multiply_matrices_ijk_ikj_800_450, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_500", multiply_matrices_ijk_ikj_800_500, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_550", multiply_matrices_ijk_ikj_800_550, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_600", multiply_matrices_ijk_ikj_800_600, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_650", multiply_matrices_ijk_ikj_800_650, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_700", multiply_matrices_ijk_ikj_800_700, measure_invocation);
-	measure_invocation_800("IJK_IKJ 800_750", multiply_matrices_ijk_ikj_800_750, measure_invocation);
 	measure_invocation_800("IJK_IKJ 800_800", multiply_matrices_ijk_ikj_800_800, measure_invocation);
 	measure_invocation_850("IJK_IKJ 850_50", multiply_matrices_ijk_ikj_850_50, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_100", multiply_matrices_ijk_ikj_850_100, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_150", multiply_matrices_ijk_ikj_850_150, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_200", multiply_matrices_ijk_ikj_850_200, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_250", multiply_matrices_ijk_ikj_850_250, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_300", multiply_matrices_ijk_ikj_850_300, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_350", multiply_matrices_ijk_ikj_850_350, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_400", multiply_matrices_ijk_ikj_850_400, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_450", multiply_matrices_ijk_ikj_850_450, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_500", multiply_matrices_ijk_ikj_850_500, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_550", multiply_matrices_ijk_ikj_850_550, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_600", multiply_matrices_ijk_ikj_850_600, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_650", multiply_matrices_ijk_ikj_850_650, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_700", multiply_matrices_ijk_ikj_850_700, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_750", multiply_matrices_ijk_ikj_850_750, measure_invocation);
-	measure_invocation_850("IJK_IKJ 850_800", multiply_matrices_ijk_ikj_850_800, measure_invocation);
+	measure_invocation_850("IJK_IKJ 850_85", multiply_matrices_ijk_ikj_850_85, measure_invocation);
+	measure_invocation_850("IJK_IKJ 850_170", multiply_matrices_ijk_ikj_850_170, measure_invocation);
+	measure_invocation_850("IJK_IKJ 850_425", multiply_matrices_ijk_ikj_850_425, measure_invocation);
 	measure_invocation_850("IJK_IKJ 850_850", multiply_matrices_ijk_ikj_850_850, measure_invocation);
 	measure_invocation_900("IJK_IKJ 900_50", multiply_matrices_ijk_ikj_900_50, measure_invocation);
+	measure_invocation_900("IJK_IKJ 900_60", multiply_matrices_ijk_ikj_900_60, measure_invocation);
+	measure_invocation_900("IJK_IKJ 900_75", multiply_matrices_ijk_ikj_900_75, measure_invocation);
+	measure_invocation_900("IJK_IKJ 900_90", multiply_matrices_ijk_ikj_900_90, measure_invocation);
 	measure_invocation_900("IJK_IKJ 900_100", multiply_matrices_ijk_ikj_900_100, measure_invocation);
 	measure_invocation_900("IJK_IKJ 900_150", multiply_matrices_ijk_ikj_900_150, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_200", multiply_matrices_ijk_ikj_900_200, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_250", multiply_matrices_ijk_ikj_900_250, measure_invocation);
+	measure_invocation_900("IJK_IKJ 900_180", multiply_matrices_ijk_ikj_900_180, measure_invocation);
+	measure_invocation_900("IJK_IKJ 900_225", multiply_matrices_ijk_ikj_900_225, measure_invocation);
 	measure_invocation_900("IJK_IKJ 900_300", multiply_matrices_ijk_ikj_900_300, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_350", multiply_matrices_ijk_ikj_900_350, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_400", multiply_matrices_ijk_ikj_900_400, measure_invocation);
 	measure_invocation_900("IJK_IKJ 900_450", multiply_matrices_ijk_ikj_900_450, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_500", multiply_matrices_ijk_ikj_900_500, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_550", multiply_matrices_ijk_ikj_900_550, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_600", multiply_matrices_ijk_ikj_900_600, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_650", multiply_matrices_ijk_ikj_900_650, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_700", multiply_matrices_ijk_ikj_900_700, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_750", multiply_matrices_ijk_ikj_900_750, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_800", multiply_matrices_ijk_ikj_900_800, measure_invocation);
-	measure_invocation_900("IJK_IKJ 900_850", multiply_matrices_ijk_ikj_900_850, measure_invocation);
 	measure_invocation_900("IJK_IKJ 900_900", multiply_matrices_ijk_ikj_900_900, measure_invocation);
 	measure_invocation_950("IJK_IKJ 950_50", multiply_matrices_ijk_ikj_950_50, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_100", multiply_matrices_ijk_ikj_950_100, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_150", multiply_matrices_ijk_ikj_950_150, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_200", multiply_matrices_ijk_ikj_950_200, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_250", multiply_matrices_ijk_ikj_950_250, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_300", multiply_matrices_ijk_ikj_950_300, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_350", multiply_matrices_ijk_ikj_950_350, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_400", multiply_matrices_ijk_ikj_950_400, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_450", multiply_matrices_ijk_ikj_950_450, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_500", multiply_matrices_ijk_ikj_950_500, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_550", multiply_matrices_ijk_ikj_950_550, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_600", multiply_matrices_ijk_ikj_950_600, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_650", multiply_matrices_ijk_ikj_950_650, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_700", multiply_matrices_ijk_ikj_950_700, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_750", multiply_matrices_ijk_ikj_950_750, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_800", multiply_matrices_ijk_ikj_950_800, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_850", multiply_matrices_ijk_ikj_950_850, measure_invocation);
-	measure_invocation_950("IJK_IKJ 950_900", multiply_matrices_ijk_ikj_950_900, measure_invocation);
+	measure_invocation_950("IJK_IKJ 950_95", multiply_matrices_ijk_ikj_950_95, measure_invocation);
+	measure_invocation_950("IJK_IKJ 950_190", multiply_matrices_ijk_ikj_950_190, measure_invocation);
+	measure_invocation_950("IJK_IKJ 950_475", multiply_matrices_ijk_ikj_950_475, measure_invocation);
 	measure_invocation_950("IJK_IKJ 950_950", multiply_matrices_ijk_ikj_950_950, measure_invocation);
 	measure_invocation_1000("IJK_IKJ 1000_50", multiply_matrices_ijk_ikj_1000_50, measure_invocation);
 	measure_invocation_1000("IJK_IKJ 1000_100", multiply_matrices_ijk_ikj_1000_100, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_150", multiply_matrices_ijk_ikj_1000_150, measure_invocation);
+	measure_invocation_1000("IJK_IKJ 1000_125", multiply_matrices_ijk_ikj_1000_125, measure_invocation);
 	measure_invocation_1000("IJK_IKJ 1000_200", multiply_matrices_ijk_ikj_1000_200, measure_invocation);
 	measure_invocation_1000("IJK_IKJ 1000_250", multiply_matrices_ijk_ikj_1000_250, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_300", multiply_matrices_ijk_ikj_1000_300, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_350", multiply_matrices_ijk_ikj_1000_350, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_400", multiply_matrices_ijk_ikj_1000_400, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_450", multiply_matrices_ijk_ikj_1000_450, measure_invocation);
 	measure_invocation_1000("IJK_IKJ 1000_500", multiply_matrices_ijk_ikj_1000_500, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_550", multiply_matrices_ijk_ikj_1000_550, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_600", multiply_matrices_ijk_ikj_1000_600, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_650", multiply_matrices_ijk_ikj_1000_650, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_700", multiply_matrices_ijk_ikj_1000_700, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_750", multiply_matrices_ijk_ikj_1000_750, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_800", multiply_matrices_ijk_ikj_1000_800, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_850", multiply_matrices_ijk_ikj_1000_850, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_900", multiply_matrices_ijk_ikj_1000_900, measure_invocation);
-	measure_invocation_1000("IJK_IKJ 1000_950", multiply_matrices_ijk_ikj_1000_950, measure_invocation);
 	measure_invocation_1000("IJK_IKJ 1000_1000", multiply_matrices_ijk_ikj_1000_1000, measure_invocation);
 	measure_invocation_1050("IJK_IKJ 1050_50", multiply_matrices_ijk_ikj_1050_50, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_100", multiply_matrices_ijk_ikj_1050_100, measure_invocation);
+	measure_invocation_1050("IJK_IKJ 1050_70", multiply_matrices_ijk_ikj_1050_70, measure_invocation);
+	measure_invocation_1050("IJK_IKJ 1050_75", multiply_matrices_ijk_ikj_1050_75, measure_invocation);
+	measure_invocation_1050("IJK_IKJ 1050_105", multiply_matrices_ijk_ikj_1050_105, measure_invocation);
 	measure_invocation_1050("IJK_IKJ 1050_150", multiply_matrices_ijk_ikj_1050_150, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_200", multiply_matrices_ijk_ikj_1050_200, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_250", multiply_matrices_ijk_ikj_1050_250, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_300", multiply_matrices_ijk_ikj_1050_300, measure_invocation);
+	measure_invocation_1050("IJK_IKJ 1050_175", multiply_matrices_ijk_ikj_1050_175, measure_invocation);
+	measure_invocation_1050("IJK_IKJ 1050_210", multiply_matrices_ijk_ikj_1050_210, measure_invocation);
 	measure_invocation_1050("IJK_IKJ 1050_350", multiply_matrices_ijk_ikj_1050_350, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_400", multiply_matrices_ijk_ikj_1050_400, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_450", multiply_matrices_ijk_ikj_1050_450, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_500", multiply_matrices_ijk_ikj_1050_500, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_550", multiply_matrices_ijk_ikj_1050_550, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_600", multiply_matrices_ijk_ikj_1050_600, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_650", multiply_matrices_ijk_ikj_1050_650, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_700", multiply_matrices_ijk_ikj_1050_700, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_750", multiply_matrices_ijk_ikj_1050_750, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_800", multiply_matrices_ijk_ikj_1050_800, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_850", multiply_matrices_ijk_ikj_1050_850, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_900", multiply_matrices_ijk_ikj_1050_900, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_950", multiply_matrices_ijk_ikj_1050_950, measure_invocation);
-	measure_invocation_1050("IJK_IKJ 1050_1000", multiply_matrices_ijk_ikj_1050_1000, measure_invocation);
+	measure_invocation_1050("IJK_IKJ 1050_525", multiply_matrices_ijk_ikj_1050_525, measure_invocation);
 	measure_invocation_1050("IJK_IKJ 1050_1050", multiply_matrices_ijk_ikj_1050_1050, measure_invocation);
 	measure_invocation_1100("IJK_IKJ 1100_50", multiply_matrices_ijk_ikj_1100_50, measure_invocation);
+	measure_invocation_1100("IJK_IKJ 1100_55", multiply_matrices_ijk_ikj_1100_55, measure_invocation);
 	measure_invocation_1100("IJK_IKJ 1100_100", multiply_matrices_ijk_ikj_1100_100, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_150", multiply_matrices_ijk_ikj_1100_150, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_200", multiply_matrices_ijk_ikj_1100_200, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_250", multiply_matrices_ijk_ikj_1100_250, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_300", multiply_matrices_ijk_ikj_1100_300, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_350", multiply_matrices_ijk_ikj_1100_350, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_400", multiply_matrices_ijk_ikj_1100_400, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_450", multiply_matrices_ijk_ikj_1100_450, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_500", multiply_matrices_ijk_ikj_1100_500, measure_invocation);
+	measure_invocation_1100("IJK_IKJ 1100_110", multiply_matrices_ijk_ikj_1100_110, measure_invocation);
+	measure_invocation_1100("IJK_IKJ 1100_220", multiply_matrices_ijk_ikj_1100_220, measure_invocation);
+	measure_invocation_1100("IJK_IKJ 1100_275", multiply_matrices_ijk_ikj_1100_275, measure_invocation);
 	measure_invocation_1100("IJK_IKJ 1100_550", multiply_matrices_ijk_ikj_1100_550, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_600", multiply_matrices_ijk_ikj_1100_600, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_650", multiply_matrices_ijk_ikj_1100_650, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_700", multiply_matrices_ijk_ikj_1100_700, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_750", multiply_matrices_ijk_ikj_1100_750, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_800", multiply_matrices_ijk_ikj_1100_800, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_850", multiply_matrices_ijk_ikj_1100_850, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_900", multiply_matrices_ijk_ikj_1100_900, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_950", multiply_matrices_ijk_ikj_1100_950, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_1000", multiply_matrices_ijk_ikj_1100_1000, measure_invocation);
-	measure_invocation_1100("IJK_IKJ 1100_1050", multiply_matrices_ijk_ikj_1100_1050, measure_invocation);
 	measure_invocation_1100("IJK_IKJ 1100_1100", multiply_matrices_ijk_ikj_1100_1100, measure_invocation);
 	measure_invocation_1150("IJK_IKJ 1150_50", multiply_matrices_ijk_ikj_1150_50, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_100", multiply_matrices_ijk_ikj_1150_100, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_150", multiply_matrices_ijk_ikj_1150_150, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_200", multiply_matrices_ijk_ikj_1150_200, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_250", multiply_matrices_ijk_ikj_1150_250, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_300", multiply_matrices_ijk_ikj_1150_300, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_350", multiply_matrices_ijk_ikj_1150_350, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_400", multiply_matrices_ijk_ikj_1150_400, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_450", multiply_matrices_ijk_ikj_1150_450, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_500", multiply_matrices_ijk_ikj_1150_500, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_550", multiply_matrices_ijk_ikj_1150_550, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_600", multiply_matrices_ijk_ikj_1150_600, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_650", multiply_matrices_ijk_ikj_1150_650, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_700", multiply_matrices_ijk_ikj_1150_700, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_750", multiply_matrices_ijk_ikj_1150_750, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_800", multiply_matrices_ijk_ikj_1150_800, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_850", multiply_matrices_ijk_ikj_1150_850, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_900", multiply_matrices_ijk_ikj_1150_900, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_950", multiply_matrices_ijk_ikj_1150_950, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_1000", multiply_matrices_ijk_ikj_1150_1000, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_1050", multiply_matrices_ijk_ikj_1150_1050, measure_invocation);
-	measure_invocation_1150("IJK_IKJ 1150_1100", multiply_matrices_ijk_ikj_1150_1100, measure_invocation);
+	measure_invocation_1150("IJK_IKJ 1150_115", multiply_matrices_ijk_ikj_1150_115, measure_invocation);
+	measure_invocation_1150("IJK_IKJ 1150_230", multiply_matrices_ijk_ikj_1150_230, measure_invocation);
+	measure_invocation_1150("IJK_IKJ 1150_575", multiply_matrices_ijk_ikj_1150_575, measure_invocation);
 	measure_invocation_1150("IJK_IKJ 1150_1150", multiply_matrices_ijk_ikj_1150_1150, measure_invocation);
 	measure_invocation_1200("IJK_IKJ 1200_50", multiply_matrices_ijk_ikj_1200_50, measure_invocation);
+	measure_invocation_1200("IJK_IKJ 1200_60", multiply_matrices_ijk_ikj_1200_60, measure_invocation);
+	measure_invocation_1200("IJK_IKJ 1200_75", multiply_matrices_ijk_ikj_1200_75, measure_invocation);
+	measure_invocation_1200("IJK_IKJ 1200_80", multiply_matrices_ijk_ikj_1200_80, measure_invocation);
 	measure_invocation_1200("IJK_IKJ 1200_100", multiply_matrices_ijk_ikj_1200_100, measure_invocation);
+	measure_invocation_1200("IJK_IKJ 1200_120", multiply_matrices_ijk_ikj_1200_120, measure_invocation);
 	measure_invocation_1200("IJK_IKJ 1200_150", multiply_matrices_ijk_ikj_1200_150, measure_invocation);
 	measure_invocation_1200("IJK_IKJ 1200_200", multiply_matrices_ijk_ikj_1200_200, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_250", multiply_matrices_ijk_ikj_1200_250, measure_invocation);
+	measure_invocation_1200("IJK_IKJ 1200_240", multiply_matrices_ijk_ikj_1200_240, measure_invocation);
 	measure_invocation_1200("IJK_IKJ 1200_300", multiply_matrices_ijk_ikj_1200_300, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_350", multiply_matrices_ijk_ikj_1200_350, measure_invocation);
 	measure_invocation_1200("IJK_IKJ 1200_400", multiply_matrices_ijk_ikj_1200_400, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_450", multiply_matrices_ijk_ikj_1200_450, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_500", multiply_matrices_ijk_ikj_1200_500, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_550", multiply_matrices_ijk_ikj_1200_550, measure_invocation);
 	measure_invocation_1200("IJK_IKJ 1200_600", multiply_matrices_ijk_ikj_1200_600, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_650", multiply_matrices_ijk_ikj_1200_650, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_700", multiply_matrices_ijk_ikj_1200_700, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_750", multiply_matrices_ijk_ikj_1200_750, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_800", multiply_matrices_ijk_ikj_1200_800, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_850", multiply_matrices_ijk_ikj_1200_850, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_900", multiply_matrices_ijk_ikj_1200_900, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_950", multiply_matrices_ijk_ikj_1200_950, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_1000", multiply_matrices_ijk_ikj_1200_1000, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_1050", multiply_matrices_ijk_ikj_1200_1050, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_1100", multiply_matrices_ijk_ikj_1200_1100, measure_invocation);
-	measure_invocation_1200("IJK_IKJ 1200_1150", multiply_matrices_ijk_ikj_1200_1150, measure_invocation);
 	measure_invocation_1200("IJK_IKJ 1200_1200", multiply_matrices_ijk_ikj_1200_1200, measure_invocation);
 	measure_invocation_1250("IJK_IKJ 1250_50", multiply_matrices_ijk_ikj_1250_50, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_100", multiply_matrices_ijk_ikj_1250_100, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_150", multiply_matrices_ijk_ikj_1250_150, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_200", multiply_matrices_ijk_ikj_1250_200, measure_invocation);
+	measure_invocation_1250("IJK_IKJ 1250_125", multiply_matrices_ijk_ikj_1250_125, measure_invocation);
 	measure_invocation_1250("IJK_IKJ 1250_250", multiply_matrices_ijk_ikj_1250_250, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_300", multiply_matrices_ijk_ikj_1250_300, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_350", multiply_matrices_ijk_ikj_1250_350, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_400", multiply_matrices_ijk_ikj_1250_400, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_450", multiply_matrices_ijk_ikj_1250_450, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_500", multiply_matrices_ijk_ikj_1250_500, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_550", multiply_matrices_ijk_ikj_1250_550, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_600", multiply_matrices_ijk_ikj_1250_600, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_650", multiply_matrices_ijk_ikj_1250_650, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_700", multiply_matrices_ijk_ikj_1250_700, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_750", multiply_matrices_ijk_ikj_1250_750, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_800", multiply_matrices_ijk_ikj_1250_800, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_850", multiply_matrices_ijk_ikj_1250_850, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_900", multiply_matrices_ijk_ikj_1250_900, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_950", multiply_matrices_ijk_ikj_1250_950, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_1000", multiply_matrices_ijk_ikj_1250_1000, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_1050", multiply_matrices_ijk_ikj_1250_1050, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_1100", multiply_matrices_ijk_ikj_1250_1100, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_1150", multiply_matrices_ijk_ikj_1250_1150, measure_invocation);
-	measure_invocation_1250("IJK_IKJ 1250_1200", multiply_matrices_ijk_ikj_1250_1200, measure_invocation);
+	measure_invocation_1250("IJK_IKJ 1250_625", multiply_matrices_ijk_ikj_1250_625, measure_invocation);
 	measure_invocation_1250("IJK_IKJ 1250_1250", multiply_matrices_ijk_ikj_1250_1250, measure_invocation);
 	measure_invocation_1300("IJK_IKJ 1300_50", multiply_matrices_ijk_ikj_1300_50, measure_invocation);
+	measure_invocation_1300("IJK_IKJ 1300_52", multiply_matrices_ijk_ikj_1300_52, measure_invocation);
+	measure_invocation_1300("IJK_IKJ 1300_65", multiply_matrices_ijk_ikj_1300_65, measure_invocation);
 	measure_invocation_1300("IJK_IKJ 1300_100", multiply_matrices_ijk_ikj_1300_100, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_150", multiply_matrices_ijk_ikj_1300_150, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_200", multiply_matrices_ijk_ikj_1300_200, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_250", multiply_matrices_ijk_ikj_1300_250, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_300", multiply_matrices_ijk_ikj_1300_300, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_350", multiply_matrices_ijk_ikj_1300_350, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_400", multiply_matrices_ijk_ikj_1300_400, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_450", multiply_matrices_ijk_ikj_1300_450, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_500", multiply_matrices_ijk_ikj_1300_500, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_550", multiply_matrices_ijk_ikj_1300_550, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_600", multiply_matrices_ijk_ikj_1300_600, measure_invocation);
+	measure_invocation_1300("IJK_IKJ 1300_130", multiply_matrices_ijk_ikj_1300_130, measure_invocation);
+	measure_invocation_1300("IJK_IKJ 1300_260", multiply_matrices_ijk_ikj_1300_260, measure_invocation);
+	measure_invocation_1300("IJK_IKJ 1300_325", multiply_matrices_ijk_ikj_1300_325, measure_invocation);
 	measure_invocation_1300("IJK_IKJ 1300_650", multiply_matrices_ijk_ikj_1300_650, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_700", multiply_matrices_ijk_ikj_1300_700, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_750", multiply_matrices_ijk_ikj_1300_750, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_800", multiply_matrices_ijk_ikj_1300_800, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_850", multiply_matrices_ijk_ikj_1300_850, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_900", multiply_matrices_ijk_ikj_1300_900, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_950", multiply_matrices_ijk_ikj_1300_950, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_1000", multiply_matrices_ijk_ikj_1300_1000, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_1050", multiply_matrices_ijk_ikj_1300_1050, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_1100", multiply_matrices_ijk_ikj_1300_1100, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_1150", multiply_matrices_ijk_ikj_1300_1150, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_1200", multiply_matrices_ijk_ikj_1300_1200, measure_invocation);
-	measure_invocation_1300("IJK_IKJ 1300_1250", multiply_matrices_ijk_ikj_1300_1250, measure_invocation);
 	measure_invocation_1300("IJK_IKJ 1300_1300", multiply_matrices_ijk_ikj_1300_1300, measure_invocation);
 	measure_invocation_1350("IJK_IKJ 1350_50", multiply_matrices_ijk_ikj_1350_50, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_100", multiply_matrices_ijk_ikj_1350_100, measure_invocation);
+	measure_invocation_1350("IJK_IKJ 1350_54", multiply_matrices_ijk_ikj_1350_54, measure_invocation);
+	measure_invocation_1350("IJK_IKJ 1350_75", multiply_matrices_ijk_ikj_1350_75, measure_invocation);
+	measure_invocation_1350("IJK_IKJ 1350_90", multiply_matrices_ijk_ikj_1350_90, measure_invocation);
+	measure_invocation_1350("IJK_IKJ 1350_135", multiply_matrices_ijk_ikj_1350_135, measure_invocation);
 	measure_invocation_1350("IJK_IKJ 1350_150", multiply_matrices_ijk_ikj_1350_150, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_200", multiply_matrices_ijk_ikj_1350_200, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_250", multiply_matrices_ijk_ikj_1350_250, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_300", multiply_matrices_ijk_ikj_1350_300, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_350", multiply_matrices_ijk_ikj_1350_350, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_400", multiply_matrices_ijk_ikj_1350_400, measure_invocation);
+	measure_invocation_1350("IJK_IKJ 1350_225", multiply_matrices_ijk_ikj_1350_225, measure_invocation);
+	measure_invocation_1350("IJK_IKJ 1350_270", multiply_matrices_ijk_ikj_1350_270, measure_invocation);
 	measure_invocation_1350("IJK_IKJ 1350_450", multiply_matrices_ijk_ikj_1350_450, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_500", multiply_matrices_ijk_ikj_1350_500, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_550", multiply_matrices_ijk_ikj_1350_550, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_600", multiply_matrices_ijk_ikj_1350_600, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_650", multiply_matrices_ijk_ikj_1350_650, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_700", multiply_matrices_ijk_ikj_1350_700, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_750", multiply_matrices_ijk_ikj_1350_750, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_800", multiply_matrices_ijk_ikj_1350_800, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_850", multiply_matrices_ijk_ikj_1350_850, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_900", multiply_matrices_ijk_ikj_1350_900, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_950", multiply_matrices_ijk_ikj_1350_950, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_1000", multiply_matrices_ijk_ikj_1350_1000, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_1050", multiply_matrices_ijk_ikj_1350_1050, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_1100", multiply_matrices_ijk_ikj_1350_1100, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_1150", multiply_matrices_ijk_ikj_1350_1150, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_1200", multiply_matrices_ijk_ikj_1350_1200, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_1250", multiply_matrices_ijk_ikj_1350_1250, measure_invocation);
-	measure_invocation_1350("IJK_IKJ 1350_1300", multiply_matrices_ijk_ikj_1350_1300, measure_invocation);
+	measure_invocation_1350("IJK_IKJ 1350_675", multiply_matrices_ijk_ikj_1350_675, measure_invocation);
 	measure_invocation_1350("IJK_IKJ 1350_1350", multiply_matrices_ijk_ikj_1350_1350, measure_invocation);
 	measure_invocation_1400("IJK_IKJ 1400_50", multiply_matrices_ijk_ikj_1400_50, measure_invocation);
+	measure_invocation_1400("IJK_IKJ 1400_56", multiply_matrices_ijk_ikj_1400_56, measure_invocation);
+	measure_invocation_1400("IJK_IKJ 1400_70", multiply_matrices_ijk_ikj_1400_70, measure_invocation);
 	measure_invocation_1400("IJK_IKJ 1400_100", multiply_matrices_ijk_ikj_1400_100, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_150", multiply_matrices_ijk_ikj_1400_150, measure_invocation);
+	measure_invocation_1400("IJK_IKJ 1400_140", multiply_matrices_ijk_ikj_1400_140, measure_invocation);
+	measure_invocation_1400("IJK_IKJ 1400_175", multiply_matrices_ijk_ikj_1400_175, measure_invocation);
 	measure_invocation_1400("IJK_IKJ 1400_200", multiply_matrices_ijk_ikj_1400_200, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_250", multiply_matrices_ijk_ikj_1400_250, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_300", multiply_matrices_ijk_ikj_1400_300, measure_invocation);
+	measure_invocation_1400("IJK_IKJ 1400_280", multiply_matrices_ijk_ikj_1400_280, measure_invocation);
 	measure_invocation_1400("IJK_IKJ 1400_350", multiply_matrices_ijk_ikj_1400_350, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_400", multiply_matrices_ijk_ikj_1400_400, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_450", multiply_matrices_ijk_ikj_1400_450, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_500", multiply_matrices_ijk_ikj_1400_500, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_550", multiply_matrices_ijk_ikj_1400_550, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_600", multiply_matrices_ijk_ikj_1400_600, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_650", multiply_matrices_ijk_ikj_1400_650, measure_invocation);
 	measure_invocation_1400("IJK_IKJ 1400_700", multiply_matrices_ijk_ikj_1400_700, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_750", multiply_matrices_ijk_ikj_1400_750, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_800", multiply_matrices_ijk_ikj_1400_800, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_850", multiply_matrices_ijk_ikj_1400_850, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_900", multiply_matrices_ijk_ikj_1400_900, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_950", multiply_matrices_ijk_ikj_1400_950, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_1000", multiply_matrices_ijk_ikj_1400_1000, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_1050", multiply_matrices_ijk_ikj_1400_1050, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_1100", multiply_matrices_ijk_ikj_1400_1100, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_1150", multiply_matrices_ijk_ikj_1400_1150, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_1200", multiply_matrices_ijk_ikj_1400_1200, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_1250", multiply_matrices_ijk_ikj_1400_1250, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_1300", multiply_matrices_ijk_ikj_1400_1300, measure_invocation);
-	measure_invocation_1400("IJK_IKJ 1400_1350", multiply_matrices_ijk_ikj_1400_1350, measure_invocation);
 	measure_invocation_1400("IJK_IKJ 1400_1400", multiply_matrices_ijk_ikj_1400_1400, measure_invocation);
 	measure_invocation_1450("IJK_IKJ 1450_50", multiply_matrices_ijk_ikj_1450_50, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_100", multiply_matrices_ijk_ikj_1450_100, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_150", multiply_matrices_ijk_ikj_1450_150, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_200", multiply_matrices_ijk_ikj_1450_200, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_250", multiply_matrices_ijk_ikj_1450_250, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_300", multiply_matrices_ijk_ikj_1450_300, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_350", multiply_matrices_ijk_ikj_1450_350, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_400", multiply_matrices_ijk_ikj_1450_400, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_450", multiply_matrices_ijk_ikj_1450_450, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_500", multiply_matrices_ijk_ikj_1450_500, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_550", multiply_matrices_ijk_ikj_1450_550, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_600", multiply_matrices_ijk_ikj_1450_600, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_650", multiply_matrices_ijk_ikj_1450_650, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_700", multiply_matrices_ijk_ikj_1450_700, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_750", multiply_matrices_ijk_ikj_1450_750, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_800", multiply_matrices_ijk_ikj_1450_800, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_850", multiply_matrices_ijk_ikj_1450_850, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_900", multiply_matrices_ijk_ikj_1450_900, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_950", multiply_matrices_ijk_ikj_1450_950, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_1000", multiply_matrices_ijk_ikj_1450_1000, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_1050", multiply_matrices_ijk_ikj_1450_1050, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_1100", multiply_matrices_ijk_ikj_1450_1100, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_1150", multiply_matrices_ijk_ikj_1450_1150, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_1200", multiply_matrices_ijk_ikj_1450_1200, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_1250", multiply_matrices_ijk_ikj_1450_1250, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_1300", multiply_matrices_ijk_ikj_1450_1300, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_1350", multiply_matrices_ijk_ikj_1450_1350, measure_invocation);
-	measure_invocation_1450("IJK_IKJ 1450_1400", multiply_matrices_ijk_ikj_1450_1400, measure_invocation);
+	measure_invocation_1450("IJK_IKJ 1450_58", multiply_matrices_ijk_ikj_1450_58, measure_invocation);
+	measure_invocation_1450("IJK_IKJ 1450_145", multiply_matrices_ijk_ikj_1450_145, measure_invocation);
+	measure_invocation_1450("IJK_IKJ 1450_290", multiply_matrices_ijk_ikj_1450_290, measure_invocation);
+	measure_invocation_1450("IJK_IKJ 1450_725", multiply_matrices_ijk_ikj_1450_725, measure_invocation);
 	measure_invocation_1450("IJK_IKJ 1450_1450", multiply_matrices_ijk_ikj_1450_1450, measure_invocation);
 	measure_invocation_1500("IJK_IKJ 1500_50", multiply_matrices_ijk_ikj_1500_50, measure_invocation);
+	measure_invocation_1500("IJK_IKJ 1500_60", multiply_matrices_ijk_ikj_1500_60, measure_invocation);
+	measure_invocation_1500("IJK_IKJ 1500_75", multiply_matrices_ijk_ikj_1500_75, measure_invocation);
 	measure_invocation_1500("IJK_IKJ 1500_100", multiply_matrices_ijk_ikj_1500_100, measure_invocation);
+	measure_invocation_1500("IJK_IKJ 1500_125", multiply_matrices_ijk_ikj_1500_125, measure_invocation);
 	measure_invocation_1500("IJK_IKJ 1500_150", multiply_matrices_ijk_ikj_1500_150, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_200", multiply_matrices_ijk_ikj_1500_200, measure_invocation);
 	measure_invocation_1500("IJK_IKJ 1500_250", multiply_matrices_ijk_ikj_1500_250, measure_invocation);
 	measure_invocation_1500("IJK_IKJ 1500_300", multiply_matrices_ijk_ikj_1500_300, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_350", multiply_matrices_ijk_ikj_1500_350, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_400", multiply_matrices_ijk_ikj_1500_400, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_450", multiply_matrices_ijk_ikj_1500_450, measure_invocation);
+	measure_invocation_1500("IJK_IKJ 1500_375", multiply_matrices_ijk_ikj_1500_375, measure_invocation);
 	measure_invocation_1500("IJK_IKJ 1500_500", multiply_matrices_ijk_ikj_1500_500, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_550", multiply_matrices_ijk_ikj_1500_550, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_600", multiply_matrices_ijk_ikj_1500_600, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_650", multiply_matrices_ijk_ikj_1500_650, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_700", multiply_matrices_ijk_ikj_1500_700, measure_invocation);
 	measure_invocation_1500("IJK_IKJ 1500_750", multiply_matrices_ijk_ikj_1500_750, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_800", multiply_matrices_ijk_ikj_1500_800, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_850", multiply_matrices_ijk_ikj_1500_850, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_900", multiply_matrices_ijk_ikj_1500_900, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_950", multiply_matrices_ijk_ikj_1500_950, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1000", multiply_matrices_ijk_ikj_1500_1000, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1050", multiply_matrices_ijk_ikj_1500_1050, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1100", multiply_matrices_ijk_ikj_1500_1100, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1150", multiply_matrices_ijk_ikj_1500_1150, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1200", multiply_matrices_ijk_ikj_1500_1200, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1250", multiply_matrices_ijk_ikj_1500_1250, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1300", multiply_matrices_ijk_ikj_1500_1300, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1350", multiply_matrices_ijk_ikj_1500_1350, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1400", multiply_matrices_ijk_ikj_1500_1400, measure_invocation);
-	measure_invocation_1500("IJK_IKJ 1500_1450", multiply_matrices_ijk_ikj_1500_1450, measure_invocation);
 	measure_invocation_1500("IJK_IKJ 1500_1500", multiply_matrices_ijk_ikj_1500_1500, measure_invocation);
-
-
 }
