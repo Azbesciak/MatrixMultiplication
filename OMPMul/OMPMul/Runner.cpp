@@ -1,41 +1,94 @@
 #include "stdafx.h"
 #include "Runner.h"
-#include <stdio.h>
 #include <time.h>
-#include <cstdlib>
-#include <iostream>
-#include "Experiment.h"
 using namespace std;
 
-//Runner::Runner(string output_filename)
-//{
-//	result_file = fopen(output_filename.c_str(), "a");
-//}
+Runner::Runner(string output_filename)
+{
+	result_file = fopen(output_filename.c_str(), "a");
+	fprintf(result_file, "n;r;parallel?;result;3loops?");
+}
+Runner::~Runner()
+{
+	fclose(result_file);
+}
 
+
+void Runner::RunExperiment()
+{
+	experiment.Reset();
+
+	Experiment_fun function = experiment.threeLoops ? &Runner::Run3Loops : &Runner::Run6Loops;
+	//function = this->Run3Loops;//
+	
+	Timer(experiment.threeLoops ? &Runner::Run3Loops : &Runner::Run6Loops);
+	CommitExperimentResults();
+}
+
+void Runner::SetExperiment(Experiment experiment)
+{
+	this->experiment = experiment;
+}
 
 void Runner::Run3Loops()
 {
-//#pragma omp parallel for if experiment.parallel
-//	for (int i = 0; i < experiment.n; i++) {
-//		for (int j = 0; j < experiment.n; j++) {
-//			float sum = 0.0;
-//			for (int k = 0; k < experiment.n; k++) {
-//				sum += experiment.matrix[i][k] * experiment.matrix[k][j];
-//			}
-//			experiment.matrix[i][j] = sum;
-//		}
-//	}
+#pragma omp parallel for if experiment.parallel
+	for (int i = 0; i < experiment.n; i++) {
+		for (int j = 0; j < experiment.n; j++) {
+			float sum = 0.0;
+			for (int k = 0; k < experiment.n; k++) {
+				sum += experiment.matrix_a[i][k] * experiment.matrix_b[k][j];
+			}
+#if CALC_RESULTS
+			experiment.result += sum;
+#endif
+			experiment.matrix_r[i][j] = sum;
+		}
+	}
 }
 
 void Runner::Run6Loops()
 {
-//#pragma omp parallel for if experiment.parallel
-	//for (int i = 0; i < experiment.n; i += experiment.r)
-	//	for (int j = 0; j < experiment.n; j += experiment.r)
-	//		for (int k = 0; k < experiment.n; k += experiment.r)
-	//			for (int ii = i; ii < i + experiment.r; ii++)
-	//				for (int kk = k; kk < k + experiment.r; kk++)
-	//					for (int jj = j; jj < j + experiment.r; jj++)
-	//						experiment.matrix[ii][jj] += experiment.matrix[ii][kk] * experiment.matrix[kk][jj];
+#pragma omp parallel for if experiment.parallel
+	for (int i = 0; i < experiment.n; i += experiment.r)
+		for (int j = 0; j < experiment.n; j += experiment.r)
+			for (int k = 0; k < experiment.n; k += experiment.r)
+				for (int ii = i; ii < i + experiment.r; ii++)
+					for (int kk = k; kk < k + experiment.r; kk++)
+						for (int jj = j; jj < j + experiment.r; jj++)
+							experiment.matrix_r[ii][jj] += experiment.matrix_a[ii][kk] * experiment.matrix_b[kk][jj];
+
+						
+}
+
+void Runner::Timer(Experiment_fun fun)
+{
+	const auto start = (double)clock() / CLK_TCK;
+	(this->*fun)();
+	const auto end = (double)clock() / CLK_TCK;
+
+
+#if CALC_RESULTS
+	for (int i = 0; i < experiment.n; i++) {
+		for (int j = 0; j < experiment.n; j++) {
+			experiment.result += experiment.matrix_r[i][j];
+		}
+#endif
+
+		const auto resolution = 1.0 / CLK_TCK;
+		experiment.time = end - start;
+
+}
+
+void Runner::CommitExperimentResults()
+{
+	fprintf(result_file , "%d;%d;%d;%f;%d" ,
+		experiment.n,
+		experiment.r,
+		experiment.parallel,
+		experiment.result,
+		experiment.threeLoops);
+
+	fflush(result_file);
 }
 

@@ -1,23 +1,26 @@
 #pragma once
-
+#include "Experiment.h"
 using namespace std;
 
 class Runner
 {
+	typedef void(Runner::*Experiment_fun)();
 public:
-	//Runner(string output_filename);
+	void (Runner::*fun)() const = NULL;
+
+	Runner(string output_filename);
 	~Runner();
 
+	void RunExperiment();
+	void SetExperiment(Experiment experiment);
 private:
-	//void RunExperiment(Experiment experiment);
+	Runner() {};
 	void Run3Loops();
 	void Run6Loops();
-
-	typedef void(*metoda)();
-	int n;
-	int r;
+	void Timer(Experiment_fun fun);
+	void CommitExperimentResults();
 	FILE* result_file;
-	//Experiment experiment;
+	Experiment experiment;
 	float *matrix;
 };
 

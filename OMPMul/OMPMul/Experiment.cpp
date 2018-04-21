@@ -1,29 +1,74 @@
 #include "stdafx.h"
+#include <string.h>
 #include "Experiment.h"
 
 void Experiment::CreateMatrix(int n)
 {
-	matrix = new float*[n];
+	DeleteMatrices();
+
+	this->n = n;
+	matrix_a = new float*[this->n];
 	for (int i = 0; i < this->n; i++) {
-		matrix[i] = new float[n];
+		matrix_a[i] = new float[this->n];
+
 	}
-	CleanMatrix();
+	matrix_b = new float*[this->n];
+	for (int i = 0; i < this->n; i++) {
+		matrix_b[i] = new float[this->n];
+
+	}
+	matrix_r = new float*[this->n];
+	for (int i = 0; i < this->n; i++) {
+		matrix_r[i] = new float[this->n];
+
+	}
+
+	CleanMatrices();
+
+}
+
+void Experiment::ResetResultMatrix()
+{
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			matrix_r[i][j] = 0;
+		}
+	}
+}
+
+void Experiment::Reset()
+{
+	ResetResultMatrix();
+	result = 0;
+	time = 0;
 }
 
 Experiment::~Experiment()
 {
-	DeleteMatrix();
+	DeleteMatrices();
 }
 
-void Experiment::DeleteMatrix()
+void Experiment::DeleteMatrices()
 {
+	if (matrix_a == NULL)
+		return;
 	for (int i = 0; i < this->n; i++) {
-		delete[] matrix[i];
+		delete[] matrix_a[i];
+		delete[] matrix_b[i];
+		delete[] matrix_r[i];
 	}
-	delete[] matrix;
+	delete[] matrix_a;
+	delete[] matrix_b;
+	delete[] matrix_r;
 }
 
-void Experiment::CleanMatrix()
+void Experiment::CleanMatrices()
 {
-	memset(matrix, 0, sizeof(matrix[0][0])*n*n);
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			matrix_a[i][j] = (float)rand() / RAND_MAX;
+			matrix_b[i][j] = (float)rand() / RAND_MAX;
+		}
+	}
+	//memset(matrix, 0, sizeof(float)*n*n);
 }
