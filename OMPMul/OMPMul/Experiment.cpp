@@ -8,21 +8,13 @@ void Experiment::CreateMatrix(int n)
 
 	this->n = n;
 	matrix_a = new float*[this->n];
-	for (int i = 0; i < this->n; i++) {
-		matrix_a[i] = new float[this->n];
-
-	}
 	matrix_b = new float*[this->n];
-	for (int i = 0; i < this->n; i++) {
-		matrix_b[i] = new float[this->n];
-
-	}
 	matrix_r = new float*[this->n];
 	for (int i = 0; i < this->n; i++) {
+		matrix_a[i] = new float[this->n];
+		matrix_b[i] = new float[this->n];
 		matrix_r[i] = new float[this->n];
-
 	}
-
 	CleanMatrices();
 
 }
@@ -31,7 +23,7 @@ void Experiment::ResetResultMatrix()
 {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			matrix_r[i][j] = 0;
+			;// matrix_r[i][j] = 0;
 		}
 	}
 }
@@ -68,6 +60,7 @@ void Experiment::CleanMatrices()
 		for (int j = 0; j < n; j++) {
 			matrix_a[i][j] = (float)rand() / RAND_MAX;
 			matrix_b[i][j] = (float)rand() / RAND_MAX;
+			matrix_r[i][j] = 0;
 		}
 	}
 	//memset(matrix, 0, sizeof(float)*n*n);
