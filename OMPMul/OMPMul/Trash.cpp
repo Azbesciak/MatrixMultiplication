@@ -3303,8 +3303,7 @@ void multiply_matrices_ijk_ikj_1500_1500()
 						for (int jj = j; jj < j + 1500; jj++)
 							matrix_r[ii][jj] += matrix_a[ii][kk] * matrix_b[kk][jj];
 }
-void clean()
-{
+void initialize() {
 #pragma omp parallel for
 	for (int i = 0; i < MAX_R; i++)
 		for (int j = 0; j < MAX_C; j++)
@@ -3314,8 +3313,18 @@ void clean()
 			matrix_b[i][j] = (float)rand() / RAND_MAX;
 		}
 }
+void clean()
+{
+#pragma omp parallel for
+	for (int i = 0; i < MAX_R; i++)
+		for (int j = 0; j < MAX_C; j++)
+		{
+			matrix_r[i][j] = 0.0;
+		}
+}
 void measure(timer_fun fun) {
 	matrix_r = new float*[MAX_R]; for (int i = 0; i < MAX_C; i++) { matrix_r[i] = new float[MAX_C]; }
+	initialize();
 	measure_invocation_50("SEQ_IKJ 50", multiply_matrices_ikj_50, fun);
 	measure_invocation_50("IJK 50", multiply_matrices_ijk_50, fun, true);
 	measure_invocation_100("SEQ_IKJ 100", multiply_matrices_ikj_100, fun);
