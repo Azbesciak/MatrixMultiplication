@@ -153,12 +153,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Experiment.h" />
+    <ClInclude Include="Runner.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Trash.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Experiment.cpp" />
     <ClCompile Include="OMPMul.cpp" />
+    <ClCompile Include="Runner.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
