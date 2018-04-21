@@ -1,0 +1,4 @@
+n;r;parallel?;result;3loops?
+100;5;1;253881.006842;0,0.010000
+100;5;0;507762.011398;0,0.010000
+Saving results true
