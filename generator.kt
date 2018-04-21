@@ -19,7 +19,9 @@ fun generateTrashCpp() =
             "#include <stdio.h>\n" +
             "#include <time.h>\n" +
             "#include <cstdlib>") +
-            generateMatrixes() +
+            "float matrix_a_1500[1500][1500];\n" +
+            "float matrix_b_1500[1500][1500];\n" +
+            "float matrix_r_1500[1500][1500];\n" +
             generateFunction() +
             listOf("""$MEASURE_HEADER {
             |      ${generateInvocations().joinToString("\n\t")}
@@ -64,13 +66,13 @@ fun generateHeaders(): List<String> {
 
 fun generateInvocations(): List<String> {
     val res = generateInRange {
-        """measure_invocation_$it("SEQ_IKJ $it", multiply_matrices_ikj_$it, measure_invocation);
-          |measure_invocation_$it("IJK $it", multiply_matrices_ijk_$it, measure_invocation);""".trimMargin()
+        """measure_invocation_$it("SEQ_IKJ $it", multiply_matrices_ikj_$it, fun);
+          |measure_invocation_$it("IJK $it", multiply_matrices_ijk_$it, fun, true);""".trimMargin()
     }
 
     val res3 = IntProgression.fromClosedRange(50, 1500, 50).flatMap { n ->
         generateSubranges(n) { r ->
-            """measure_invocation_$n("IJK_IKJ ${n}_$r", multiply_matrices_ijk_ikj_${n}_$r, measure_invocation);"""
+            """measure_invocation_$n("IJK_IKJ ${n}_$r", multiply_matrices_ijk_ikj_${n}_$r, measure_invocation, true, $r);"""
         }
     }
 
@@ -81,29 +83,25 @@ fun generateFunction(): List<String> {
     val threeLines = generateInRange {
         """
 
-            void measure_invocation_$it(const char* title, void(*f)(), void(*callback)(void(*ff)()))
+            void measure_invocation_$it(const char* title, mul_fun f, timer_fun timer, bool parallel = false, int r = 0)
             {
                 clean_$it();
                 printf("%s: ", title);
-                callback(f);
+
+	            experiment.n = $it;
+	            experiment.name = title;
+            	experiment.r = r;
+            	experiment.parallel = parallel;
+	            experiment.matrix = matrix_r;
+	            timer(f, &experiment);
             }
-            void clean_$it()
-            {
-            #pragma omp parallel for
-                for (int i = 0; i < $it; i++)
-                    for (int j = 0; j < $it; j++)
-                    {
-                        matrix_r_$it[i][j] = 0.0;
-                        matrix_a_$it[i][j] = (float)rand() / RAND_MAX;
-                        matrix_b_$it[i][j] = (float)rand() / RAND_MAX;
-                    }
-            }
+
             void multiply_matrices_ikj_$it()
             {
                 for (int i = 0; i < $it; i++)
                     for (int k = 0; k < $it; k++)
                         for (int j = 0; j < $it; j++)
-                            matrix_r_$it[i][j] += matrix_a_$it[i][k] * matrix_b_$it[k][j];
+                            matrix_r[i][j] += matrix_a[i][k] * matrix[k][j];
             }
 
             void multiply_matrices_ijk_$it()
@@ -116,9 +114,9 @@ fun generateFunction(): List<String> {
                         float sum = 0.0;
                         for (int k = 0; k < $it; k++)
                         {
-                            sum += matrix_a_$it[i][k] * matrix_b_$it[k][j];
+                            sum += matrix_a[i][k] * matrix_b[k][j];
                         }
-                        matrix_r_$it[i][j] = sum;
+                        matrix_r[i][j] = sum;
                     }
                 }
             }
@@ -136,7 +134,7 @@ fun generateFunction(): List<String> {
                             for (int ii = i; ii < i + $r; ii++)
                                 for (int kk = k; kk < k + $r; kk++)
                                     for (int jj = j; jj < j + $r; jj++)
-                                        matrix_r_$n[ii][jj] += matrix_a_$n[ii][kk] * matrix_b_$n[kk][jj];
+                                        matrix_r[ii][jj] += matrix_a[ii][kk] * matrix_b[kk][jj];
             }
             """.trimIndent()
 
