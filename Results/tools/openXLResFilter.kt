@@ -1,6 +1,7 @@
 
 import java.io.File
 import java.math.BigDecimal
+import java.math.RoundingMode
 
 const val OPEN_XL_SEPARATOR = "\t"
 
@@ -87,10 +88,11 @@ private fun mergeOpenXlWithTimes(openXlLines: List<String>, times: List<BigDecim
             .map { it.split(OPEN_XL_SEPARATOR) }
             .groupBy { it.first() }
             .mapValues {
-                it.value.map { it.drop(1).map { it.bigDecimal() } }
+                it.value.map { it.drop(1).map { it.bigDecimal().setScale(10) } }
                         .aggregateToAverage(size)
             }.mapValues {
                 mapOpenXLMeasurements(it.value, measurementWithInc)
+                        .map { it.setScale(2, RoundingMode.HALF_UP) }
                         .joinToString(OPEN_XL_SEPARATOR) { it.toEngineeringString() }
             }
 
