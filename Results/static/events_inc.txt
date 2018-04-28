@@ -1,0 +1,9 @@
+DC accesses;250000
+DC misses;25000
+CPU clocks;250000
+Ret inst;250000
+DTLB L1M L2M;25000
+DTLB L1M L2H;25000
+DRAM accesses;50000
+L3 misses;50000
+Timer;1
