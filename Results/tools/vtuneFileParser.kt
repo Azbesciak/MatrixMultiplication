@@ -65,7 +65,7 @@ private fun mergeVtuneWithTimes(vtuneLines: List<String>, times: List<Pair<Strin
     val timesAggregated = times.groupBy { it.first }
             .mapValues { it.value.map { it.second } }
             .mapValues { it.value.reduce { acc, v -> acc + v } / size }
-            .mapValues { it.value.toEngineeringString() }
+            .mapValues { it.value.setScale(4).toEngineeringString() }
 
     val functions = vtuneWithoutHeader
             .map { it.split(VTUNE_SEPARATOR) }
@@ -73,7 +73,7 @@ private fun mergeVtuneWithTimes(vtuneLines: List<String>, times: List<Pair<Strin
             .mapValues {
                 it.value.map { it.drop(1).map { it.bigDecimal().setScale(10) } }
                         .aggregateToAverage(size)
-            }.mapValues {it.value.joinToString(VTUNE_SEPARATOR) { it.toEngineeringString() }}
+            }.mapValues {it.value.joinToString(VTUNE_SEPARATOR) { it.setScale(4).toEngineeringString() }}
 
     return functions
             .map { "${it.key}$VTUNE_SEPARATOR${it.value}$VTUNE_SEPARATOR${timesAggregated[it.key]}" }
