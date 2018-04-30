@@ -62,7 +62,7 @@ private fun readFileLines(fileName: String) = File(fileName)
 private fun mergeVtuneWithTimes(vtuneLines: List<String>, times: List<Pair<String,BigDecimal>>): List<String> {
     val vtuneWithoutHeader = vtuneLines.drop(1)
     validateInputForMerging(times, vtuneWithoutHeader)
-    val size = BigDecimal(times.size / vtuneWithoutHeader.size).setScale(10)
+    val size = BigDecimal(Math.ceil(times.size.toDouble() / vtuneWithoutHeader.size)).setScale(10)
     val timesAggregated = times.groupBy { it.first }
             .mapValues { it.value.map { it.second } }
             .mapValues { it.value.reduce { acc, v -> acc + v } / size }
