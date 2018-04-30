@@ -1,6 +1,7 @@
 
 import java.io.File
 import java.math.BigDecimal
+import java.math.RoundingMode
 
 private const val VTUNE_SEPARATOR = ","
 
@@ -33,7 +34,7 @@ private fun prepareSingleVtuneFile(fileLines: List<String>) =
                 .filter { it.startsWith("multiply") or it.startsWith("Function") }
                 .map { it.replace("(void)", "") }
                 .map { it.replace("\$omp\$1", "") }
-                .map { it.replace("${it.split(VTUNE_SEPARATOR)[1]}$VTUNE_SEPARATOR", "") }
+//                .map { it.replace("${it.split(VTUNE_SEPARATOR)[1]}$VTUNE_SEPARATOR", "") }
                 .map { it.replace("multiply_matrices_", "") }
                 .toList()
 
@@ -73,7 +74,7 @@ private fun mergeVtuneWithTimes(vtuneLines: List<String>, times: List<Pair<Strin
             .mapValues {
                 it.value.map { it.drop(1).map { it.bigDecimal().setScale(10) } }
                         .aggregateToAverage(size)
-            }.mapValues {it.value.joinToString(VTUNE_SEPARATOR) { it.setScale(4).toEngineeringString() }}
+            }.mapValues {it.value.joinToString(VTUNE_SEPARATOR) { it.setScale(4, RoundingMode.HALF_UP).toEngineeringString() }}
 
     return functions
             .map { "${it.key}$VTUNE_SEPARATOR${it.value}$VTUNE_SEPARATOR${timesAggregated[it.key]}" }
@@ -90,8 +91,13 @@ private fun String.bigDecimal() = if (isBlank()) BigDecimal.ZERO else toBigDecim
 private fun validateInputForMerging(times: List<Pair<String, BigDecimal>>, inv: List<String>) {
     require(times.isNotEmpty()) { "Brak czasów" }
     require(inv.isNotEmpty()) { "Brak wywołań"}
-    require(times.size % inv.size == 0) {
-        "No stary, czasy sie wysypały... pomiarów ${times.size} a funkcji ${inv.size}" // hyhy. too late.
+    val timesNames = times.map { it.first }.distinct()
+    val invMapped = inv.map { it.split(VTUNE_SEPARATOR).first() }.distinct()
+    val notIncludedInTimes = invMapped
+            .filterNot { timesNames.contains(it) }
+    val notIncludedInInv = timesNames.filterNot { invMapped.contains(it) }
+    require(timesNames.size == invMapped.size) {
+        "No stary, czasy sie wysypały... pomiarów ${timesNames.size} a funkcji ${invMapped.size}, \nbrakuje w funkcjach: $notIncludedInInv,\n w czasach: $notIncludedInTimes" // hyhy. too late.
     }
 }
 
