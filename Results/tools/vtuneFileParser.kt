@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
     }
 
     val vtuneResults = vtuneFile(args[0])
-    val header = vtuneResults.first() + "${VTUNE_SEPARATOR}time"
+    val header = vtuneResults.first() + "${VTUNE_SEPARATOR}time_Avg${VTUNE_SEPARATOR}time_min${VTUNE_SEPARATOR}time_max"
     val times = readTimes(args[1])
     val results = mergeVtuneWithTimes(vtuneResults, times)
     writeLinesToFile(args[2], listOf(header) + results)
@@ -63,23 +63,30 @@ private fun mergeVtuneWithTimes(vtuneLines: List<String>, times: List<Pair<Strin
     val vtuneWithoutHeader = vtuneLines.drop(1)
     validateInputForMerging(times, vtuneWithoutHeader)
     val size = BigDecimal(Math.ceil(times.size.toDouble() / vtuneWithoutHeader.size)).setScale(10)
-    val timesAggregated = times.groupBy { it.first }
+    val timesByFunction = times.groupBy { it.first }
             .mapValues { it.value.map { it.second } }
+    val timesAverage = timesByFunction
             .mapValues { it.value.reduce { acc, v -> acc + v } / size }
-            .mapValues { it.value.setScale(4).toEngineeringString() }
-
+            .mapValues { it.value.asString() }
+    val timesMax = timesByFunction.mapValues { it.value.max()!!.asString() }
+    val timesMin = timesByFunction.mapValues { it.value.min()!!.asString() }
     val functions = vtuneWithoutHeader
             .map { it.split(VTUNE_SEPARATOR) }
             .groupBy { it.first() }
             .mapValues {
                 it.value.map { it.drop(1).map { it.bigDecimal().setScale(10) } }
                         .aggregateToAverage(size)
-            }.mapValues {it.value.joinToString(VTUNE_SEPARATOR) { it.setScale(4, RoundingMode.HALF_UP).toEngineeringString() }}
+            }.mapValues {it.value.joinToString(VTUNE_SEPARATOR) { it.asString() }}
 
     return functions
-            .map { "${it.key}$VTUNE_SEPARATOR${it.value}$VTUNE_SEPARATOR${timesAggregated[it.key]}" }
+            .map { it.key +
+                    "$VTUNE_SEPARATOR${it.value}" +
+                    "$VTUNE_SEPARATOR${timesAverage[it.key]}" +
+                    "$VTUNE_SEPARATOR${timesMin[it.key]}" +
+                    "$VTUNE_SEPARATOR${timesMax[it.key]}" }
 }
 
+private fun BigDecimal.asString() = setScale(4, RoundingMode.HALF_UP).toEngineeringString()
 
 private fun List<List<BigDecimal>>.aggregateToAverage(totalSize: BigDecimal) =
         reduce { acc, list ->
