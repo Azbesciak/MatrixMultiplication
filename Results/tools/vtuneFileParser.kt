@@ -1,3 +1,4 @@
+import FunTimeData.Companion.create
 import java.io.File
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -16,11 +17,14 @@ fun main(args: Array<String>) {
     }
 
     val vtuneResults = vtuneFile(args[0])
-    val header = vtuneResults.first() + "${VTUNE_SEPARATOR}time_Avg${VTUNE_SEPARATOR}time_min${VTUNE_SEPARATOR}time_max"
+    val otherColumns = listOf("time_avg", "time_min", "time_max", "type","n", "r").toHeader()
+    val header = vtuneResults.first() + otherColumns
     val times = readTimes(args[1])
     val results = mergeVtuneWithTimes(vtuneResults, times)
     writeLinesToFile(args[2], listOf(header) + results)
 }
+
+private fun List<String?>.toHeader() = joinToString("") {"$VTUNE_SEPARATOR$it"}
 
 private fun vtuneFile(fileName: String) =
         readMultipleFiles(fileName)
@@ -48,8 +52,19 @@ private fun parseSingleTimesFile(fileLines: List<String>) =
                     it.replace("SEQ_", "").split(";")
                             .map { it.trim() }
                 }
-                .map { it[0].toLowerCase() to it[3].bigDecimal() }
+                .map(::create)
 
+
+class FunTimeData(val name: String, val type: String, val n: Int, val r: Int, val time: BigDecimal) {
+    companion object {
+        fun create(list: List<String>): FunTimeData {
+            val name = list[0].toLowerCase()
+            val indexOfFirst = name.indexOfFirst { it in '0'..'9' }
+            val type = name.take(indexOfFirst - 1)
+            return FunTimeData(name, type, list[1].toInt(), list[2].toInt(), list[3].bigDecimal())
+        }
+    }
+}
 
 private fun readMultipleFiles(fileNames: String) =
         fileNames.split(",").map { readFileLines(it) }
@@ -57,12 +72,17 @@ private fun readMultipleFiles(fileNames: String) =
 private fun readFileLines(fileName: String) = File(fileName)
         .inputStream().bufferedReader().useLines { it.toList() }
 
-private fun mergeVtuneWithTimes(vtuneLines: List<String>, times: List<Pair<String, BigDecimal>>): List<String> {
+private fun mergeVtuneWithTimes(vtuneLines: List<String>, times: List<FunTimeData>): List<String> {
     val vtuneWithoutHeader = vtuneLines.drop(1)
     validateInputForMerging(times, vtuneWithoutHeader)
     val size = BigDecimal(Math.ceil(times.size.toDouble() / vtuneWithoutHeader.size)).setScale(10)
-    val timesByFunction = times.groupBy { it.first }
-            .mapValues { it.value.map { it.second } }
+
+    val timesGrouped = times.groupBy { it.name }
+    val funParams = timesGrouped
+            .mapValues { it.value.first() }
+            .mapValues { it.value.let { "${it.type}$VTUNE_SEPARATOR${it.n}$VTUNE_SEPARATOR${it.r}" } }
+    val timesByFunction = timesGrouped
+            .mapValues { it.value.map { it.time } }
     val timesAverage = timesByFunction
             .mapValues { it.value.reduce { acc, v -> acc + v } / size }
             .mapValues { it.value.asString() }
@@ -80,11 +100,7 @@ private fun mergeVtuneWithTimes(vtuneLines: List<String>, times: List<Pair<Strin
             .toList()
             .sortedByDescending { extractInstanceKey(it) }
             .map {
-                it.first +
-                        "$VTUNE_SEPARATOR${it.second}" +
-                        "$VTUNE_SEPARATOR${timesAverage[it.first]}" +
-                        "$VTUNE_SEPARATOR${timesMin[it.first]}" +
-                        "$VTUNE_SEPARATOR${timesMax[it.first]}"
+                it.first + listOf(it.second, timesAverage[it.first], timesMin[it.first], timesMax[it.first], funParams[it.first]).toHeader()
             }
 }
 
@@ -108,10 +124,10 @@ private fun List<List<BigDecimal>>.aggregateToAverage(totalSize: BigDecimal) =
 
 private fun String.bigDecimal() = if (isBlank()) BigDecimal.ZERO else toBigDecimal()
 
-private fun validateInputForMerging(times: List<Pair<String, BigDecimal>>, inv: List<String>) {
+private fun validateInputForMerging(times: List<FunTimeData>, inv: List<String>) {
     require(times.isNotEmpty()) { "Brak czasów" }
     require(inv.isNotEmpty()) { "Brak wywołań" }
-    val timesNames = times.map { it.first }.distinct()
+    val timesNames = times.map { it.name }.distinct()
     val invMapped = inv.map { it.split(VTUNE_SEPARATOR).first() }.distinct()
     val notIncludedInTimes = invMapped
             .filterNot { timesNames.contains(it) }
