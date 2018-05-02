@@ -1,0 +1,266 @@
+Function	Module	Timer	DC accesses	DC misses	CPU clocks	Ret inst	DTLB L1M L2H	DTLB L1M L2M	Read req L3	L3 misses
+multiply_matrices_ijk_1500(void)	OMPMul.exe	47868	13205	62263	275117	22892	4059	67751	72246	3101
+multiply_matrices_ijk_1450(void)	OMPMul.exe	42364	12038	53164	248667	21610	4181	59945	36377	2550
+multiply_matrices_ijk_1400(void)	OMPMul.exe	38499	10843	46541	222969	19001	4127	53920	28863	1737
+multiply_matrices_ijk_1350(void)	OMPMul.exe	33517	9969	44694	197850	17235	4341	47526	26562	1345
+multiply_matrices_ijk_1300(void)	OMPMul.exe	29871	8974	32682	173134	15344	4327	42354	19963	945
+multiply_matrices_ijk_1250(void)	OMPMul.exe	26179	7464	31508	152508	13521	4439	37026	18586	680
+multiply_matrices_ijk_1200(void)	OMPMul.exe	22575	6508	21081	133303	12186	4255	32150	12619	479
+multiply_matrices_ijk_1150(void)	OMPMul.exe	19400	6049	16651	113689	11482	4730	27314	9651	221
+multiply_matrices_ijk_1100(void)	OMPMul.exe	16731	5309	19361	98972	10179	4447	23876	11437	173
+multiply_matrices_ijk_1050(void)	OMPMul.exe	14232	4447	11911	82753	7219	4408	20266	7039	130
+multiply_matrices_ijk_1000(void)	OMPMul.exe	11231	4088	5771	66195	7160	4502	16310	3565	74
+multiply_matrices_ijk_950(void)	OMPMul.exe	8567	3359	6863	49749	5821	4916	12162	4264	58
+multiply_matrices_ijk_900(void)	OMPMul.exe	6067	2827	4810	35018	4862	5356	8677	3463	70
+multiply_matrices_ijk_850(void)	OMPMul.exe	3799	2365	3906	22639	4232	5903	5696	2441	20
+multiply_matrices_ikj_1500(void)	OMPMul.exe	2801	6634	313	15951	10928	6	68	4823	2217
+multiply_matrices_ijk_ikj_1450_1450(void)	OMPMul.exe	2585	7704	313	16055	16097	3	63	2187	1445
+multiply_matrices_ijk_ikj_1500_125(void)	OMPMul.exe	2576	11063	1336	14276	23392	627	22	2627	49
+multiply_matrices_ijk_ikj_1400_1400(void)	OMPMul.exe	2458	5567	292	14015	14502	2	56	1921	988
+multiply_matrices_ikj_1450(void)	OMPMul.exe	2400	7792	282	15367	10020	6	61	2108	1331
+multiply_matrices_ijk_ikj_1500_150(void)	OMPMul.exe	2353	7713	993	10443	18673	624	15	3719	50
+multiply_matrices_ijk_800(void)	OMPMul.exe	2344	1552	8103	12233	2844	7030	3718	6701	16
+multiply_matrices_ijk_ikj_1450_725(void)	OMPMul.exe	2289	9960	565	14161	20183	22	106	2349	32
+multiply_matrices_ijk_ikj_1500_75(void)	OMPMul.exe	2223	11507	314	12979	25827	936	24	286	45
+multiply_matrices_ijk_ikj_1500_50(void)	OMPMul.exe	2153	10123	333	13127	27252	1347	45	335	57
+multiply_matrices_ikj_1350(void)	OMPMul.exe	2142	6514	249	12683	8429	7	45	1670	676
+multiply_matrices_ijk_ikj_1500_250(void)	OMPMul.exe	2134	8870	812	11615	21479	354	11	3013	32
+multiply_matrices_ijk_ikj_1500_60(void)	OMPMul.exe	2093	8620	268	12255	26576	1160	32	312	57
+multiply_matrices_ikj_1400(void)	OMPMul.exe	2076	5606	279	12905	8805	5	58	1976	1076
+multiply_matrices_ijk_ikj_1450_50(void)	OMPMul.exe	2051	9196	307	11583	24814	1206	34	325	69
+multiply_matrices_ijk_ikj_1450_145(void)	OMPMul.exe	1984	9333	1102	12154	19464	515	17	3053	29
+multiply_matrices_ijk_ikj_1500_100(void)	OMPMul.exe	1944	8105	588	11613	24673	730	21	424	38
+multiply_matrices_ijk_ikj_1450_58(void)	OMPMul.exe	1871	9105	259	11470	24215	1049	32	287	47
+multiply_matrices_ijk_ikj_1400_700(void)	OMPMul.exe	1734	5157	422	8453	15076	26	107	2317	17
+multiply_matrices_ijk_ikj_1400_350(void)	OMPMul.exe	1716	7160	567	9975	17011	189	23	2037	26
+multiply_matrices_ijk_ikj_1450_290(void)	OMPMul.exe	1701	7668	648	10098	18466	280	15	2727	31
+multiply_matrices_ikj_1300(void)	OMPMul.exe	1614	4547	221	9452	7400	2	41	1489	358
+multiply_matrices_ijk_ikj_1300_130(void)	OMPMul.exe	1585	6171	887	8801	15167	388	9	3231	186
+multiply_matrices_ijk_ikj_1250_625(void)	OMPMul.exe	1566	6403	358	9153	13024	28	53	1716	77
+multiply_matrices_ijk_ikj_1250_1250(void)	OMPMul.exe	1547	5215	232	9238	11017	3	39	1413	219
+multiply_matrices_ijk_ikj_1300_50(void)	OMPMul.exe	1498	6409	206	8439	17437	891	29	658	53
+multiply_matrices_ijk_ikj_1250_125(void)	OMPMul.exe	1494	6325	768	8239	13376	377	10	1860	105
+multiply_matrices_ijk_ikj_1300_65(void)	OMPMul.exe	1488	7230	181	8391	16542	700	20	443	94
+multiply_matrices_ijk_ikj_1300_52(void)	OMPMul.exe	1457	5833	207	8509	18208	834	24	237	41
+multiply_matrices_ijk_ikj_1300_650(void)	OMPMul.exe	1439	5580	383	8209	13227	32	74	1819	23
+multiply_matrices_ijk_ikj_1300_325(void)	OMPMul.exe	1424	6852	468	8387	14264	173	14	2621	46
+multiply_matrices_ijk_ikj_1300_260(void)	OMPMul.exe	1300	4777	519	6928	13886	225	7	2794	72
+multiply_matrices_ijk_ikj_1300_100(void)	OMPMul.exe	1297	5138	367	7415	15648	492	11	763	70
+multiply_matrices_ijk_750(void)	OMPMul.exe	1275	1345	5187	6882	2319	7766	1191	4256	20
+multiply_matrices_ijk_ikj_1250_250(void)	OMPMul.exe	1264	5138	465	6821	12456	206	9	2229	51
+multiply_matrices_ikj_1250(void)	OMPMul.exe	1236	5119	201	7894	6722	1	37	1251	118
+multiply_matrices_ijk_ikj_1150_575(void)	OMPMul.exe	1211	5007	287	7096	10221	33	30	1211	55
+multiply_matrices_ijk_ikj_1500_300(void)	OMPMul.exe	1192	4769	486	6914	13820	168	10	1627	14
+multiply_matrices_ijk_ikj_1200_50(void)	OMPMul.exe	1176	5175	184	6797	13979	685	20	245	72
+multiply_matrices_ijk_ikj_1200_120(void)	OMPMul.exe	1168	4026	776	6765	11918	314	14	1353	59
+multiply_matrices_ijk_ikj_1200_150(void)	OMPMul.exe	1157	4268	560	5828	10399	276	6	1774	70
+multiply_matrices_ijk_ikj_1200_600(void)	OMPMul.exe	1113	3278	263	5428	9592	29	47	1525	53
+multiply_matrices_ijk_ikj_1200_1200(void)	OMPMul.exe	1076	3252	204	6132	8669	3	34	1319	164
+multiply_matrices_ijk_ikj_1200_100(void)	OMPMul.exe	1039	4027	407	5814	12186	385	8	322	49
+multiply_matrices_ijk_ikj_1150_50(void)	OMPMul.exe	1027	4491	152	5693	12181	614	19	212	67
+multiply_matrices_ijk_ikj_1200_200(void)	OMPMul.exe	1017	3119	376	4733	9082	233	7	1830	51
+multiply_matrices_ijk_ikj_1150_1150(void)	OMPMul.exe	1000	3818	148	5676	8091	1	31	1089	83
+multiply_matrices_ijk_ikj_1200_80(void)	OMPMul.exe	980	3868	173	5632	11978	458	13	203	54
+multiply_matrices_ijk_ikj_1150_115(void)	OMPMul.exe	974	4426	449	5646	9253	257	3	423	48
+multiply_matrices_ijk_ikj_1100_55(void)	OMPMul.exe	962	5029	125	5611	11468	492	13	174	54
+multiply_matrices_ijk_ikj_1100_110(void)	OMPMul.exe	955	4035	444	5556	9934	261	8	403	61
+multiply_matrices_ijk_ikj_1200_240(void)	OMPMul.exe	951	3494	375	5139	10145	165	5	1454	35
+multiply_matrices_ijk_ikj_1100_550(void)	OMPMul.exe	930	3373	222	4886	7912	39	24	1172	59
+multiply_matrices_ijk_ikj_1050_175(void)	OMPMul.exe	865	3826	369	4785	8063	139	3	1126	44
+multiply_matrices_ijk_ikj_1250_50(void)	OMPMul.exe	823	3697	112	4682	9983	485	15	229	58
+multiply_matrices_ijk_ikj_1050_350(void)	OMPMul.exe	779	2608	197	3624	6249	81	3	1115	39
+multiply_matrices_ijk_ikj_1000_125(void)	OMPMul.exe	774	3287	393	4208	6864	165	1	994	55
+multiply_matrices_ijk_ikj_1100_275(void)	OMPMul.exe	769	3540	251	4177	7205	84	3	1008	44
+multiply_matrices_ijk_ikj_1050_210(void)	OMPMul.exe	762	2996	303	4001	7269	120	2	1135	39
+multiply_matrices_ijk_ikj_1100_1100(void)	OMPMul.exe	755	2216	113	3581	5885	3	27	1067	49
+multiply_matrices_ikj_1200(void)	OMPMul.exe	742	2835	146	4110	4694	7	37	1332	30
+multiply_matrices_ikj_1150(void)	OMPMul.exe	726	2750	99	3487	3548	6	38	1318	20
+multiply_matrices_ijk_ikj_1050_105(void)	OMPMul.exe	711	3173	376	4229	6765	182	6	775	27
+multiply_matrices_ijk_ikj_1000_50(void)	OMPMul.exe	694	3144	109	4086	8401	358	11	150	48
+multiply_matrices_ijk_ikj_1100_100(void)	OMPMul.exe	684	2758	205	3952	8379	248	6	182	37
+multiply_matrices_ijk_ikj_950_475(void)	OMPMul.exe	676	2788	155	3885	5693	31	3	757	46
+multiply_matrices_ijk_ikj_1150_230(void)	OMPMul.exe	654	2563	255	3409	6228	107	3	956	35
+multiply_matrices_ijk_ikj_1200_60(void)	OMPMul.exe	651	2567	107	3650	7879	361	8	135	46
+multiply_matrices_ijk_ikj_1050_150(void)	OMPMul.exe	648	2332	292	3187	5626	142	3	1054	41
+multiply_matrices_ijk_ikj_1000_500(void)	OMPMul.exe	641	2006	153	3255	5856	36	6	911	53
+multiply_matrices_ijk_ikj_1000_250(void)	OMPMul.exe	639	2608	232	3392	6383	83		927	36
+multiply_matrices_ijk_ikj_1100_220(void)	OMPMul.exe	636	2610	311	3827	7616	99	3	853	19
+multiply_matrices_ikj_1050(void)	OMPMul.exe	618	2392	89	2989	3131	5	25	909	10
+multiply_matrices_ijk_ikj_1000_100(void)	OMPMul.exe	616	2456	355	3587	7472	188		433	45
+multiply_matrices_ikj_1100(void)	OMPMul.exe	615	2465	124	3279	4060	3	28	957	10
+multiply_matrices_ijk_700(void)	OMPMul.exe	583	1421	942	3684	2520	5939	81	544	5
+multiply_matrices_ijk_ikj_950_190(void)	OMPMul.exe	582	1916	204	2590	4654	104	1	976	43
+multiply_matrices_ijk_ikj_950_50(void)	OMPMul.exe	582	2556	88	3250	6893	305	9	135	48
+multiply_matrices_ijk_ikj_950_95(void)	OMPMul.exe	581	2885	135	3224	6369	171	4	150	48
+multiply_matrices_ijk_ikj_1000_200(void)	OMPMul.exe	578	1643	183	2497	4807	113	3	1091	49
+multiply_matrices_ijk_ikj_1050_75(void)	OMPMul.exe	571	2962	124	3394	6557	247	10	147	36
+multiply_matrices_ijk_ikj_1200_300(void)	OMPMul.exe	561	1857	184	2673	5428	91	3	938	35
+multiply_matrices_ijk_ikj_1050_70(void)	OMPMul.exe	552	2609	125	3200	6721	239	4	136	38
+multiply_matrices_ijk_ikj_1000_1000(void)	OMPMul.exe	538	1615	89	2466	4245	4	17	803	14
+multiply_matrices_ijk_ikj_900_225(void)	OMPMul.exe	508	2081	170	2542	4300	63	1	727	18
+multiply_matrices_ijk_ikj_1050_525(void)	OMPMul.exe	502	2013	97	2836	4092	17	6	552	29
+multiply_matrices_ijk_ikj_900_50(void)	OMPMul.exe	492	2252	66	2882	6174	232	3	79	19
+multiply_matrices_ijk_ikj_950_950(void)	OMPMul.exe	481	1825	71	2579	3893	4	14	666	48
+multiply_matrices_ijk_ikj_900_75(void)	OMPMul.exe	474	2426	62	2694	5442	165	4	84	28
+multiply_matrices_ikj_1000(void)	OMPMul.exe	467	1925	89	2533	3174	2	17	697	6
+multiply_matrices_ijk_ikj_900_100(void)	OMPMul.exe	467	1787	179	2672	5303	125	4	199	35
+multiply_matrices_ikj_950(void)	OMPMul.exe	466	1813	69	2259	2399	3	14	673	5
+multiply_matrices_ijk_ikj_900_150(void)	OMPMul.exe	454	1385	171	1861	3339	99	2	760	26
+multiply_matrices_ijk_ikj_900_90(void)	OMPMul.exe	439	2040	85	2493	5256	143	2	84	25
+multiply_matrices_ijk_ikj_900_60(void)	OMPMul.exe	436	1897	60	2646	5851	200	6	75	17
+multiply_matrices_ijk_650(void)	OMPMul.exe	430	1053	704	2642	1876	4609	29	462	5
+clean_1500(void)	OMPMul.exe	393	1824	18	2212	4153	1		69	37
+multiply_matrices_ijk_ikj_850_50(void)	OMPMul.exe	383	1880	52	2425	5067	161	5	64	15
+multiply_matrices_ijk_ikj_1050_50(void)	OMPMul.exe	365	1600	67	2009	4313	216	5	82	24
+multiply_matrices_ijk_ikj_900_450(void)	OMPMul.exe	363	1440	89	2083	3460	19	3	405	21
+multiply_matrices_ijk_ikj_900_300(void)	OMPMul.exe	356	1157	115	1628	3382	44	3	606	18
+multiply_matrices_ijk_ikj_850_850(void)	OMPMul.exe	355	1318	57	1763	2781	6	9	483	6
+multiply_matrices_ijk_600(void)	OMPMul.exe	355	854	496	2147	1491	3126	4	300	5
+multiply_matrices_ijk_ikj_900_180(void)	OMPMul.exe	339	1094	149	1602	3177	65	1	600	20
+multiply_matrices_ijk_ikj_1200_400(void)	OMPMul.exe	338	997	92	1669	2922	31	3	503	22
+clean_1300(void)	OMPMul.exe	332	1496	9	1769	3631	1		119	42
+multiply_matrices_ijk_ikj_850_425(void)	OMPMul.exe	321	1321	71	1829	2658	15		338	10
+multiply_matrices_ijk_ikj_850_85(void)	OMPMul.exe	313	1685	69	1915	3730	93	4	58	11
+multiply_matrices_ijk_ikj_900_900(void)	OMPMul.exe	311	1087	56	1701	2896	5	8	422	18
+multiply_matrices_ijk_ikj_750_375(void)	OMPMul.exe	309	1241	70	1694	2553	17		380	20
+multiply_matrices_ikj_900(void)	OMPMul.exe	307	1543	79	2036	2547	6	11	551	5
+multiply_matrices_ijk_ikj_800_400(void)	OMPMul.exe	306	961	85	1595	2830	23	1	480	24
+multiply_matrices_ikj_850(void)	OMPMul.exe	300	1679	61	2052	2179	5	7	393	2
+clean_1450(void)	OMPMul.exe	282	1376	9	1671	3358			45	20
+multiply_matrices_ijk_ikj_800_200(void)	OMPMul.exe	267	1060	132	1619	3105	42	1	517	22
+multiply_matrices_ijk_ikj_1300_1300(void)	OMPMul.exe	265	708	32	1700	1893	2	6	241	54
+clean_1200(void)	OMPMul.exe	262	1169	13	1558	3101			48	38
+multiply_matrices_ijk_550(void)	OMPMul.exe	260	559	442	1378	992	2483	4	406	8
+multiply_matrices_ijk_ikj_750_150(void)	OMPMul.exe	257	931	105	1301	2260	45	2	491	29
+multiply_matrices_ijk_ikj_1200_75(void)	OMPMul.exe	247	1201	40	1376	2676	108	4	54	15
+multiply_matrices_ijk_ikj_750_250(void)	OMPMul.exe	244	989	94	1306	2405	30		416	13
+multiply_matrices_ijk_ikj_800_50(void)	OMPMul.exe	243	1180	38	1492	3188	11	2	58	14
+multiply_matrices_ijk_ikj_800_800(void)	OMPMul.exe	239	883	43	1373	2370	5	7	407	16
+multiply_matrices_ijk_ikj_1100_50(void)	OMPMul.exe	225	1055	34	1391	2804	132	3	35	17
+multiply_matrices_ijk_500(void)	OMPMul.exe	221	470	840	1284	825	1490	1	619	4
+clean_1050(void)	OMPMul.exe	216	891	11	1155	2294			40	20
+multiply_matrices_ijk_ikj_750_750(void)	OMPMul.exe	214	982	34	1324	2106	5	3	318	14
+multiply_matrices_ijk_ikj_650_50(void)	OMPMul.exe	212	835	24	1197	2120	4	1	41	7
+multiply_matrices_ijk_ikj_700_50(void)	OMPMul.exe	207	1016	22	1236	2731	7	1	41	14
+multiply_matrices_ikj_800(void)	OMPMul.exe	206	1026	39	1346	1701	5	5	452	8
+multiply_matrices_ijk_ikj_750_125(void)	OMPMul.exe	198	878	103	1155	1867	30	1	242	16
+multiply_matrices_ijk_ikj_650_130(void)	OMPMul.exe	194	719	94	1015	1765	28	2	234	17
+multiply_matrices_ikj_750(void)	OMPMul.exe	188	929	30	1135	1218	8	2	332	4
+multiply_matrices_ijk_ikj_750_50(void)	OMPMul.exe	183	805	27	1003	2174	5	1	36	8
+clean_1250(void)	OMPMul.exe	181	834	5	1058	1996			54	20
+multiply_matrices_ijk_ikj_700_350(void)	OMPMul.exe	178	602	44	826	1523	14		274	13
+multiply_matrices_ijk_ikj_650_325(void)	OMPMul.exe	178	818	52	986	1695	13	1	252	12
+multiply_matrices_ijk_ikj_650_65(void)	OMPMul.exe	174	915	18	1031	2104	35		30	6
+multiply_matrices_ijk_ikj_650_650(void)	OMPMul.exe	167	694	20	926	1496	4	1	196	10
+multiply_matrices_ijk_ikj_800_80(void)	OMPMul.exe	166	697	41	1002	2162	62		40	9
+clean_900(void)	OMPMul.exe	163	796	4	956	2251			44	21
+multiply_matrices_ijk_ikj_850_170(void)	OMPMul.exe	158	481	55	658	1175	27	1	283	4
+clean_1000(void)	OMPMul.exe	155	650	3	879	1714			28	18
+multiply_matrices_ijk_ikj_800_100(void)	OMPMul.exe	151	590	78	868	1777	40	1	116	13
+multiply_matrices_ijk_ikj_600_150(void)	OMPMul.exe	148	626	77	834	1533	19		217	6
+clean_1100(void)	OMPMul.exe	147	754	6	970	1762			28	21
+multiply_matrices_ijk_ikj_1050_1050(void)	OMPMul.exe	144	521	23	737	1104	2	5	185	13
+multiply_matrices_ijk_ikj_600_75(void)	OMPMul.exe	144	723	31	824	1644	33	1	36	9
+multiply_matrices_ijk_ikj_600_120(void)	OMPMul.exe	144	375	69	611	1103	26		220	8
+clean_1150(void)	OMPMul.exe	136	724	1	867	2026			30	16
+multiply_matrices_ijk_ikj_600_50(void)	OMPMul.exe	136	656	20	797	1766	4		51	13
+multiply_matrices_ikj_700(void)	OMPMul.exe	135	667	21	846	1102	6	2	238	1
+multiply_matrices_ijk_450(void)	OMPMul.exe	134	343	197	818	621	926		120	1
+multiply_matrices_ijk_ikj_600_200(void)	OMPMul.exe	130	475	56	730	1401	14		229	14
+multiply_matrices_ijk_ikj_600_60(void)	OMPMul.exe	127	542	24	736	1684	3		28	6
+multiply_matrices_ijk_ikj_600_100(void)	OMPMul.exe	126	534	70	771	1615	24		105	6
+multiply_matrices_ijk_ikj_550_110(void)	OMPMul.exe	125	520	54	693	1258	15		53	7
+clean_1400(void)	OMPMul.exe	124	655	5	829	1607	1		16	6
+multiply_matrices_ijk_ikj_600_300(void)	OMPMul.exe	124	420	35	597	1226	9		213	12
+multiply_matrices_ijk_ikj_750_75(void)	OMPMul.exe	120	598	30	678	1328	33	1	31	8
+multiply_matrices_ijk_ikj_600_600(void)	OMPMul.exe	118	461	18	695	1227	3	1	147	6
+multiply_matrices_ikj_650(void)	OMPMul.exe	118	561	18	678	740	7		232	1
+multiply_matrices_ijk_ikj_550_55(void)	OMPMul.exe	117	611	18	649	1390	2		33	8
+multiply_matrices_ijk_ikj_700_175(void)	OMPMul.exe	113	512	56	640	1109	13		158	4
+multiply_matrices_ijk_ikj_700_700(void)	OMPMul.exe	111	293	15	446	794	5	1	199	5
+multiply_matrices_ijk_ikj_800_160(void)	OMPMul.exe	110	512	77	806	1504	20	1	217	13
+multiply_matrices_ijk_ikj_550_275(void)	OMPMul.exe	110	522	35	627	1085	7		154	8
+clean_950(void)	OMPMul.exe	109	510	2	633	1143	1		18	19
+multiply_matrices_ijk_ikj_550_50(void)	OMPMul.exe	106	478	16	578	1283	2		26	3
+multiply_matrices_ijk_400(void)	OMPMul.exe	106	271	95	693	479	508		111	3
+multiply_matrices_ijk_ikj_550_550(void)	OMPMul.exe	101	430	9	581	908	3		139	8
+multiply_matrices_ijk_ikj_500_125(void)	OMPMul.exe	99	469	49	595	968	8		104	5
+multiply_matrices_ijk_ikj_500_50(void)	OMPMul.exe	81	346	10	429	928	2	1	24	8
+multiply_matrices_ijk_ikj_500_250(void)	OMPMul.exe	79	306	27	398	738	6		122	6
+multiply_matrices_ikj_600(void)	OMPMul.exe	78	472	18	626	790	4		129	
+multiply_matrices_ikj_550(void)	OMPMul.exe	76	504	17	605	666	3	2	132	4
+clean_800(void)	OMPMul.exe	75	374	2	444	813			23	10
+multiply_matrices_ijk_ikj_700_70(void)	OMPMul.exe	75	393	10	471	1013	22		10	3
+multiply_matrices_ijk_ikj_500_100(void)	OMPMul.exe	73	256	18	371	792	13		25	9
+clean_1350(void)	OMPMul.exe	67	291	1	353	668			14	4
+multiply_matrices_ijk_ikj_500_500(void)	OMPMul.exe	67	267	10	414	719	3		85	1
+clean_600(void)	OMPMul.exe	66	315	1	424	732			30	9
+multiply_matrices_ijk_ikj_450_225(void)	OMPMul.exe	66	250	20	301	490	4		97	
+clean_850(void)	OMPMul.exe	64	246		320	577			13	13
+multiply_matrices_ijk_ikj_450_150(void)	OMPMul.exe	63	262	28	357	650	5		91	3
+multiply_matrices_ijk_ikj_450_75(void)	OMPMul.exe	59	303	6	325	672			14	3
+multiply_matrices_ijk_ikj_700_140(void)	OMPMul.exe	58	209	37	327	619	9		76	
+multiply_matrices_ijk_ikj_450_50(void)	OMPMul.exe	58	263	5	315	709			18	5
+clean_700(void)	OMPMul.exe	55	293	3	330	683			16	3
+multiply_matrices_ijk_ikj_450_90(void)	OMPMul.exe	55	234	10	278	597		1	18	8
+multiply_matrices_ijk_ikj_450_450(void)	OMPMul.exe	54	185	9	254	402	3		78	3
+multiply_matrices_ijk_350(void)	OMPMul.exe	53	182	85	404	322	296		86	3
+clean_750(void)	OMPMul.exe	52	276		305	598			11	6
+multiply_matrices_ikj_500(void)	OMPMul.exe	48	260	13	336	441	2		91	2
+multiply_matrices_ijk_ikj_400_50(void)	OMPMul.exe	42	189	6	228	511	1		10	1
+multiply_matrices_ijk_300(void)	OMPMul.exe	42	92	31	211	162	188		56	2
+clean_650(void)	OMPMul.exe	41	251		317	619			12	8
+multiply_matrices_ijk_ikj_400_100(void)	OMPMul.exe	39	165	20	240	490	1		38	5
+multiply_matrices_ijk_ikj_400_200(void)	OMPMul.exe	39	185	22	274	537	1		43	
+multiply_matrices_ikj_450(void)	OMPMul.exe	38	298	12	371	405	3		48	1
+clean_550(void)	OMPMul.exe	34	144	2	201	424			19	10
+multiply_matrices_ijk_ikj_400_400(void)	OMPMul.exe	33	155	4	233	408			38	2
+multiply_matrices_ijk_ikj_400_80(void)	OMPMul.exe	32	118	6	165	355			13	4
+clean_450(void)	OMPMul.exe	30	99	1	136	257			11	4
+multiply_matrices_ijk_ikj_350_175(void)	OMPMul.exe	30	156	15	188	328	2		42	5
+multiply_matrices_ijk_ikj_350_50(void)	OMPMul.exe	28	119	4	143	315	1	1	6	1
+multiply_matrices_ijk_ikj_350_70(void)	OMPMul.exe	27	113	3	134	294			4	
+multiply_matrices_ikj_400(void)	OMPMul.exe	25	141	2	179	228	1		57	1
+multiply_matrices_ijk_ikj_700_100(void)	OMPMul.exe	24	98	11	154	314	5		11	4
+multiply_matrices_ijk_250(void)	OMPMul.exe	24	54	18	127	97	88		30	1
+clean_500(void)	OMPMul.exe	23	174	1	201	420			6	1
+multiply_matrices_ijk_ikj_350_350(void)	OMPMul.exe	23	142	3	158	303	1		22	
+multiply_matrices_ijk_ikj_300_150(void)	OMPMul.exe	21	80	10	104	189			29	
+multiply_matrices_ijk_ikj_300_60(void)	OMPMul.exe	18	57	3	78	174		1	7	3
+clean_400(void)	OMPMul.exe	17	72		91	162			6	3
+multiply_matrices_ijk_ikj_300_75(void)	OMPMul.exe	17	89	2	98	201			2	3
+multiply_matrices_ijk_ikj_300_50(void)	OMPMul.exe	17	93	1	116	251			2	
+multiply_matrices_ikj_350(void)	OMPMul.exe	16	73	2	73	99	2		52	1
+multiply_matrices_ijk_ikj_300_100(void)	OMPMul.exe	15	49	2	66	152			3	
+multiply_matrices_ijk_200(void)	OMPMul.exe	14	31	20	71	53	1		22	
+multiply_matrices_ijk_ikj_300_300(void)	OMPMul.exe	13	52	2	69	139	2		27	5
+clean_300(void)	OMPMul.exe	12	61	1	73	153			12	1
+multiply_matrices_ijk_ikj_250_50(void)	OMPMul.exe	11	41	1	52	118			4	2
+multiply_matrices_ijk_ikj_250_125(void)	OMPMul.exe	11	61	6	82	135			10	
+clean_350(void)	OMPMul.exe	10	40		62	132	1		12	2
+multiply_matrices_ikj_300(void)	OMPMul.exe	8	64	1	56	107			21	
+multiply_matrices_ijk_ikj_250_250(void)	OMPMul.exe	8	18		22	41	1		18	1
+multiply_matrices_ikj_250(void)	OMPMul.exe	6	44		41	59			13	
+multiply_matrices_ijk_ikj_200_200(void)	OMPMul.exe	5	25	1	32	69			3	
+multiply_matrices_ijk_ikj_200_100(void)	OMPMul.exe	5	21	3	25	62			6	
+multiply_matrices_ijk_150(void)	OMPMul.exe	5	17	4	40	31			5	
+multiply_matrices_ijk_ikj_1400_100(void)	OMPMul.exe	4	8		9	18	2			
+clean_250(void)	OMPMul.exe	4	12		31	42			4	1
+multiply_matrices_ijk_ikj_200_50(void)	OMPMul.exe	4	31	1	35	81			2	
+multiply_matrices_ijk_ikj_150_75(void)	OMPMul.exe	4	2		3	8			2	
+multiply_matrices_ikj_200(void)	OMPMul.exe	3	22		21	36			6	1
+multiply_matrices_ijk_ikj_150_50(void)	OMPMul.exe	3	9		11	21			1	1
+multiply_matrices_ijk_ikj_150_150(void)	OMPMul.exe	2	9		9	20			2	
+clean_150(void)	OMPMul.exe	2	10		16	23			2	
+multiply_matrices_ikj_150(void)	OMPMul.exe	2	19	1	12	25				
+multiply_matrices_ijk_ikj_100_50(void)	OMPMul.exe	2	4	1	5	8				
+multiply_matrices_ijk_100(void)	OMPMul.exe	2							7	
+module_init_entry	em006_64.dll	1			2					
+clean_50(void)	OMPMul.exe	1			1					
+multiply_matrices_ijk_ikj_1400_280(void)	OMPMul.exe	1	4		6	13				
+clean_200(void)	OMPMul.exe	1	13		19	31			5	
+multiply_matrices_ikj_100(void)	OMPMul.exe	1	4		4	7				
+measure_invocation(void (*)(void))	OMPMul.exe				1					
+measure(void (*)(void (*)(void)))	OMPMul.exe				1					
+multiply_matrices_ijk_ikj_50_50(void)	OMPMul.exe		1		2	4				
+clean_100(void)	OMPMul.exe		6		12	10				
