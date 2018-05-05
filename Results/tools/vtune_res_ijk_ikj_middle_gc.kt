@@ -1,6 +1,7 @@
 import java.io.File
 
 private const val VTUNE_SEPARATOR = ","
+private const val ADDITIONL_COLUMN = "annotation"
 
 
 fun main(args: Array<String>) {
@@ -31,7 +32,7 @@ private fun writeLinesToFile(path: String, lines: Iterable<String>) = File(path)
 
 private fun vtuneFile(fileName: String): List<String> {
     val lines = readFileLines(fileName)
-    val headers = lines.first().split(VTUNE_SEPARATOR)
+    val headers = lines.first().split(VTUNE_SEPARATOR) + ADDITIONL_COLUMN
     val body = lines.drop(1).map { headers.zip(it.split(VTUNE_SEPARATOR)).toMap()}
             .filter { it["type"] != "ijk" }
             .groupBy { it["n"] }
@@ -39,9 +40,10 @@ private fun vtuneFile(fileName: String): List<String> {
                 val ikj = it.find { it["type"] == "ikj" }
                 val sorted = it.filter { it["type"] == "ijk_ikj" }
                         .sortedBy { it["time_avg"]!!.toBigDecimal() }
-                listOf(sorted.first(), sorted.last(), ikj)
+                listOf(sorted.first().plus(ADDITIONL_COLUMN to "min"),
+                        sorted.last().plus(ADDITIONL_COLUMN to "max"), ikj!!.plus(ADDITIONL_COLUMN to "ikj"))
             } }
-            .map { v -> headers.map { h ->  v!![h]}}
+            .map { v -> headers.map { h ->  v[h]}}
 
     return (listOf(headers) + body).map { it.joinToString(VTUNE_SEPARATOR) }
 
